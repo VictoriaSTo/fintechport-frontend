@@ -1,0 +1,13 @@
+.title-container {
+  width: 100%;
+  text-align: left;
+}
+
+@media only screen and (max-width: 900px) {
+  .title-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}

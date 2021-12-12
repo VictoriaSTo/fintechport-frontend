@@ -1,0 +1,30 @@
+.wrap {
+  animation: moveInLeft 1s ease-out;
+}
+
+.option {
+  color: #08D9D6;
+  font-size: 62px;
+  font-weight: 700;
+}
+
+span {
+  font-weight: 200;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .option {
+    font-size: 44px;
+  }
+}

@@ -1,0 +1,91 @@
+.banner {
+  display: flex;
+  height: 65vh;;
+  flex-direction: row;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  justify-content: space-between;
+  background: linear-gradient(45deg, black, transparent), url(../../assets/blue/blue2.jpg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.banner__text {
+  align-items: center;
+  margin-top: 4%;
+  text-align: center;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-bottom: 2%;
+}
+
+.banner__text h1 {
+  font-size: 6.2rem;
+  font-family: Barlow;
+  color: white;
+}
+
+.banner__text p {
+  color: white;
+  text-shadow: 2px 2px 3px rgb(255 255 255 / 10%);
+  font-size: 2.2rem;
+  font-weight: 400;
+  animation: moveInRight 1s ease-out;
+}
+
+.banner__buttons {
+  animation: moveInBottom 1s 1s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .banner {
+    display: block;
+    padding-bottom: 10%;
+  }
+
+  .banner__text {
+    margin: 0px;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .banner__text p {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .banner__text {
+    margin-top: 20%;
+    align-items: center;
+    text-align: center;
+    margin-right: 0px;
+  }
+
+  .banner__text h1 {
+    font-size: 4.4rem;
+    font-family: Barlow;
+  }
+}

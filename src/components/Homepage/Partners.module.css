@@ -1,0 +1,48 @@
+.title-reference {
+  color: #03d9d6;
+  margin-top: -2.5rem;
+  font-weight: 400;
+  transition: all .2s;
+}
+
+.title-reference:hover {
+  box-shadow: 0 1rem 2rem rgba(#000, .15);
+  transform: translateY(-2px);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.logo-container {
+  height: 340px;
+  text-align: left;
+  align-items: center;
+  padding-top: 9%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 2%;
+}
+
+.logo {
+  width: 70%;
+}
+
+@media only screen and (max-width: 900px) {
+  .logo-container {
+    margin-left: auto;
+    margin-right: auto;
+    height: 640px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .logo-container {
+    height: 360px;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-bottom: 44%;
+  }
+
+  .logo {
+    width: 100%;
+  }
+}

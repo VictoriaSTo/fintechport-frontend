@@ -1,0 +1,38 @@
+.articles--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles__category {
+  text-transform: uppercase;
+  color: #08D9D6;
+}
+
+.article__title {
+  margin-bottom: 2%;
+}
+
+.article__subtitle {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.article__subtitle--blue {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #08D9D6;
+}
+
+.article__divider {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin: 0% auto 4% auto;
+}
+
+@media only screen and (max-width: 540px) {
+  .articles--flex {
+    display: block;
+  }
+}

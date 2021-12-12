@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+}
+
+.flex-element {
+  display: block;
+}
+
+.photo {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.flex-element p {
+  text-align: justify;
+}
+
+.title-underline {
+  width: 240px;
+  border: 2px solid #08D9D6;
+  margin: -10px auto 20px 0px;
+}
+
+.icon {
+  padding-right: 8px;
+}
+
+.icon:hover {
+  color: #039795;
+}

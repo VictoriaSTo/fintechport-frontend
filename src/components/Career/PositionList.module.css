@@ -1,0 +1,94 @@
+.banner {
+  display: flex;
+  padding: 7% 7% 7% 7%;
+}
+
+.banner__photo {
+  max-width: 580px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner__card {
+  height: 70%;
+  background: white;
+  box-shadow: 0px 10px 30px -8px rgb(0 0 0 / 15%);
+  transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 40px 0px 30px -80px;
+  padding: 37px 50px 50px 50px;
+}
+
+.banner__card h1 {
+  text-transform: uppercase;
+}
+
+.jobs {
+  padding: 2% 18% 2% 18%;
+}
+
+.job {
+  margin-top: -4px;
+  padding-top: 0px;
+  color: black;
+}
+
+.job__title {
+  text-transform: uppercase;
+  color: #08D9D6;
+  font-weight: 700;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.job__details {
+  color: #B2B2B2;
+}
+
+.contact-us {
+  padding: 2% 18% 2% 18%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner__photo {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .banner {
+    display: block;
+    padding: 7% 0% 7% 0%;
+  }
+
+  .banner__card {
+    margin-left: 1%;
+  }
+
+  .banner__photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+
+  .job {
+    margin: 0px 0px 70px 0px;
+    padding: 20px 30px 30px 30px;
+    height: auto;
+  }
+
+  .contact-us {
+    margin: 0px 0px 30px 0px;
+    padding: 20px 30px 30px 30px;
+    text-align: left;
+  }
+}

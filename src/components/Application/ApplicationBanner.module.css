@@ -1,0 +1,16 @@
+.banner__text--aligned {
+  text-align: justify;
+}
+
+.banner__text--large {
+  font-size: 58px;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+};
+
+@media only screen and (max-width: 540px) {
+  .banner__title {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+}
+
+.title-underline {
+  width: 140px;
+  border: 2px solid #08D9D6;
+  margin: -20px auto 20px auto;
+}
+
+.article-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #08D9D6;
+}
+
+.articles {
+  margin-top: 5%;
+}

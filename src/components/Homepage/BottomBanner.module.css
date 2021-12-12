@@ -1,0 +1,30 @@
+.hero-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/conference.jpeg);
+  height: 65vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+
+.hero-banner__text {
+  text-align: left;
+  position: absolute;
+  top: 30%;
+  left: 19%;
+  transform: translate(-30%, -30%);
+  color: white;
+  width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-banner__text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 0% 7%;
+  }
+}

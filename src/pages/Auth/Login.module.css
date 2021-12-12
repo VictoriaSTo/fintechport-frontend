@@ -1,0 +1,49 @@
+.main-container {
+  background-color: #F8F5F7;
+  margin: 0%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  /* height: 90vh; */
+}
+
+.form {
+  width: 24%;
+  height: auto;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2% 14%;
+  text-align: center;
+  /* box-shadow: 0 0 0.85em 0.01em rgba(0, 0, 0, 0.25); */
+  border-radius: 2px;
+}
+
+.link {
+  text-decoration: none;
+  color: #08D9D6;
+  margin-top: 0px;
+}
+
+.container p {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 992px) {
+  .form {
+    width: 44%;
+    padding: 2% 14%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .main-container {
+    padding-top: 20%;
+    padding-bottom: 20%;
+  }
+
+  .form {
+    width: 72%;
+    padding: 2% 7%;
+  }
+}
