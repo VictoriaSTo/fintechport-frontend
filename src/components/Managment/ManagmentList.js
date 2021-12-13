@@ -4,20 +4,28 @@ import ManagerCard from './ManagerCard';
 import classes from './ManagmentList.module.css';
 import ManagerDetails from './ManagerDetails';
 import managmentInfo from './managmentInfo';
+import useFetch from '../../hooks/useFetch';
 
 import { Grid } from '@mui/material';
 
-const managersList = managmentInfo.map((manager) => {
-  return (
-      <Grid item xs={12} md={4}>
-        <div data-aos-duration="1000" data-aos="zoom-in" data-aos-once="true">
-          <ManagerCard manager={manager} />
-        </div>
-      </Grid>
-  )
-})
-
 const ManagmentList = () => {
+  const { loading, error, data } = useFetch('http://localhost:1337/managments');
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
+  const managersList = data.map((manager) => {
+    return (
+        <Grid item xs={12} md={4} key={manager.id}>
+          <div data-aos-duration="1000" data-aos="zoom-in" data-aos-once="true">
+            <ManagerCard manager={manager}/>
+          </div>
+        </Grid>
+    )
+  })
+
+  console.log(data[0].image)
+
   return (
 <React.Fragment>
   {/* <ManagerDetails /> */}

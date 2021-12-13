@@ -14,7 +14,7 @@ const Home = () => {
       <Services />
       <BottomBanner />
       <Partners />
-      <ApplicationForm />
+      {/* <ApplicationForm /> */}
       <NewsEvents />
     </React.Fragment>
   )

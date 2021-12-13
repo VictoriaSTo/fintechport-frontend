@@ -9,10 +9,9 @@ import anny from '../../assets/managment/anny.webp';
 import { EmailRounded } from '@mui/icons-material';
 
 export default function MediaCard(props) {
-  const { id, img, name, surname, position, email } = props.manager;
+  const { image, name, surname, position, email } = props.manager;
   return (
     <Card 
-      key={id}
       sx={{ 
         maxWidth: 345, 
         marginBottom: "5%", 
@@ -21,7 +20,7 @@ export default function MediaCard(props) {
       <CardMedia
         component="img"
         height="280"
-        image={img}
+        image={image}
         alt={surname}
         sx={{
           objectPosition: "top"
@@ -31,10 +30,6 @@ export default function MediaCard(props) {
         <h3>{name} {surname}</h3>
         <p>{position} <br/><span style={{color: "#08D9D6"}}>{email}</span></p>
       </CardContent>
-      {/* <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
     </Card>
   );
 }
