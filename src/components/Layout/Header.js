@@ -226,8 +226,8 @@ const Header = (props) => {
         />
       </Tabs>
       <Stack spacing={2} direction="row">
-        <ContainedButtonEl action={"Log In"} />
-        <OutlinedButtonEl action={"Sign Up"} />
+        <ContainedButtonEl action={"Log In"} component={RouterLink} to="/login"/>
+        <OutlinedButtonEl action={"Sign Up"} component={RouterLink} to="/logout"/>
       </Stack>
       <Menu 
         id="about-us-menu" 

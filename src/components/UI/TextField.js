@@ -35,6 +35,8 @@ const TextFieldEl = (props) => {
       id="outlined-size-small"
       defaultValue=" "
       size="small"
+      value={props.value}
+      onChange={props.onChange}
     />
   )
 }

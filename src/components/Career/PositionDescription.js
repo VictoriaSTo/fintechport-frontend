@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useParams } from 'react-router-dom';
 
 import useFetch from '../../hooks/useFetch';
@@ -14,8 +13,6 @@ const PositionDescription = () => {
 
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error</p>
-  console.log(`${apiUrl}/jobs/` + id)
-  console.log(data)
 
   return (
     <React.Fragment>

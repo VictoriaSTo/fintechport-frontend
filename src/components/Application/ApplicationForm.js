@@ -37,6 +37,8 @@ const applicationFields = applicationFieldsInfo.map((field) => {
 })
 
 const ApplicationForm = () => {
+
+
   return (
     <div className={classes.form}>
       <h2>Get In Touch</h2>

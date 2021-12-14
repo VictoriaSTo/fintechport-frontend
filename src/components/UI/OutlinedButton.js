@@ -16,6 +16,7 @@ const OutlinedButtonEl = (props) => {
     <OutlinedButton 
       variant="outlined" 
       color="secondary"
+      type={props.type}
     >
       {props.action}
     </OutlinedButton>

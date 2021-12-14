@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as RouterLink} from "react-router-dom";
 
 import { makeStyles } from '@mui/styles';
@@ -13,7 +13,23 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
+// Parses the JSON returned by a network request
+const parseJSON = resp => (resp.json ? resp.json() : resp);
 
+// Checks if a network request came back fine, and throws an error if not
+const checkStatus = resp => {
+  if (resp.status >= 200 && resp.status < 300) {
+    return resp;
+  }
+  return parseJSON(resp).then(resp => {
+    throw resp;
+  });
+};
+const headers = {
+  'Content-Type': 'application/json',
+};
+
+// Style customization
 const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.common.darkBrown,
@@ -64,9 +80,32 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-
 const Footer = (props) => {
   const classes = useStyles();
+  const [enteredEmail, setEnteredEmail] = useState(null);
+
+  const submitEmailHandler = async e => {
+    e.preventDefault();
+    console.log(enteredEmail);
+    try {
+      await fetch('http://localhost:1337/subscriptions', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          email: enteredEmail
+        }),
+      })
+        .then(checkStatus)
+        .then(parseJSON);
+    } catch (error) {
+      console.log(error)
+    }
+    setEnteredEmail("");
+  }
+
+  const emailChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  }
 
   return (
     <footer className={classes.footer}>
@@ -153,16 +192,17 @@ const Footer = (props) => {
             </Grid>
           </Grid>
         </Grid>
+
         <Grid xs={10} md={4} item sx={{marginTop: "24px"}}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.title} sx={{width: "110%"}}>
               Subscribe to stay updated!
             </Grid>
             <Grid item className={classes.link}>
-              <TextFieldEl label={"Email"}/>
-            </Grid>
-            <Grid item className={classes.link}>
-              <OutlinedButtonEl action={"Subscribe"} />
+              <form onSubmit={submitEmailHandler}>
+                <TextFieldEl label={"Email"} value={enteredEmail} onChange={emailChangeHandler}/>
+                <OutlinedButtonEl type={"submit"} action={"Subscribe"} />
+              </form>
             </Grid>
           </Grid>
         </Grid>
