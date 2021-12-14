@@ -9,17 +9,14 @@ import classes from './EventsList.module.css';
 import Banner from './EventsListBanner';
 import Wrapper from '../UI/WrapperNoColor';
 import Calendar from '../UI/Calendar';
-// import eventsInfo from './eventsInfo';
 import useFetch from '../../hooks/useFetch';
 
 const EventsList = () => {
-  const { loading, error, data } = useFetch('http://localhost:1337/events');
   const apiUrl = 'http://localhost:1337';
+  const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error</p>
-
-  console.log(data);
 
   return (
     <React.Fragment>

@@ -22,7 +22,7 @@ export default function MediaCard(props) {
       <CardMedia
         component="img"
         height="280"
-        image={`${apiUrl}${props.manager.image[0].url}`}
+        image={`${apiUrl}${image[0].url}`}
         alt={surname}
         sx={{
           objectPosition: "top"

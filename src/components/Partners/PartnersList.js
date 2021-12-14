@@ -7,8 +7,9 @@ import useFetch from '../../hooks/useFetch';
 
 
 const PartnersList = () => {
-  const { loading, error, data } = useFetch('http://localhost:1337/partners');
   const apiUrl = 'http://localhost:1337';
+  const { loading, error, data } = useFetch(`${apiUrl}/partners`);
+
 
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error</p>

@@ -7,6 +7,7 @@ import classes from "./Partners.module.css";
 import useFetch from '../../hooks/useFetch';
 
 const Partners = () => {
+  const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch('http://localhost:1337/partners');
 
   if (loading) return <p>Loading ...</p>
@@ -14,7 +15,6 @@ const Partners = () => {
 
   const partnersList = data.map((partner) => {
     const { id, name, logo } = partner;
-    const apiUrl = 'http://localhost:1337';
     
     return (
       <Grid item xs={4} md={3} key={id}>

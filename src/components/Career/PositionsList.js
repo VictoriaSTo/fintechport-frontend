@@ -6,9 +6,16 @@ import classes from "./PositionList.module.css";
 import Wrapper from "../UI/Wrapper";
 import tech from "../../assets/tech.jpeg";
 import OutlinedButtonEl from "../UI/OutlinedButton";
+import useFetch from '../../hooks/useFetch';
 
 
 const PositionsList = () => {
+  const apiUrl = 'http://localhost:1337';
+  const { loading, error, data } = useFetch(`${apiUrl}/jobs`);
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
   return (
     <React.Fragment>
       <Wrapper>
@@ -21,39 +28,27 @@ const PositionsList = () => {
           </div>
         </div>
       </Wrapper>
+
+
       <div className={classes["jobs"]}>
-        <Grid 
-          container 
-          spacing={2}>
-          <Grid item xs={12} md={6}>
-            <h3>Startegy & Business Design</h3>
-          </Grid>
-          <Grid item xs={12} md={6}>  
-            <Grid container columnSpacing={6} rowSpacing={0}>
-              <Grid component={RouterLink} to="/open-positions/:id" item xs={12} md={12} sx={{textDecoration: "none"}} className={classes.job}>
-                <p className={classes["job__title"]}>Executive Assistant</p>
-                <p className={classes["job__details"]}>Shenzhen - part-time</p>
+        {data.map((job) => {
+              const { id, title, schedule, category} = job;
+            return (
+              <Grid container spacing={2} key={id} sx={{alignItems: "center"}}>
+                <Grid item xs={12} md={6}>
+                  <h3>{category}</h3>
+                </Grid>
+                <Grid item xs={12} md={6}>  
+                  <Grid container columnSpacing={6} rowSpacing={0}>
+                    <Grid component={RouterLink} to={`/open-positions/${id}`} item xs={12} md={12} sx={{textDecoration: "none"}} className={classes.job}>
+                      <p className={classes["job__title"]}>{title}</p>
+                      <p className={classes["job__details"]}>{schedule}</p>
+                    </Grid>
+                  </Grid>
+                </Grid>
               </Grid>
-              <Grid component={RouterLink} to="/open-positions/:id" item xs={12} md={12} sx={{textDecoration: "none"}} className={classes.job}>
-                <p className={classes["job__title"]}>Executive Assistant</p>
-                <p className={classes["job__details"]}>Shenzhen - part-time</p>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid container spacing={2} sx={{paddingTop: "4%"}}>
-          <Grid item xs={12} md={6}>
-            <h3>Marketing & B2B</h3>
-          </Grid>
-          <Grid item xs={12} md={6}>  
-            <Grid container columnSpacing={6} rowSpacing={4}>
-              <Grid component={RouterLink} to="/open-positions/:id" item xs={12} md={12} sx={{textDecoration: "none"}} className={classes.job}>
-                <p className={classes["job__title"]}>Executive Assistant</p>
-                <p className={classes["job__details"]}>Shenzhen - part-time</p>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+            )
+        })}
       </div>
 
       <div className={classes["contact-us"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
