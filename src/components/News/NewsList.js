@@ -13,7 +13,7 @@ import useFetch from '../../hooks/useFetch';
 
 const NewsList = () => {
   const apiUrl = 'http://localhost:1337';
-  const { loading, error, data } = useFetch(`${apiUrl}/news`);
+  const { loading, error, data } = useFetch(`${apiUrl}/last-news`);
 
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error</p>
@@ -31,7 +31,7 @@ const NewsList = () => {
           {data.map((news) => {
             const { id, title, image, date } = news;
             return (
-              <Grid key={id} item xs={12} md={4} component={RouterLink} to="/tech-connect/news/:id" sx={{textDecoration: "none"}}>
+              <Grid key={id} item xs={12} md={4} component={RouterLink} to={`/tech-connect/news/${id}`} sx={{textDecoration: "none"}}>
                 <Card sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"

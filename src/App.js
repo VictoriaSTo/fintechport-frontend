@@ -43,7 +43,7 @@ function App() {
 
           <Route exact path="/submission-form" element={<SubmissionForm/>} />
           {/* To delete */}
-          <Route exact path="/tech-events" element={<TechNews />} />
+          <Route exact path="/tech-events" element={<TechEvents />} />
           <Route exact path="/tech-news" element={<TechNews />} />
           {/* Make it dynamic */}
           <Route exact path="/tech-connect/news/:id" element={<NewsArticle />} />
