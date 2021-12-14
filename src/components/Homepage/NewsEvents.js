@@ -55,7 +55,7 @@ const NewsEvents = () => {
         paddingLeft: "7%", 
         paddingRight: "7%",
         paddingTop: "5%",
-        paddingBottom: "5%",
+        paddingBottom: "10%",
         background: "#f8f5f7"
         }}>
 

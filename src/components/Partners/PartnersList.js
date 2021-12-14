@@ -3,10 +3,18 @@ import classes from './PartnersList.module.css';
 import { Grid } from '@mui/material';
 
 import Wrapper from '../UI/WrapperNoColor';
-import partnersInfo from '../Homepage/partnersInfo';
+import useFetch from '../../hooks/useFetch';
 
 
 const PartnersList = () => {
+  const { loading, error, data } = useFetch('http://localhost:1337/partners');
+  const apiUrl = 'http://localhost:1337';
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
+  console.log(data)
+
   return (
     <Wrapper>
       <div className={classes.partners}>
@@ -19,7 +27,7 @@ const PartnersList = () => {
             <h3>Business Partners</h3>
             <p>These are healthcare companies that are not equity owners. They provide “underwriting” or “sponsorship” financial support for the cost of operating the Lab. These companies will have various benefits based on the level of financial support they provide to the Innovation Lab.</p>
             <Grid item md={12} container spacing={2} sx={{marginTop: "2%", marginBottom: "4%"}}>
-              {partnersInfo.map((partner) => {
+              {data.map((partner) => {
                 if (partner.category === "business") {
                   return (
                     <Grid item xs={12} md={2} 
@@ -27,7 +35,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo} alt={partner.name} className={classes.logo}/>
+                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 
@@ -39,7 +47,7 @@ const PartnersList = () => {
             <h3>Alliance Partners</h3>
             <p>These are healthcare companies that are not equity owners. They provide “underwriting” or “sponsorship” financial support for the cost of operating the Lab. These companies will have various benefits based on the level of financial support they provide to the Innovation Lab.</p>
             <Grid item md={12} container spacing={2} sx={{marginTop: "2%", marginBottom: "4%"}}>
-              {partnersInfo.map((partner) => {
+              {data.map((partner) => {
                 if (partner.category === "alliance partners") {
                   return (
                     <Grid item xs={12} md={2} 
@@ -47,7 +55,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo} alt={partner.name} className={classes.logo}/>
+                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 
@@ -58,7 +66,7 @@ const PartnersList = () => {
           <div className={classes["partners-gallery-category"]}>
             <h3>Affiliation Partners</h3>
             <Grid item md={12} container spacing={2} sx={{marginTop: "2%", marginBottom: "4%"}}>
-              {partnersInfo.map((partner) => {
+              {data.map((partner) => {
                 if (partner.category === "university collaboration") {
                   return (
                     <Grid item xs={12} md={2} 
@@ -66,7 +74,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo} alt={partner.name} className={classes.logo}/>
+                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 

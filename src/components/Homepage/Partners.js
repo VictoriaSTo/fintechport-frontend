@@ -1,19 +1,28 @@
-import classes from "./Partners.module.css";
-import partnersInfo from "./partnersInfo";
 import { Grid } from "@mui/material";
 import theme from '../UI/Theme';
 import { Link as RouterLink} from "react-router-dom";
 
-const partnersList = partnersInfo.map((partner) => {
-  const { id, name, logo } = partner;
-  return (
-    <Grid item xs={4} md={3} key={id}>
-      <img src={logo} alt={name} className={classes.logo}/>
-    </Grid> 
-  )
-})
+import classes from "./Partners.module.css";
+// import partnersInfo from "./partnersInfo";
+import useFetch from '../../hooks/useFetch';
 
 const Partners = () => {
+  const { loading, error, data } = useFetch('http://localhost:1337/partners');
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
+  const partnersList = data.map((partner) => {
+    const { id, name, logo } = partner;
+    const apiUrl = 'http://localhost:1337';
+    
+    return (
+      <Grid item xs={4} md={3} key={id}>
+         <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${logo[0].url}`} alt={name} className={classes.logo}/>
+      </Grid> 
+    )
+  })
+
   return (
   <div className={classes["logo-container"]}>
     <Grid item container>

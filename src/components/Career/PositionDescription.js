@@ -3,22 +3,6 @@ import React from 'react';
 import classes from './PositionDescription.module.css';
 import ContainedButtonEl from '../UI/ContainedButton';
 
-// const ContainedButton = styled(Button)({
-//   ...theme.typography.buttonCustomization,
-//   color: "white",
-//   width: "40%",
-//   marginTop: "2%",
-//   [theme.breakpoints.down("md")]: {
-//     width: "100%",
-//     marginRight: "0px",
-//     marginBottom: "76px"
-//   },
-//   [theme.breakpoints.down("lg")]: {
-//     marginRight: "0px",
-//     marginBottom: "76px"
-//   }
-// })
-
 const PositionDescription = () => {
   return (
     <React.Fragment>

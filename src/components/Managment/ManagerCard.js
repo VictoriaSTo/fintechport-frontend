@@ -10,6 +10,8 @@ import { EmailRounded } from '@mui/icons-material';
 
 export default function MediaCard(props) {
   const { image, name, surname, position, email } = props.manager;
+  const apiUrl = 'http://localhost:1337';
+
   return (
     <Card 
       sx={{ 
@@ -20,7 +22,7 @@ export default function MediaCard(props) {
       <CardMedia
         component="img"
         height="280"
-        image={image}
+        image={`${apiUrl}${props.manager.image[0].url}`}
         alt={surname}
         sx={{
           objectPosition: "top"

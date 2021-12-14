@@ -2,15 +2,14 @@ import React from 'react';
 import WrapperNoColor from '../UI/WrapperNoColor';
 import ManagerCard from './ManagerCard';
 import classes from './ManagmentList.module.css';
-import ManagerDetails from './ManagerDetails';
-import managmentInfo from './managmentInfo';
+// import ManagerDetails from './ManagerDetails';
 import useFetch from '../../hooks/useFetch';
 
 import { Grid } from '@mui/material';
 
 const ManagmentList = () => {
   const { loading, error, data } = useFetch('http://localhost:1337/managments');
-
+  
   if (loading) return <p>Loading ...</p>
   if (error) return <p>Error</p>
 
@@ -23,8 +22,6 @@ const ManagmentList = () => {
         </Grid>
     )
   })
-
-  console.log(data[0].image)
 
   return (
 <React.Fragment>
