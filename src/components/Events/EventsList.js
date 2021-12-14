@@ -9,9 +9,18 @@ import classes from './EventsList.module.css';
 import Banner from './EventsListBanner';
 import Wrapper from '../UI/WrapperNoColor';
 import Calendar from '../UI/Calendar';
-import eventsInfo from './eventsInfo';
+// import eventsInfo from './eventsInfo';
+import useFetch from '../../hooks/useFetch';
 
 const EventsList = () => {
+  const { loading, error, data } = useFetch('http://localhost:1337/events');
+  const apiUrl = 'http://localhost:1337';
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
+  console.log(data);
+
   return (
     <React.Fragment>
       <Banner />
@@ -22,8 +31,8 @@ const EventsList = () => {
             {/* <Calendar /> */}
           </div>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
-            {eventsInfo.map((event) => {
-              const { id, title, img, date, place, desc, category} = event;
+            {data.map((event) => {
+              const { id, title, image, date, place, description, category, link} = event;
               if (category === "upcoming") {
                 return (
                   <Grid item xs={12} md={4}>
@@ -32,13 +41,13 @@ const EventsList = () => {
                         component="img"
                         alt={title}
                         height="290"
-                        image={img}
+                        image={`${apiUrl}${image.url}`}
                       />
                       <CardContent>
                         <h3 className={classes["article__title"]}>{title}</h3>
                         <p className={classes["article__subtitle--blue"]}>{date}</p>
                         <p className={classes["article__subtitle"]}>{place}</p>
-                        <p>{desc}</p>
+                        <p>{description}</p>
                       </CardContent>
                     </Card>
                   </Grid>
@@ -47,10 +56,10 @@ const EventsList = () => {
             })}
           </Grid>
           <div className={classes["article__divider"]} />
-          {/* <h3 className={classes.subtitle}>Event Gallery</h3>
+          <h3 className={classes.subtitle}>Event Gallery</h3>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
-            {eventsInfo.map((event) => {
-              const { id, title, img, date, place, desc, category} = event;
+            {data.map((event) => {
+              const { id, title, image, date, place, description, category} = event;
               if (category === "past") {
                 return (
                   <Grid item xs={12} md={4}>
@@ -59,20 +68,20 @@ const EventsList = () => {
                         component="img"
                         alt={title}
                         height="290"
-                        image={img}
+                        image={`${apiUrl}${image.url}`}
                       />
                       <CardContent>
                         <h3 style={{marginBottom: "4px", fontSize: "22px"}}>{title}</h3>
                         <Typography variant="body2" color="text.secondary" sx={{color: "#08D9D6", paddingBottom: "0"}}><b>{date}</b></Typography>
                         <Typography variant="body2" color="text.secondary" sx={{color: "black"}}><b>{place}</b></Typography>
-                        <p>{desc}</p>
+                        <p>{description}</p>
                       </CardContent>
                     </Card>
                   </Grid>
                 )
               }
             })}
-          </Grid> */}
+          </Grid>
         </div>
       </Wrapper>
     </React.Fragment>
