@@ -61,17 +61,7 @@ const theme = createTheme({
       textTransform: 'none',
       width: "112px"
     }
-    // h5: {
-    //   fontFamily: "Barlow",
-    //   fontSize: 14,
-    //   ontWeightLight: 300
-    // },
-    // h6: {
-    //   fontFamily: "Barlow",
-    //   fontSize: 14,
-    //   ontWeightLight: 300
-    // },
-  },
+  }
 });
 
 export default theme;

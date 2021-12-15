@@ -26,8 +26,9 @@ const headers = {
 
 // Validation options
 const isNotEmpty = (value) => value.trim() !== '';
-const isEmail = (value) => value.includes('@');
-
+const isEmail = (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)
+const isPhoneNumber = (value) => /^((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2[1-689])|9[0-58]|8[1246]|6[0-6]|5[1-8]|4[013-9]|3[0-469]|2[70]|7|1)(?:\W*\d){0,13}\d$/.test(value)
+const isNotMinimum = (value) => value.trim().length >= 30;
 
 const ApplicationForm = (props) => {
   const {
@@ -61,7 +62,7 @@ const ApplicationForm = (props) => {
     valueChangeHandler: phoneNumberChangeHandler,
     inputBlurHandler: phoneNumberBlurHandler,
     reset: resetPhoneNumber,
-  } = useInput(isNotEmpty);
+  } = useInput(isPhoneNumber);
   const {
     value: jobTitleValue,
     isValid: jobTitleIsValid,
@@ -93,7 +94,7 @@ const ApplicationForm = (props) => {
     valueChangeHandler: messageChangeHandler,
     inputBlurHandler: messageBlurHandler,
     reset: resetMessage,
-  } = useInput(isNotEmpty);
+  } = useInput(isNotMinimum);
 
   let formIsValid = false;
 
@@ -142,23 +143,21 @@ const ApplicationForm = (props) => {
     resetMessage();
   };
 
-  const InputTextField = styled(TextField)({
+  const CustomizedTextField = styled(TextField)({
+    '& .MuiFormHelperText-root': {
+      fontFamily: "Barlow",
+      fontSize: "1.4rem",
+    },
+    '& .MuiInputLabel-root': {
+        fontFamily: "Barlow",
+        fontSize: "1.8rem"
+    },
+    '& .MuiFilledInput-input': {
+      fontSize: "1.8rem",
+      color: "black"
+    },
     '& label.Mui-focused': {
       color: theme.palette.common.lightBlue,
-    },
-    "&:hover label": {
-      color: theme.palette.common.lightBlue
-    },
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'white',
-      },
-      '&:hover fieldset': {
-        borderColor: theme.palette.common.lightBlue,
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: theme.palette.common.lightBlue,
-      },
     }
   });
 
@@ -180,6 +179,23 @@ const ApplicationForm = (props) => {
               onBlur={firstNameBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -191,10 +207,27 @@ const ApplicationForm = (props) => {
               id="Last Name"
               label="Last Name" 
               value={lastNameValue} 
-              onChange={lastNameChangeHandler} 
+              onChange={lastNameChangeHandler}
               onBlur={lastNameBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -210,6 +243,23 @@ const ApplicationForm = (props) => {
               onBlur={emailBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -225,6 +275,23 @@ const ApplicationForm = (props) => {
               onBlur={phoneNumberBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -240,6 +307,23 @@ const ApplicationForm = (props) => {
               onBlur={jobTitleBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -252,6 +336,23 @@ const ApplicationForm = (props) => {
               onBlur={organizationBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
           <Grid item xs={12} md={6}>
@@ -267,6 +368,23 @@ const ApplicationForm = (props) => {
               onBlur={countryBlurHandler} 
               variant="filled" 
               size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
             />
           </Grid>
             {/* {applicationFields} */}
@@ -284,7 +402,24 @@ const ApplicationForm = (props) => {
               value={messageValue}
               onChange={messageChangeHandler}
               onBlur={messageBlurHandler}
-              sx={{marginBottom: "5%"}}
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }},
+                {marginBottom: "5%"}
+              ]}
             />
           </Grid>
         </Grid>

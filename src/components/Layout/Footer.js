@@ -4,9 +4,11 @@ import { Link as RouterLink} from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles';
+import theme from "../UI/Theme";
 
 import OutlinedButtonEl from '../UI/OutlinedButton';
-import TextFieldEl from '../UI/TextField';
 import useInput from '../../hooks/useInput';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -31,7 +33,8 @@ const headers = {
 };
 
 // Validation options
-const isEmail = (value) => value.includes('@');
+const isEmail = (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)
+
 
 // Style customization
 const useStyles = makeStyles(theme => ({
@@ -83,6 +86,44 @@ const useStyles = makeStyles(theme => ({
     }
   }
 }))
+
+const CustomizedTextField = styled(TextField)({
+  '& .MuiInputLabel-root': {
+    fontFamily: "Barlow",
+    fontSize: "1.6rem",
+    color: "white"
+  },
+  '& .MuiOutlinedInput-input': {
+    fontSize: "1.8rem",
+    color: "white"
+  },
+  '& label': {
+    color: 'white'
+  },
+  '& label.Mui-focused': {
+    color: theme.palette.common.lightBlue,
+  },
+  "&:hover label": {
+    color: theme.palette.common.lightBlue
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'white',
+    },
+    '&:hover fieldset': {
+      borderColor: theme.palette.common.lightBlue,
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: theme.palette.common.lightBlue,
+    },
+  },
+  [theme.breakpoints.down("md")]: {
+    marginBottom: "4%",
+    '& .MuiOutlinedInput-root': {
+      width: "100%"
+    }
+  }
+});
 
 const Footer = (props) => {
   const classes = useStyles();
@@ -212,11 +253,17 @@ const Footer = (props) => {
             </Grid>
             <Grid item className={classes.link}>
               <form onSubmit={submitHandler}>
-                <TextFieldEl 
-                  label={"Email"}               
+                <CustomizedTextField 
+                  label={"Email"}  
+                  id="email-outlined"             
                   value={emailValue} 
                   onChange={emailChangeHandler} 
-                  onBlur={emailBlurHandler} />
+                  onBlur={emailBlurHandler}
+                  size="small" 
+                  sx={{
+                    display: "block",
+                    marginBottom: "2%"
+                  }}/>
                 <OutlinedButtonEl type={"submit"} action={"Subscribe"} />
               </form>
             </Grid>

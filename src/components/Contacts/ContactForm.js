@@ -25,26 +25,25 @@ const headers = {
 
 // Validation options
 const isNotEmpty = (value) => value.trim() !== '';
-const isEmail = (value) => value.includes('@');
+const isEmail = (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)
+const isNotMinimum = (value) => value.trim().length >= 30;
 
 // Style customization
 const InputTextField = styled(TextField)({
+  '& .MuiFormHelperText-root': {
+    fontFamily: "Barlow",
+    fontSize: "1.4rem",
+  },
+  '& .MuiInputLabel-root': {
+      fontFamily: "Barlow",
+      fontSize: "1.8rem"
+  },
+  '& .MuiFilledInput-input': {
+    fontSize: "1.8rem",
+    color: "black"
+  },
   '& label.Mui-focused': {
     color: theme.palette.common.lightBlue,
-  },
-  "&:hover label": {
-    color: theme.palette.common.lightBlue
-  },
-  '& .MuiOutlinedInput-root': {
-    '& fieldset': {
-      borderColor: 'white',
-    },
-    '&:hover fieldset': {
-      borderColor: theme.palette.common.lightBlue,
-    },
-    '&.Mui-focused fieldset': {
-      borderColor: theme.palette.common.lightBlue,
-    },
   }
 });
 
@@ -72,7 +71,7 @@ const ContactForm = () => {
     valueChangeHandler: messageChangeHandler,
     inputBlurHandler: messageBlurHandler,
     reset: resetMessage,
-  } = useInput(isNotEmpty);
+  } = useInput(isNotMinimum);
 
   let formIsValid = false;
 
