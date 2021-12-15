@@ -24,7 +24,6 @@ const PositionsList = () => {
           <div className={classes["banner__card"]} data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
             <h1>Jobs</h1>
             <p>Board of Innovation is building a team with superpowers. How are we doing it? By hiring top talent and creating a unique work environment.</p>
-            <OutlinedButtonEl action={"Learn More"} />
           </div>
         </div>
       </Wrapper>

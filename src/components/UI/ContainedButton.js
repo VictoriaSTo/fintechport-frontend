@@ -1,7 +1,6 @@
 import theme from './Theme';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
-import { Link as RouterLink} from "react-router-dom";
 
 const ContainedButton = styled(Button)({
   ...theme.typography.buttonCustomization,
@@ -24,6 +23,8 @@ const ContainedButtonEl = (props) => {
       color="secondary" 
       sx={{marginRight: "24px"}}
       type={props.type}
+      component={props.component}
+      to={props.to}
     >
       {props.action}
     </ContainedButton>

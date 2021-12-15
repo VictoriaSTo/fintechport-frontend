@@ -23,7 +23,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 // Accordion
 import Accordion from '@mui/material/Accordion';
@@ -227,7 +226,7 @@ const Header = (props) => {
       </Tabs>
       <Stack spacing={2} direction="row">
         <ContainedButtonEl action={"Log In"} component={RouterLink} to="/login"/>
-        <OutlinedButtonEl action={"Sign Up"} component={RouterLink} to="/logout"/>
+        <OutlinedButtonEl action={"Sign Up"} component={RouterLink} to="/signup"/>
       </Stack>
       <Menu 
         id="about-us-menu" 
@@ -403,9 +402,6 @@ const Header = (props) => {
           </MenuItem>
         ))}
       </Menu> */}
-
-
-
 
               </Grid>
             </AccordionDetails>

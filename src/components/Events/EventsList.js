@@ -68,9 +68,9 @@ const EventsList = () => {
                         image={`${apiUrl}${image.url}`}
                       />
                       <CardContent>
-                        <h3 style={{marginBottom: "4px", fontSize: "22px"}}>{title}</h3>
-                        <Typography variant="body2" color="text.secondary" sx={{color: "#08D9D6", paddingBottom: "0"}}><b>{date}</b></Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{color: "black"}}><b>{place}</b></Typography>
+                      <h3 className={classes["article__title"]}>{title}</h3>
+                        <p className={classes["article__subtitle--blue"]}>{date}</p>
+                        <p className={classes["article__subtitle"]}>{place}</p>
                         <p>{description}</p>
                       </CardContent>
                     </Card>

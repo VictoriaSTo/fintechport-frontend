@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link as RouterLink } from "react-router-dom";
 
 import classes from "./TopBanner.module.css";
 import TypedReactHook from '../UI/TypedElement';
@@ -14,8 +14,8 @@ const TopBanner = () => {
         <TypedReactHook />
         <p>FinTechPort is designed to help high-level talent and teams get support for government affairs, business promotion, and innovation development in Mainland China</p>
         <div className={classes["banner__buttons"]}>
-          <ContainedButtonEl action={"Contact Now"} />
-          <OutlinedButtonEl action={"Learn More"} />
+          <ContainedButtonEl component={RouterLink} to="/contacts" action={"Contact Now"} />
+          <OutlinedButtonEl component={RouterLink} to="/about-us/fintech-hub-of-sz" action={"Learn More"} />
         </div>
       </div>
     </div>

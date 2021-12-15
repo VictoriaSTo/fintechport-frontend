@@ -137,7 +137,6 @@ const ContactForm = () => {
         </Grid>
         <ContainedButtonEl type={"submit"} action={"Send"} />
       </form>
-
     </div>
   )
 };

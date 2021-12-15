@@ -8,7 +8,6 @@ const EventsListenerBanner = () => {
       <div className={classes["hero-text"]}>
         <h1>Ad eos saepe lucilius, noster postulant.</h1>
         <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum.</p>
-        <ContainedButtonEl action={"Log In"} />
       </div>
     </div>
   )

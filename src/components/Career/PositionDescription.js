@@ -23,7 +23,7 @@ const PositionDescription = () => {
         <h4>Overview</h4>
       </div>
       <div className={classes["position__description"]}>
-        {data.description}
+        <p>{data.description}</p>
         <div className={classes["position__actions"]}>
           <ContainedButtonEl action={"Apply"} />
         </div>

@@ -36,7 +36,7 @@ const Partners = () => {
       >
         <div >
           <h2 data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true">Collaboration with <br /> forward-thinking <br /> organizations</h2>
-          <p component={RouterLink} to="/about-us/partners" data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true" data-aos-delay="700"className={classes["title-reference"]}>Learn more about our partnership &rarr;</p>
+          <RouterLink to="/about-us/partners" style={{textDecoration: "none"}}><p data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true" data-aos-delay="700" className={classes["title-reference"]}>Learn more about our partnership &rarr;</p></RouterLink>
         </div>
       </Grid>
       <Grid item md={9} container spacing={2}    

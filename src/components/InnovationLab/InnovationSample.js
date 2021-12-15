@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink} from "react-router-dom";
 
 import WrapperNoColor from '../UI/WrapperNoColor';
 import Wrapper from '../UI/Wrapper';
@@ -41,8 +42,8 @@ const InnovationSample = () => {
             <p>Sign up or contact us</p>
           </div>
           <div className={classes["call-to-action__buttons"]}>
-            <ContainedButton action={"Apply"} />
-            <OutlinedButton action={"Contact Us"}/>
+            <ContainedButton component={RouterLink} to="/submission-form" action={"Apply"} />
+            <OutlinedButton component={RouterLink} to="/contacts" action={"Contact Us"}/>
           </div>
         </article>
       </Wrapper>
