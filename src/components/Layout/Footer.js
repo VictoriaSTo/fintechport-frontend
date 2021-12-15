@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as RouterLink} from "react-router-dom";
 
 import { makeStyles } from '@mui/styles';
@@ -7,6 +7,7 @@ import Link from '@mui/material/Link';
 
 import OutlinedButtonEl from '../UI/OutlinedButton';
 import TextFieldEl from '../UI/TextField';
+import useInput from '../../hooks/useInput';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -28,6 +29,9 @@ const checkStatus = resp => {
 const headers = {
   'Content-Type': 'application/json',
 };
+
+// Validation options
+const isEmail = (value) => value.includes('@');
 
 // Style customization
 const useStyles = makeStyles(theme => ({
@@ -82,17 +86,29 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = (props) => {
   const classes = useStyles();
-  const [enteredEmail, setEnteredEmail] = useState(null);
 
-  const submitEmailHandler = async e => {
+  const {
+    value: emailValue,
+    isValid: emailIsValid,
+    hasError: emailHasError,
+    valueChangeHandler: emailChangeHandler,
+    inputBlurHandler: emailBlurHandler,
+    reset: resetEmail,
+  } = useInput(isEmail);
+
+  const submitHandler = async e => {
     e.preventDefault();
-    console.log(enteredEmail);
+
+    if (!emailIsValid) {
+      return;
+    }
+
     try {
       await fetch('http://localhost:1337/subscriptions', {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
-          email: enteredEmail
+          email: emailValue
         }),
       })
         .then(checkStatus)
@@ -100,11 +116,7 @@ const Footer = (props) => {
     } catch (error) {
       console.log(error)
     }
-    setEnteredEmail("");
-  }
-
-  const emailChangeHandler = (event) => {
-    setEnteredEmail(event.target.value);
+    resetEmail();
   }
 
   return (
@@ -199,8 +211,12 @@ const Footer = (props) => {
               Subscribe to stay updated!
             </Grid>
             <Grid item className={classes.link}>
-              <form onSubmit={submitEmailHandler}>
-                <TextFieldEl label={"Email"} value={enteredEmail} onChange={emailChangeHandler}/>
+              <form onSubmit={submitHandler}>
+                <TextFieldEl 
+                  label={"Email"}               
+                  value={emailValue} 
+                  onChange={emailChangeHandler} 
+                  onBlur={emailBlurHandler} />
                 <OutlinedButtonEl type={"submit"} action={"Subscribe"} />
               </form>
             </Grid>

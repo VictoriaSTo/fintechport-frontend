@@ -8,8 +8,26 @@ import ContainedButtonEl from '../UI/ContainedButton';
 import classes from './ApplicationForm.module.css';
 import useInput from '../../hooks/useInput';
 
+// Parses the JSON returned by a network request
+const parseJSON = resp => (resp.json ? resp.json() : resp);
+
+// Checks if a network request came back fine, and throws an error if not
+const checkStatus = resp => {
+  if (resp.status >= 200 && resp.status < 300) {
+    return resp;
+  }
+  return parseJSON(resp).then(resp => {
+    throw resp;
+  });
+};
+const headers = {
+  'Content-Type': 'application/json',
+};
+
+// Validation options
 const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => value.includes('@');
+
 
 const ApplicationForm = (props) => {
   const {
@@ -83,10 +101,8 @@ const ApplicationForm = (props) => {
     formIsValid = true;
   }
 
-  const submitHandler = event => {
+  const submitHandler = async event => {
     event.preventDefault();
-    console.log('Submitted!');
-    console.log(firstNameValue, lastNameValue, emailValue, phoneNumberValue, jobTitleValue, organizationValue, countryValue, messageValue);
 
     if (!formIsValid) {
       return;
@@ -94,6 +110,27 @@ const ApplicationForm = (props) => {
 
     console.log('Validated!');
     console.log(firstNameValue, lastNameValue, emailValue, phoneNumberValue, jobTitleValue, organizationValue, countryValue, messageValue);
+
+    try {
+      await fetch('http://localhost:1337/applications', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+          first_name: firstNameValue,
+          last_name: lastNameValue,
+          job_title: jobTitleValue,
+          email: emailValue,
+          phone_number: phoneNumberValue,
+          organization: organizationValue,
+          country: countryValue,
+          message: messageValue
+        }),
+      })
+        .then(checkStatus)
+        .then(parseJSON);
+    } catch (error) {
+      console.log(error)
+    }
 
     resetFirstName();
     resetLastName();
@@ -207,8 +244,6 @@ const ApplicationForm = (props) => {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField 
-              error={organizationHasError}
-              helperText={organizationHasError ? "Please enter your organization" : ""}
               fullWidth 
               id="Organization"
               label="Organization" 
