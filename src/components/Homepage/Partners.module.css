@@ -14,9 +14,9 @@
 
 .logo-container {
   height: 340px;
-  text-align: left;
+  text-align: center;
   align-items: center;
-  padding-top: 9%;
+  padding-top: 7%;
   padding-left: 7%;
   padding-right: 7%;
   padding-bottom: 2%;
@@ -25,6 +25,7 @@
 .logo {
   width: 70%;
 }
+
 
 @media only screen and (max-width: 900px) {
   .logo-container {

@@ -17,7 +17,7 @@ const Partners = () => {
     const { id, name, logo } = partner;
     
     return (
-      <Grid item xs={4} md={3} key={id}>
+      <Grid item xs={4} md={2} key={id}>
          <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${logo[0].url}`} alt={name} className={classes.logo}/>
       </Grid> 
     )
@@ -25,21 +25,13 @@ const Partners = () => {
 
   return (
   <div className={classes["logo-container"]}>
-    <Grid item container>
-      <Grid item md={3}
-        sx={{
-          [theme.breakpoints.down("lg")]: {
-          marginLeft: "auto",
-          marginRight: "auto"
-          }
-        }}
-      >
-        <div >
-          <h2 data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true">Collaboration with <br /> forward-thinking <br /> organizations</h2>
+
+        <div className={classes["partners-text"]}>
+          <h2 data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true">Collaboration with <br/> forward-thinking organizations</h2>
           <RouterLink to="/about-us/partners" style={{textDecoration: "none"}}><p data-aos-duration="1000" data-aos="fade-right" data-aos-mirror="true" data-aos-delay="700" className={classes["title-reference"]}>Learn more about our partnership &rarr;</p></RouterLink>
         </div>
-      </Grid>
-      <Grid item md={9} container spacing={2}    
+    
+      <Grid item md={12} container spacing={2}    
         sx={{
         paddingLeft: "84px",
         textAlign: "center",
@@ -52,7 +44,7 @@ const Partners = () => {
       >
         {partnersList}
       </Grid>
-    </Grid>
+
   </div>
   )
 };

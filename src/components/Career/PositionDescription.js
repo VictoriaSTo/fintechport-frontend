@@ -25,7 +25,9 @@ const PositionDescription = () => {
       <div className={classes["position__description"]}>
         <p>{data.description}</p>
         <div className={classes["position__actions"]}>
+        <a href="mailto:hr@fintechport.com?subject=Job Application&body=Thank you for applying for the position at Fintechport. Please attach your resume and a cover letter. We will carefully review your application and get back to you soon." style={{textDecoration: "none"}}>
           <ContainedButtonEl action={"Apply"} />
+          </a>
         </div>
       </div>
     </React.Fragment>

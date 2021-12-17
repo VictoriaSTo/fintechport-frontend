@@ -10,6 +10,7 @@
 
 span {
   font-weight: 200;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
 }
 
 @keyframes moveInLeft {

@@ -10,7 +10,7 @@ import 'aos/dist/aos.css';
 
 
 const servicesList = services.map((service) => {
-  const { id, title, desc, icon} = service;
+  const { id, title, desc, icon, details} = service;
   return (
       <Grid 
         item 
@@ -19,14 +19,15 @@ const servicesList = services.map((service) => {
         lg={4} 
         key={id}
         sx={{
-          marginBottom: "4rem",
+          marginBottom: "4rem" 
         }}
       >
         <div data-aos-duration="1000" data-aos="fade-up">
-          {/* <div className={classes["service__card"]}> */}
+          {/* <div className={classes["service-card"]}> */}
             <div>{icon}</div>
-            <h3>{title}</h3>
-            <p>{desc}</p>
+            <h3 className={classes["service-card__title"]}>{title}</h3>
+            <p className={classes["service-card__text"]}>{desc}</p>
+            <p className={classes["service-card__details"]}>{details}</p>
           </div>
         {/* </div> */}
       </Grid>
@@ -36,23 +37,26 @@ const servicesList = services.map((service) => {
 const Services = () => {
   return (
     <Wrapper>
-      <h2 
-        className={classes["services__title"]} 
-        // data-aos-duration="2000" 
-        // data-aos="fade-up"
-      >
-        We offer a complete <br/> range of services
-      </h2>
-      <Grid 
-        container 
-        columnSpacing={{ xs: 1, sm: 4, md: 12 }}
-        sx={{
-          textAlign: "center", 
-          paddingTop: "5%",
-          paddingBottom: "5%"
-          }}>
-        {servicesList}
-      </Grid>
+      <div className={classes.services}>
+        <h2 
+          className={classes["services__title"]} 
+          // data-aos-duration="2000" 
+          // data-aos="fade-up"
+        >
+          We offer a complete <br/> range of services
+        </h2>
+        <Grid 
+          container 
+          columnSpacing={{ xs: 1, sm: 4, md: 6 }}
+          rowSpacing={{ xs: 1, sm: 4, md: 4 }}
+          sx={{
+            textAlign: "center", 
+            paddingTop: "5%",
+            paddingBottom: "5%"
+            }}>
+          {servicesList}
+        </Grid>
+      </div>
     </Wrapper>
   )
 };

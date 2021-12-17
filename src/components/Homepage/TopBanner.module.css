@@ -1,6 +1,6 @@
 .banner {
   display: flex;
-  height: 65vh;;
+  height: 70vh;;
   flex-direction: row;
   padding-bottom: 5%;
   padding-top: 1%;
@@ -12,24 +12,25 @@
 }
 
 .banner__text {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   align-items: center;
-  margin-top: 4%;
-  text-align: center;
-  padding-left: 18%;
-  padding-right: 18%;
-  padding-bottom: 2%;
+  text-align: justify;
 }
 
 .banner__text h1 {
-  font-size: 6.2rem;
-  font-family: Barlow;
+  font-size: 5.9rem;
   color: white;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
 }
 
 .banner__text p {
   color: white;
   text-shadow: 2px 2px 3px rgb(255 255 255 / 10%);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  padding-bottom: 2%;
   font-weight: 400;
   animation: moveInRight 1s ease-out;
 }

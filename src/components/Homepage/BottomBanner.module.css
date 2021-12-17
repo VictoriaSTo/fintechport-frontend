@@ -1,12 +1,12 @@
 .hero-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/conference.jpeg);
-  height: 50vh;
+  height: 60vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  display: flex;
+  display: flex; 
 }
 
 .hero-banner__text {
@@ -16,16 +16,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  width: 40%;
+  width: 70%;
 }
 
 .hero-banner__text h2 {
   position: relative;
-  color: #03d9d6;
+  color: white;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.4;
 }
 
 .hero-banner__text-sub {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 600px) {

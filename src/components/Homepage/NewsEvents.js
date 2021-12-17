@@ -29,6 +29,7 @@ const eventsList = eventsInfo.map((event) => {
   return (
     <Grid item key={id} md={4}
       sx={{
+        marginTop: "10%",
         [theme.breakpoints.down("md")]: {
           marginTop: "6%"}
       }}>

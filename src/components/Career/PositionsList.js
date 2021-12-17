@@ -53,7 +53,7 @@ const PositionsList = () => {
       <div className={classes["contact-us"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
         <h3>Become a part of our talent pool</h3>
         <p>Did you not find the job you were looking for but are still keen to join Board of Innovation? We’d love to have you as part of our talent pool in the different regions!</p>
-        <p>Contact us at<br/><span style={{color: "#03d9d6", fontWeight: "600"}}>hr@fintechport.com</span></p>
+        <p>Contact us at<br/><a href="mailto:hr@fintechport.com?subject=Job Application&body=Thank you for applying for the position at Fintechport. Please attach your resume and a cover letter. We will carefully review your application and get back to you soon." style={{color: "#03d9d6", fontWeight: "600", textDecoration: "none"}}>hr@fintechport.com</a></p>
       </div>
     </React.Fragment>
   )

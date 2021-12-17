@@ -18,12 +18,13 @@ html, body {
 
 h1 {
   font-size: 4.0rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 3.4rem;
   font-weight: 700;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif
 }
 
 h3 {
@@ -38,6 +39,6 @@ h4 {
 
 p {
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
 }

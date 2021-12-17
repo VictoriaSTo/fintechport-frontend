@@ -1,18 +1,38 @@
+.services {
+  padding-top: 2%;
+  padding-bottom: 4%;
+}
 .services__title {
   align-items: center;
   text-align: center;
   margin-bottom: 0%;
   padding-top: 5%;
   margin-top: 0%;
+  text-shadow: .5rem 1rem 2rem rgba(black, .2);
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
   /* animation: moveInBottom 1s 1.5s ease-out;
   animation-fill-mode: backwards; */
 }
 
-.service__card {
+.service-card {
   background: white;
   padding: 1.4rem;
   border-radius: 4px;
   box-shadow: 0 0 5px 0 rgb(60 65 140 / 8%), 0 5px 15px 0 rgb(60 65 140 / 10%);
+}
+
+.service-card__title {
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+}
+
+.service-card__text {
+  text-align: justify;
+}
+
+.service-card__details {
+  text-align: justify;
+  color: grey;
+  font-size: 1.4rem;
 }
 
 @keyframes moveInBottom {
