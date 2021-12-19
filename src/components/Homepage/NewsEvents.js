@@ -57,11 +57,12 @@ const NewsEvents = () => {
         paddingRight: "7%",
         paddingTop: "5%",
         paddingBottom: "10%",
-        background: "#f8f5f7"
+        background: "#f8f5f7",
+        marginTop: "12%"
         }}>
 
       {/* News */}
-      <Grid 
+      {/* <Grid 
         container 
         item 
         direction="column" 
@@ -70,15 +71,15 @@ const NewsEvents = () => {
       >
         <Grid item>
           <h3 
-            // data-aos-duration="1000" 
-            // data-aos="fade-up"
+            data-aos-duration="1000" 
+            data-aos="fade-up"
           >
             <ArticleIcon color="secondary" sx={{fontSize: "4rem", paddingRight: "1rem"}}/>
               Our News
             </h3>
         </Grid>
         {newsList}
-      </Grid>
+      </Grid> */}
 
       {/* Events */}
       <Grid 

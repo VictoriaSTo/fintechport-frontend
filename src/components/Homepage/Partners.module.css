@@ -1,3 +1,7 @@
+.partners-text {
+  text-align: left;
+}
+
 .title-reference {
   color: #03d9d6;
   margin-top: -2.5rem;
@@ -24,6 +28,12 @@
 
 .logo {
   width: 70%;
+  filter: grayscale(1);
+}
+
+.logo:hover {
+  filter: none;
+  width: 72%;
 }
 
 

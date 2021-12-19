@@ -19,17 +19,17 @@ const servicesList = services.map((service) => {
         lg={4} 
         key={id}
         sx={{
-          marginBottom: "4rem" 
+          marginBottom: "4rem"
         }}
       >
         <div data-aos-duration="1000" data-aos="fade-up">
-          {/* <div className={classes["service-card"]}> */}
+          <div className={classes["service-card"]}>
             <div>{icon}</div>
             <h3 className={classes["service-card__title"]}>{title}</h3>
             <p className={classes["service-card__text"]}>{desc}</p>
             <p className={classes["service-card__details"]}>{details}</p>
           </div>
-        {/* </div> */}
+        </div>
       </Grid>
   )
 })
@@ -47,7 +47,7 @@ const Services = () => {
         </h2>
         <Grid 
           container 
-          columnSpacing={{ xs: 1, sm: 4, md: 6 }}
+          columnSpacing={{ xs: 1, sm: 4, md: 8 }}
           rowSpacing={{ xs: 1, sm: 4, md: 4 }}
           sx={{
             textAlign: "center", 

@@ -1,5 +1,6 @@
 import classes from './BottomBanner.module.css';
 import ContainedButtonEl from '../UI/ContainedButton';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const Banner = () => {
   return (

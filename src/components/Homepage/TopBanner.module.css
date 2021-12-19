@@ -14,14 +14,14 @@
 .banner__text {
   position: absolute;
   top: 44%;
-  left: 50%;
+  left: 38%;
   transform: translate(-50%, -50%);
   align-items: center;
   text-align: justify;
 }
 
 .banner__text h1 {
-  font-size: 5.9rem;
+  font-size: 6.9rem;
   color: white;
   font-family: archiabold,"DM Sans",Helvetica,sans-serif;
 }
