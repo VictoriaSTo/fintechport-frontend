@@ -29,7 +29,7 @@ const ManagmentList = () => {
   <WrapperNoColor>
     <div className={classes["title-container"]}>
       <h2>LEADERSHIP</h2>
-      <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.</p>
+      <p>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
     </div>
     <Grid container spacing={2}>
       {managersList}

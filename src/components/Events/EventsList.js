@@ -31,7 +31,7 @@ const EventsList = () => {
               if (category === "upcoming") {
                 return (
                   <Grid item xs={12} md={4}>
-                    <Card  key={id} className={classes["event"]}>
+                    <Card  key={id} className={classes["event"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <CardMedia
                         component="img"
                         alt={title}
@@ -58,7 +58,7 @@ const EventsList = () => {
               if (category === "past") {
                 return (
                   <Grid item xs={12} md={4} className={classes["event"]}>
-                    <Card key={id}>
+                    <Card key={id} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <CardMedia
                         component="img"
                         alt={title}

@@ -17,7 +17,11 @@ export default function MediaCard(props) {
       sx={{ 
         maxWidth: 345, 
         marginBottom: "5%", 
-        marginTop: "5%" 
+        marginTop: "5%",
+        filter: "drop-shadow(0px 2px 6px rgba(68, 68, 68, 0.2))",
+        ":hover": {
+          filter: "drop-shadow(0px 4px 6px black)"
+        }
       }}>
       <CardMedia
         component="img"
