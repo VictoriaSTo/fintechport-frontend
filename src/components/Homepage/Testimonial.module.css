@@ -1,4 +1,4 @@
-.hero-banner {
+.section-testimonial {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/conference.jpeg);
   height: 60vh;
   background-attachment: fixed;
@@ -9,7 +9,7 @@
   display: flex; 
 }
 
-.hero-banner__text {
+.testimonial__text {
   text-align: center;
   position: absolute;
   top: 50%;
@@ -19,7 +19,7 @@
   width: 70%;
 }
 
-.hero-banner__text h2 {
+.testimonial__text-primary {
   position: relative;
   color: white;
   font-weight: 300;
@@ -27,14 +27,14 @@
   line-height: 1.4;
 }
 
-.hero-banner__text-sub {
+.testimonial__text-sub {
   font-size: 1.8rem;
   font-weight: 600;
   color: #03d9d6;
 }
 
 @media only screen and (max-width: 600px) {
-  .hero-banner__text {
+  .testimonial__text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

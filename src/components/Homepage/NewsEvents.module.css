@@ -1,25 +1,28 @@
-/* News */
-
-.news__subtitle {
-  color: grey;
-  font-weight: 300;
-  font-family: Barlow;
-  font-size: 1.4rem;
-  opacity: 0.8;
-  padding-left: 2%;
-}
-
-.link {
-  color: #08D9D6;
-}
-
 /* Events */
+
+.section-events {
+  padding: 3% 7% 9% 7%;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(45deg, black, transparent), url(../../assets/blue/blue2.jpg);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.heading-secondary {
+  margin: 0;
+  padding: 2.4rem;
+  text-align: center;
+  color: #03d9d6;
+}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 4px;
   position: relative;
+  text-align: left;
 }
 
 .card:hover {
@@ -36,6 +39,7 @@
   width: 100%; 
   min-height: 260px;
   object-fit: cover;
+  max-height: 260px;
 }
 
 .card__text {
@@ -56,6 +60,7 @@
   margin-top: 8px;
   margin-bottom: 0px;
   font-weight: 400;
+  color: #03d9d6;
 }
 
 .card__text--small {
@@ -64,5 +69,17 @@
   font-size: 14px;
 }
 
+/* News */
 
+/* .news__subtitle {
+  color: grey;
+  font-weight: 300;
+  font-family: Barlow;
+  font-size: 1.4rem;
+  opacity: 0.8;
+  padding-left: 2%;
+}
 
+.link {
+  color: #08D9D6;
+} */

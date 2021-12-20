@@ -1,29 +1,26 @@
-.partners-text {
+.section-partners {
+  text-align: center;
+  align-items: center;
+  padding: 5% 7% 10% 7%;
+  position: relative;
+}
+
+.heading-box {
   text-align: left;
 }
 
-.title-reference {
+.link {
   color: #03d9d6;
-  margin-top: -2.5rem;
+  margin-top: -2.4rem;
   font-weight: 400;
   transition: all .2s;
 }
 
-.title-reference:hover {
+.link:hover {
   box-shadow: 0 1rem 2rem rgba(#000, .15);
   transform: translateY(-2px);
   cursor: pointer;
   font-weight: 500;
-}
-
-.logo-container {
-  height: 340px;
-  text-align: center;
-  align-items: center;
-  padding-top: 7%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding-bottom: 2%;
 }
 
 .logo {
@@ -36,21 +33,22 @@
   width: 72%;
 }
 
-
 @media only screen and (max-width: 900px) {
-  .logo-container {
+  .section-partners {
     margin-left: auto;
     margin-right: auto;
-    height: 640px;
+    height: fit-content;
   }
 }
 
 @media only screen and (max-width: 540px) {
-  .logo-container {
-    height: 360px;
-    padding-right: 4%;
-    padding-left: 4%;
-    padding-bottom: 44%;
+  .section-partners {
+    height: fit-content;
+    padding: 0% 7%;
+  }
+
+  .heading-box {
+    text-align: center;
   }
 
   .logo {

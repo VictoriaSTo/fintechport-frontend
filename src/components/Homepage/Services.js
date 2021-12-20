@@ -23,11 +23,11 @@ const servicesList = services.map((service) => {
         }}
       >
         <div data-aos-duration="1000" data-aos="fade-up">
-          <div className={classes["service-card"]}>
+          <div className={classes["service-box"]}>
             <div>{icon}</div>
-            <h3 className={classes["service-card__title"]}>{title}</h3>
-            <p className={classes["service-card__text"]}>{desc}</p>
-            <p className={classes["service-card__details"]}>{details}</p>
+            <h3 className={classes["service-box__title"]}>{title}</h3>
+            <p className={classes["service-box__text"]}>{desc}</p>
+            <p className={classes["service-box__comments"]}>{details}</p>
           </div>
         </div>
       </Grid>
@@ -36,10 +36,8 @@ const servicesList = services.map((service) => {
 
 const Services = () => {
   return (
-    <Wrapper>
-      <div className={classes.services}>
-        <h2 
-          className={classes["services__title"]} 
+      <div className={classes["section-services"]}>
+        <h2 className={classes["heading-secondary"]} 
           // data-aos-duration="2000" 
           // data-aos="fade-up"
         >
@@ -57,7 +55,6 @@ const Services = () => {
           {servicesList}
         </Grid>
       </div>
-    </Wrapper>
   )
 };
 

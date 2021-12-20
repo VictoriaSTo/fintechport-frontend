@@ -1,4 +1,4 @@
-.banner {
+.header {
   display: flex;
   height: 70vh;;
   flex-direction: row;
@@ -11,22 +11,21 @@
   position: relative;
 }
 
-.banner__text {
+.header__text-box {
   position: absolute;
   top: 44%;
   left: 38%;
   transform: translate(-50%, -50%);
   align-items: center;
-  text-align: justify;
 }
 
-.banner__text h1 {
+.heading-primary h1 {
   font-size: 6.9rem;
   color: white;
   font-family: archiabold,"DM Sans",Helvetica,sans-serif;
 }
 
-.banner__text p {
+.heading-primary--sub {
   color: white;
   text-shadow: 2px 2px 3px rgb(255 255 255 / 10%);
   font-size: 1.8rem;
@@ -35,7 +34,7 @@
   animation: moveInRight 1s ease-out;
 }
 
-.banner__buttons {
+.header__btn-box {
   animation: moveInBottom 1s 1s ease-out;
   animation-fill-mode: backwards;
 }
@@ -63,31 +62,30 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .banner {
+  .header {
     display: block;
     padding-bottom: 10%;
   }
 
-  .banner__text {
+  .header__text-box {
     margin: 0px;
-    padding-left: 7%;
-    padding-right: 7%;
+    top: 50%;
+    left: 50%;
+    width: 86%;
   }
 
-  .banner__text p {
+  .heading-primary--sub {
     font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 540px) {
-  .banner__text {
-    margin-top: 20%;
+  .header__text-box {
     align-items: center;
     text-align: center;
-    margin-right: 0px;
   }
 
-  .banner__text h1 {
+  .heading-primary h1 {
     font-size: 4.4rem;
     font-family: Barlow;
   }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import TopBanner from '../components/Homepage/TopBanner';
 import ApplicationForm from '../components/Homepage/ApplicationForm';
-import BottomBanner from '../components/Homepage/BottomBanner';
+import Testimonial from '../components/Homepage/Testimonial';
 import Services from '../components/Homepage/Services';
 import Partners from '../components/Homepage/Partners';
 import NewsEvents from '../components/Homepage/NewsEvents';
@@ -12,7 +12,7 @@ const Home = () => {
     <React.Fragment>
       <TopBanner />
       <Services />
-      <BottomBanner />
+      <Testimonial />
       <Partners />
       {/* <ApplicationForm /> */}
       <NewsEvents />

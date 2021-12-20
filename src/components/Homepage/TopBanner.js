@@ -9,11 +9,13 @@ import ContainedButtonEl from '../UI/ContainedButton';
 
 const TopBanner = () => {
   return (
-    <div className={classes.banner}>
-      <div className={classes["banner__text"]}>
-        <TypedReactHook />
-        <p>FinTechPort is designed to help high-level talent and teams get support for government affairs, business promotion, and innovation development in Mainland China</p>
-        <div className={classes["banner__buttons"]}>
+    <div className={classes["header"]}>
+      <div className={classes["header__text-box"]}>
+        <div className={classes["heading-primary"]}>
+          <TypedReactHook />
+          <p className={classes["heading-primary--sub"]}>FinTechPort is designed to help high-level talent and teams get support for government affairs, business promotion, and innovation development in Mainland China</p>
+        </div>
+        <div className={classes["header__btn-box"]}>
           <ContainedButtonEl component={RouterLink} to="/contacts" action={"Contact Now"} />
           <OutlinedButtonEl component={RouterLink} to="/about-us/fintech-hub-of-sz" action={"Learn More"} />
         </div>
