@@ -1,11 +1,11 @@
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/event.jpeg);
-  height: 70vh;
-  background-position: center;
-  background-repeat: no-repeat;
+  text-align: center;
+  background-image: url(../../assets/office.jpg);
+  background-position: bottom left;
   background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
   position: relative;
-  display: flex;
 }
 
 .hero-text {

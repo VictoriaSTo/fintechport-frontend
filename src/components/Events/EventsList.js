@@ -20,20 +20,18 @@ const EventsList = () => {
 
   return (
     <React.Fragment>
-      <Banner />
+      <div className={classes["events-banner"]}></div>
       <Wrapper>
-        <div className={classes.articles}>
-          <div className={classes["articles--flex"]}>
-            <h3 className={classes["articles__category"]}>Upcoming Events</h3>
+        <div className={classes["event-box"]}>
+            <h1 className={classes["heading-primary"]}>Upcoming Events</h1>
             {/* <Calendar /> */}
-          </div>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
               const { id, title, image, date, place, description, category, link} = event;
               if (category === "upcoming") {
                 return (
                   <Grid item xs={12} md={4}>
-                    <Card sx={{ maxWidth: 345 }} key={id} className={classes.article}>
+                    <Card  key={id} className={classes["event"]}>
                       <CardMedia
                         component="img"
                         alt={title}
@@ -41,9 +39,9 @@ const EventsList = () => {
                         image={`${apiUrl}${image.url}`}
                       />
                       <CardContent>
-                        <h3 className={classes["article__title"]}>{title}</h3>
-                        <p className={classes["article__subtitle--blue"]}>{date}</p>
-                        <p className={classes["article__subtitle"]}>{place}</p>
+                        <h2 className={classes["event__title"]}>{title}</h2>
+                        <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
+                        <h3 className={classes["event__subtitle"]}>{place}</h3>
                         <p>{description}</p>
                       </CardContent>
                     </Card>
@@ -52,15 +50,15 @@ const EventsList = () => {
               }
             })}
           </Grid>
-          <div className={classes["article__divider"]} />
-          <h3 className={classes.subtitle}>Event Gallery</h3>
+          <div className={classes["divider"]} />
+          <h1 className={classes["heading-primary"]}>Past Events</h1>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
               const { id, title, image, date, place, description, category} = event;
               if (category === "past") {
                 return (
-                  <Grid item xs={12} md={4}>
-                    <Card sx={{ maxWidth: 345 }} key={id}>
+                  <Grid item xs={12} md={4} className={classes["event"]}>
+                    <Card key={id}>
                       <CardMedia
                         component="img"
                         alt={title}
@@ -68,9 +66,9 @@ const EventsList = () => {
                         image={`${apiUrl}${image.url}`}
                       />
                       <CardContent>
-                      <h3 className={classes["article__title"]}>{title}</h3>
-                        <p className={classes["article__subtitle--blue"]}>{date}</p>
-                        <p className={classes["article__subtitle"]}>{place}</p>
+                      <h2 className={classes["event__title"]}>{title}</h2>
+                        <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
+                        <h3 className={classes["event__subtitle"]}>{place}</h3>
                         <p>{description}</p>
                       </CardContent>
                     </Card>
