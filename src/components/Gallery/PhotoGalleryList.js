@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 
-import Wrapper from '../UI/WrapperNoColor';
 import classes from './PhotoGalleryList.module.css';
 import useFetch from '../../hooks/useFetch'
 
@@ -14,12 +13,12 @@ const PhotoGalleryList = () => {
   console.log(data)
 
   return (
-    <Wrapper className={classes.gallery}>
-      <div className={classes["gallery__title"]}>
-        <h2>SUCCESSFULL COLLABORATIONS</h2>
-        <p>Confidential contents for your membership. Please do NOT repost this webpage.</p>
+    <div className={classes.gallery}>
+      <div className={classes["gallery__title-box"]}>
+        <h1 className={classes["gallery__title"]}>A portfolio of <br/> collaboration & innovation</h1>
+        <p className={classes["gallery__subtitle"]}>We connect with talants, start-ups and organizations in a variety of ways. Explore our network of more than 500 contacts. </p>
       </div>
-      <div className={classes.gallery} data-aos-duration="1000" data-aos="fade-right" data-aos-once="true">
+      <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
       <Grid container spacing={8}>
          {data.map((photo) => {
           const {id, name, image, title, description } = photo
@@ -37,7 +36,7 @@ const PhotoGalleryList = () => {
           })}
       </Grid>
       </div>
-    </Wrapper>
+    </div>
   )
 }
 

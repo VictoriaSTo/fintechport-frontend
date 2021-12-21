@@ -1,3 +1,11 @@
+.partners {
+padding: 2% 14% 4% 14%;
+}
+
+.partners-gallery-category {
+  text-align: justify;
+}
+
 .title {
   text-align: center;
 }
@@ -18,13 +26,17 @@
   text-align: center;
 }
 
-.divider {
+.partners__divider {
   width: 100%;
   border: 1px solid rgba(128, 128, 128, 0.2);
   margin: 0% auto 4% auto;
 }
 
 @media only screen and (max-width: 900px) {
+  .partners__title {
+    text-align: center;
+  }
+
   .logo {
     text-align: center;
     align-items: center;

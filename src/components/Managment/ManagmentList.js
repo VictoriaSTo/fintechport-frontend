@@ -16,7 +16,7 @@ const ManagmentList = () => {
   const managersList = data.map((manager) => {
     return (
         <Grid item xs={12} md={4} key={manager.id}>
-          <div data-aos-duration="1000" data-aos="zoom-in" data-aos-once="true">
+          <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
             <ManagerCard manager={manager}/>
           </div>
         </Grid>
@@ -26,15 +26,15 @@ const ManagmentList = () => {
   return (
 <React.Fragment>
   {/* <ManagerDetails /> */}
-  <WrapperNoColor>
+  <div className={classes["section-managment"]}>
     <div className={classes["title-container"]}>
-      <h2>LEADERSHIP</h2>
-      <p>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
+      <h1 className={classes["title"]}>Leadership</h1>
+      <p className={classes["subtitle"]}>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
     </div>
     <Grid container spacing={2}>
       {managersList}
     </Grid>
-  </WrapperNoColor>
+  </div>
 </React.Fragment>
   )
 };
