@@ -91,7 +91,7 @@ const Header = (props) => {
   const routes = useMemo(() => [
     {name: "Home", link: "/", activeIndex: "one"}, 
     {name: "Innovation Lab", link: "/innovation-lab", activeIndex: "two"}, 
-    {name: "Submit an Idea", link: "/submission-form", activeIndex: "three"}, 
+    {name: "Apply", link: "/submission-form", activeIndex: "three"}, 
     {name: "Events", link: "/tech-events", activeIndex: "four"},
     {name: "About Us", link: "/about-us", activeIndex: "five"},
     {name: "Our Contacts", link: "/contacts", activeIndex: "six"},
@@ -187,7 +187,7 @@ const Header = (props) => {
         />
         <Tab 
           value="three" 
-          label="Submit an Idea" 
+          label="Apply" 
           className={classes.tab}
           component={RouterLink}
           to="/submission-form"
@@ -224,10 +224,10 @@ const Header = (props) => {
           sx={{fontSize: "1.4rem"}}
         />
       </Tabs>
-      <Stack spacing={2} direction="row">
+      {/* <Stack spacing={2} direction="row">
         <ContainedButtonEl action={"Log In"} component={RouterLink} to="/login"/>
         <OutlinedButtonEl action={"Sign Up"} component={RouterLink} to="/signup"/>
-      </Stack>
+      </Stack> */}
       <Menu 
         id="about-us-menu" 
         anchorEl={aboutMenuAnchorEl} 
@@ -306,7 +306,7 @@ const Header = (props) => {
             component={RouterLink} to="/submission-form"
           >
             <ListItemText>
-              Submit an Idea
+              Apply
             </ListItemText>
           </ListItem>
 
@@ -419,7 +419,7 @@ const Header = (props) => {
               Our Contacts
             </ListItemText>
           </ListItem>
-          <ListItem 
+          {/* <ListItem 
             onClick={() => {setOpenDrawer(false); props.setHeaderValue("one"); props.setSelectedAboutMenuIndex(null)}} 
             button 
             component={RouterLink} to="/signup"
@@ -436,7 +436,7 @@ const Header = (props) => {
             <ListItemText>
               Log In
             </ListItemText>
-          </ListItem>
+          </ListItem> */}
         </List>
       </SwipeableDrawer>
       <IconButton 

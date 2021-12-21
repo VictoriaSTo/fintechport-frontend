@@ -29,6 +29,7 @@ const isNotEmpty = (value) => value.trim() !== '';
 const isEmail = (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value)
 const isPhoneNumber = (value) => /^((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2[1-689])|9[0-58]|8[1246]|6[0-6]|5[1-8]|4[013-9]|3[0-469]|2[70]|7|1)(?:\W*\d){0,13}\d$/.test(value)
 const isNotMinimum = (value) => value.trim().length >= 30;
+const isWebsite = (value) => value.includes(".");
 
 const ApplicationForm = (props) => {
   const {
@@ -95,6 +96,14 @@ const ApplicationForm = (props) => {
     inputBlurHandler: messageBlurHandler,
     reset: resetMessage,
   } = useInput(isNotMinimum);
+  const {
+    value: websiteValue,
+    isValid: websiteIsValid,
+    hasError: websiteHasError,
+    valueChangeHandler: websiteChangeHandler,
+    inputBlurHandler: websiteBlurHandler,
+    reset: resetWebsite,
+  } = useInput(isWebsite);
 
   let formIsValid = false;
 
@@ -163,7 +172,8 @@ const ApplicationForm = (props) => {
 
   return (
     <div className={classes.form}>
-      <h2>Get In Touch</h2>
+      <h2>Apply to the Fintechport</h2>
+      <p>We'd love to help you get started with the Fintechport! Please fill out and submit the form below</p>
       <form onSubmit={submitHandler}>
         <Grid container columnSpacing={6} rowSpacing={4}>
           <Grid item xs={12} md={6}>
@@ -295,6 +305,38 @@ const ApplicationForm = (props) => {
             />
           </Grid>
           <Grid item xs={12} md={6}>
+            <TextField
+              error={countryHasError}
+              helperText={countryHasError ? "Please enter your country" : ""}
+              required 
+              fullWidth 
+              id="Country"
+              label="Country" 
+              value={countryValue} 
+              onChange={countryChangeHandler} 
+              onBlur={countryBlurHandler} 
+              variant="filled" 
+              size="small"
+              sx={[
+                {'& .MuiFormHelperText-root': {
+                  fontFamily: "Barlow",
+                  fontSize: "1.4rem",
+                },
+                '& .MuiInputLabel-root': {
+                    fontFamily: "Barlow",
+                    fontSize: "1.8rem"
+                },
+                '& .MuiFilledInput-input': {
+                  fontSize: "1.8rem",
+                  color: "black"
+                },
+                '& label.Mui-focused': {
+                  color: theme.palette.common.lightBlue,
+                }}
+              ]}
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <TextField 
               error={jobTitleHasError}
               helperText={jobTitleHasError ? "Please enter your job title" : ""}
@@ -330,7 +372,7 @@ const ApplicationForm = (props) => {
             <TextField 
               fullWidth 
               id="Organization"
-              label="Organization" 
+              label="Company Name" 
               value={organizationValue} 
               onChange={organizationChangeHandler} 
               onBlur={organizationBlurHandler} 
@@ -357,15 +399,14 @@ const ApplicationForm = (props) => {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              error={countryHasError}
-              helperText={countryHasError ? "Please enter your country" : ""}
-              required 
+              // error={websiteHasError}
+              // helperText={websiteHasError ? "Please enter your website" : ""}
               fullWidth 
-              id="Country"
-              label="Country" 
-              value={countryValue} 
-              onChange={countryChangeHandler} 
-              onBlur={countryBlurHandler} 
+              id="Website"
+              label="Company Website" 
+              value={websiteValue} 
+              onChange={websiteChangeHandler} 
+              onBlur={websiteBlurHandler} 
               variant="filled" 
               size="small"
               sx={[

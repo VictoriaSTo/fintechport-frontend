@@ -49,7 +49,7 @@ function App() {
           <Route exact path="/tech-connect/news/:id" element={<NewsArticle />} />
           {/* To delete or save */}
           <Route exact path="/about-us" element={<AboutUs />} />
-          {/* <Route exact path="/about-us/fintech-hub-of-sz" element={<FintechHub />} /> */}
+          <Route exact path="/about-us/fintech-hub-of-sz" element={<FintechHub />} />
           <Route exact path="/about-us/gallery" element={<Gallery />} />
           <Route exact path="/about-us/open-positions" element={<OpenPositions />} />
           <Route exact path="/about-us/organisation-managment" element={<OrganisationManagment />} />

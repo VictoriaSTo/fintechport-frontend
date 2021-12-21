@@ -63,4 +63,8 @@
   .title p {
     width: 100%;
   }
+
+  .gallery__subtitle {
+    margin-bottom: 8%;
+  }
 }

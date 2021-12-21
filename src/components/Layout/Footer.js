@@ -170,7 +170,7 @@ const Footer = (props) => {
               FINTECHPORT LTD.
             </Grid>
             <Grid item className={classes.text} sx={{width: "50%"}}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing.
+              Leading talent & startup development platform
             </Grid>
             <Grid spacing={2} container sx={{paddingTop: "12px", paddingLeft: "16px"}}>
               <Grid item>

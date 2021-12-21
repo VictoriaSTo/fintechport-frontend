@@ -3,12 +3,6 @@ text-align: center;
 margin-top: 5%;
 }
 
-.position__title h3 {
-  text-transform: uppercase;
-  color: #08D9D6;
-  margin-bottom: 0%;
-}
-
 .position__title h4 {
   text-transform: uppercase;
   color: #797979;
@@ -30,9 +24,11 @@ margin-top: 5%;
 .position__description {
   padding: 2% 24% 10% 24%;
   background-color: #F8F5F7;
+  text-align: justify;
 }
 
 .position__actions {
+  margin-top: 6%;
   align-items: center;
   text-align: center;
 }

@@ -1,6 +1,8 @@
+import FintechportHub from "../components/FintechportHub/FintechportHub";
+
 const FintechHub = () => {
   return (
-    <h1>FintechHub</h1>
+    <FintechportHub />
   )
 };
 

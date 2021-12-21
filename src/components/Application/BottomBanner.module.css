@@ -1,0 +1,8 @@
+.application-banner {
+  text-align: center;
+  background-image: url(../../assets/handshake.jpg);
+  background-position: center left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+}

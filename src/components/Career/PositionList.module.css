@@ -1,3 +1,12 @@
+.jobs-banner{
+  text-align: center;
+  background-image: url(../../assets/career/1.jpg);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+}
+
 .banner {
   display: flex;
   padding: 7% 7% 7% 7%;
@@ -36,7 +45,7 @@
 .job__title {
   text-transform: uppercase;
   color: #08D9D6;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -47,7 +56,11 @@
 
 .contact-us {
   padding: 2% 18% 2% 18%;
-  text-align: center;
+  text-align: left;
+}
+
+.contact-us h4 {
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -61,6 +74,11 @@
 
 
 @media only screen and (max-width: 900px) {
+  .jobs-banner {
+    background-size: contain;
+    height: 24vh;
+  }
+
   .banner {
     display: block;
     padding: 7% 0% 7% 0%;
@@ -89,6 +107,6 @@
   .contact-us {
     margin: 0px 0px 30px 0px;
     padding: 20px 30px 30px 30px;
-    text-align: left;
+    text-align: center;
   }
 }
