@@ -1,34 +1,43 @@
+import useFetch from '../../hooks/useFetch';
+
 import Grid from '@mui/material/Grid';
 import theme from '../UI/Theme';
-import EventIcon from '@mui/icons-material/Event';
+// import EventIcon from '@mui/icons-material/Event';
 
 import classes from './NewsEvents.module.css';
-import eventsInfo from '../Events/eventsInfo';
+// import eventsInfo from '../Events/eventsInfo';
 
-
-const eventsList = eventsInfo.map((event) => {
-  const { id, title, img, date, place } = event;
-  return (
-    <Grid item key={id} md={4}
-      sx={{
-        marginTop: "4%",
-        [theme.breakpoints.down("md")]: {
-          marginTop: "6%"}
-      }}>
-      <div data-aos-duration="1000" data-aos="fade-up">
-        <div className={classes["card"]}>
-          <img className={classes["card__image"]} src={img} alt={title} />
-          <div className={classes["card__text"]}>
-            <p className={classes["card__text--medium"]}>{title}</p>
-            <p className={classes["card__text--small"]}>{date}</p>
-          </div>
-        </div>
-      </div>
-    </Grid>
-  )
-})
 
 const NewsEvents = () => {
+  const apiUrl = 'http://localhost:1337';
+  const { loading, error, data } = useFetch(`${apiUrl}/events`);
+
+  if (loading) return <p>Loading ...</p>
+  if (error) return <p>Error</p>
+
+  const eventsList = data.map((event) => {
+    const { id, title, image, date, place } = event;
+    return (
+      <Grid item key={id} md={4}
+        sx={{
+          marginTop: "4%",
+          [theme.breakpoints.down("md")]: {
+            marginTop: "6%"}
+        }}>
+        <div data-aos-duration="1000" data-aos="fade-up">
+          <div className={classes["card"]}>
+            <img className={classes["card__image"]} src={`${apiUrl}${image.url}`} alt={title} />
+            <div className={classes["card__text"]}>
+              <p className={classes["card__text--medium"]}>{title}</p>
+              <p className={classes["card__text--small"]}>{date}</p>
+            </div>
+          </div>
+        </div>
+      </Grid>
+    )
+  })
+
+
   return (
     <div className={classes["section-events"]}>
       {/* <h2 className={classes["heading-secondary"]}> <EventIcon color="secondary" sx={{fontSize: "4rem", paddingRight: "1rem"}} />Join Our Events</h2> */}

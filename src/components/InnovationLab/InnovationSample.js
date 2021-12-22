@@ -4,15 +4,14 @@ import { Link as RouterLink} from "react-router-dom";
 import WrapperNoColor from '../UI/WrapperNoColor';
 import Wrapper from '../UI/Wrapper';
 import classes from './InnovationSample.module.css';
-import schema from '../../assets/schema.jpeg';
 import ContainedButton from '../UI/ContainedButton';
 import OutlinedButton from '../UI/OutlinedButton';
 
 const InnovationSample = () => {
   return (
     <React.Fragment>
-      <WrapperNoColor>
-        <article className={classes.header}>
+
+        {/* <article className={classes.header}>
           <img src={schema} alt="schema" className={classes["header__image"]}/>
           <div className={classes["header__text"]}>
             <h1>Ad eos saepe lucilius, noster postulant philosophia ea usu, qui dicta sadipscing te.</h1>
@@ -20,8 +19,15 @@ const InnovationSample = () => {
             <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.
               Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. </p>
           </div>
-        </article>
-        <article className={classes.text}>
+        </article> */}
+         <div className={classes["lab-header"]}>
+        <div className={classes["lab-header__text-box"]}>
+          <div className={classes["heading-primary"]}>
+            <h1>Innovation Lab</h1>
+          </div>
+        </div>
+      </div>
+        <article className={classes["text-section"]}>
           <p> 
             We don’t believe in forcing someone into a specific job function so consider the following responsibilities - in order of importance - as a starting point:
             <br/>
@@ -34,12 +40,11 @@ const InnovationSample = () => {
             Program preparation and design: You turn a brief into a detailed approach that is both flexible enough to survive the fuzzy front end of innovation while being robust enough to drive real impact (no theatre please).
           </p>
         </article>
-      </WrapperNoColor>
       <Wrapper>
         <article className={classes["call-to-action"]}>
           <div>
             <h2>Ready to get started?</h2>
-            <p>Sign up or contact us</p>
+            <p>Apply or contact us directly</p>
           </div>
           <div className={classes["call-to-action__buttons"]}>
             <ContainedButton component={RouterLink} to="/submission-form" action={"Apply"} />

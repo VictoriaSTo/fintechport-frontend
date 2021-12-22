@@ -20,7 +20,7 @@ const FintechportHub = () => {
         </div>
       </div>
       <div className={classes["text"]}>
-        <h2 className={classes["text-title"]}>About Fintechport</h2>
+        <h2 className={classes["text-title"]}>About the Fintechport</h2>
         <p>The Fintechport, China's leading talent&startup development platform. It is located in QianHai, Shenzhen - the hub for digital technology in China. The Fintechport focuses on helping talents and technological startups from around the world enter China. We offer comprehensive services and resources from our mentors, partners and investors. With a team of committed professionals, the Fintechport is a "bridge" between innovations, entrepreneurship and venture capital investment. The robust and supportive network is our essential advantage.</p>
         <h3 className={classes["text-subtitle"]}>Our Objectives</h3>
         <p>To cultivate innovative solutions, promote entrepreneurs and attract global talent, partners and companies to China for cooperation and commercial possibilities.</p>
@@ -47,12 +47,12 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <WorkIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>
                     <h3 className={classes["adv__title"]}>Services</h3>
-                    <p className={classes["adv__text"]}>We provide a wide range of services and customize then to your startups’ needs.</p>
+                    <p className={classes["adv__text"]}>We provide a wide range of services and customize then to your startup needs.</p>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <CreditScoreIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>
@@ -87,7 +87,7 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <SchoolIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>
@@ -107,7 +107,7 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <CardGiftcardIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>
@@ -127,7 +127,7 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <WorkspacesIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>
@@ -147,7 +147,7 @@ const FintechportHub = () => {
                 marginBottom: "4rem"
               }}
             >
-              <div data-aos-duration="1000" data-aos="fade-up">
+              <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <div className={classes["advantage-box"]}>
                     <PeopleIcon className={classes["adv__icon"]}/>
                   <div className={classes["adv__text-container"]}>

@@ -1,3 +1,28 @@
+.lab-header{
+  text-align: center;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, .9), transparent), url(../../assets/schema.jpeg);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+  position: relative;
+}
+
+.lab-header__text-box {
+  position: absolute;
+  top: 44%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.heading-primary h1 {
+  font-size: 6.9rem;
+  color: #08D9D6;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+  text-shadow: .5rem 2rem 4rem rgba(0, 0, 0, .8);
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -42,6 +67,10 @@
   margin-top: 0.8rem;
 }
 
+.text-section {
+  padding: 2% 24% 5% 24%;
+  text-align: justify;
+}
 
 @media only screen and (max-width: 992px) {
   .header {

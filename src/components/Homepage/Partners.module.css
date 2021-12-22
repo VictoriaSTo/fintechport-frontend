@@ -25,12 +25,6 @@
 
 .logo {
   width: 70%;
-  filter: grayscale(1);
-}
-
-.logo:hover {
-  filter: none;
-  width: 72%;
 }
 
 @media only screen and (max-width: 900px) {
