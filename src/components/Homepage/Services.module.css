@@ -11,8 +11,16 @@
   cursor: default;
 }
 
-.service-box:hover {
-  transform: scale(1.05);
+.service-box:hover .service-box__title {
+  transform: scale(1.1);
+}
+
+.service-box:hover .service-box__icon {
+  transform: scale(1.1);
+}
+
+.service-box__icon {
+  transition: all .3s ease;
 }
 
 .service-box__title {
@@ -22,6 +30,7 @@
   margin-top: 0%;
   text-shadow: .5rem 1rem 2rem rgba(black, .2);
   font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+  transition: all .3s ease;
   /* animation: moveInBottom 1s 1.5s ease-out;
   animation-fill-mode: backwards; */
 }

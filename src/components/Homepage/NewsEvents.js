@@ -31,7 +31,7 @@ const eventsList = eventsInfo.map((event) => {
 const NewsEvents = () => {
   return (
     <div className={classes["section-events"]}>
-      <h2 className={classes["heading-secondary"]}> <EventIcon color="secondary" sx={{fontSize: "4rem", paddingRight: "1rem"}} />Join Our Events</h2>
+      {/* <h2 className={classes["heading-secondary"]}> <EventIcon color="secondary" sx={{fontSize: "4rem", paddingRight: "1rem"}} />Join Our Events</h2> */}
       <Grid container item direction="row" xs={12} md={12} spacing={6}>
         {eventsList}
       </Grid>

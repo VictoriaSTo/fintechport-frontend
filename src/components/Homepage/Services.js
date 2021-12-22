@@ -24,7 +24,7 @@ const servicesList = services.map((service) => {
       >
         <div data-aos-duration="1000" data-aos="fade-up">
           <div className={classes["service-box"]}>
-            <div>{icon}</div>
+            <div className={classes["service-box__icon"]}>{icon}</div>
             <h3 className={classes["service-box__title"]}>{title}</h3>
             <p className={classes["service-box__text"]}>{desc}</p>
             <p className={classes["service-box__comments"]}>{details}</p>

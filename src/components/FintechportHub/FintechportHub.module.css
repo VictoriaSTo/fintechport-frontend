@@ -1,14 +1,13 @@
 .header {
   display: flex;
-  height: 25vh;;
+  height: 40vh;;
   flex-direction: row;
-  padding-bottom: 5%;
-  padding-top: 1%;
   justify-content: space-between;
-  background-image: linear-gradient(45deg, black, transparent), url(../../assets/cp.jpeg);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, .5), transparent), url(../../assets/sh.jpg);
   background-size: cover;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
   position: relative;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 
 .header__text-box {
@@ -21,8 +20,9 @@
 
 .heading-primary h1 {
   font-size: 6.9rem;
-  color: white;
+  color: #08D9D6;
   font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+  text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .heading-primary--sub {
@@ -35,10 +35,26 @@
 }
 
 .text {
-  padding: 2% 24% 4% 24%;
+  padding: 2% 24% 2% 24%;
   text-align: justify;
 }
 
-.text-title {
-  /* text-align: center; */
+.section-advantages {
+  background-color: #f8f5f7;
+  padding: 1% 24% 0% 24%;
+}
+
+.advantage-box {
+  display: inline-flex;
+  text-align: justify;
+}
+
+.adv__icon {
+  font-size: 5rem !important;
+  color: #08D9D6;
+  padding-right: 8%;
+}
+
+.adv__title {
+  margin: 0;
 }
