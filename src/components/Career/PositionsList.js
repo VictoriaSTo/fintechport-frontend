@@ -7,14 +7,16 @@ import Wrapper from "../UI/Wrapper";
 import tech from "../../assets/tech.jpeg";
 import OutlinedButtonEl from "../UI/OutlinedButton";
 import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 
 const PositionsList = () => {
   const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch(`${apiUrl}/jobs`);
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   return (
     <React.Fragment>

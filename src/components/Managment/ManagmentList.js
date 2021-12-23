@@ -4,14 +4,16 @@ import ManagerCard from './ManagerCard';
 import classes from './ManagmentList.module.css';
 // import ManagerDetails from './ManagerDetails';
 import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 import { Grid } from '@mui/material';
 
 const ManagmentList = () => {
   const { loading, error, data } = useFetch('http://localhost:1337/managments');
   
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   const managersList = data.map((manager) => {
     return (

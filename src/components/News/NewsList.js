@@ -3,6 +3,7 @@ import { Link as RouterLink} from "react-router-dom";
 
 import Wrapper from '../UI/WrapperNoColor';
 import classes from './NewsList.module.css';
+import LoadingSpinner from '../UI/LoadingSpinner';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -10,13 +11,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import useFetch from '../../hooks/useFetch';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 const NewsList = () => {
   const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch(`${apiUrl}/last-news`);
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   console.log(data)
 

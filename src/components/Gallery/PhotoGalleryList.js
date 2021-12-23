@@ -1,14 +1,16 @@
 import { Grid } from "@mui/material";
 
 import classes from './PhotoGalleryList.module.css';
-import useFetch from '../../hooks/useFetch'
+import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 const PhotoGalleryList = () => {
   const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch(`${apiUrl}/photos`);
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   console.log(data)
 

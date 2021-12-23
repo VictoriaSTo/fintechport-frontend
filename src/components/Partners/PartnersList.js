@@ -2,6 +2,8 @@ import React from 'react';
 import classes from './PartnersList.module.css';
 import { Grid } from '@mui/material';
 import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 
 const PartnersList = () => {
@@ -9,8 +11,8 @@ const PartnersList = () => {
   const { loading, error, data } = useFetch(`${apiUrl}/partners`);
 
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   return (
     <div className={classes.partners}>

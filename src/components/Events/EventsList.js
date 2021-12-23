@@ -10,13 +10,15 @@ import Banner from './EventsListBanner';
 import Wrapper from '../UI/WrapperNoColor';
 import Calendar from '../UI/Calendar';
 import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerError from '../../pages/HelperPages/ServerError';
 
 const EventsList = () => {
   const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading) return <LoadingSpinner />
+  if (error) return <ServerError />
 
   return (
     <React.Fragment>
