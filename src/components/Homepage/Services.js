@@ -45,7 +45,7 @@ const Services = () => {
         </h2>
         <Grid 
           container 
-          columnSpacing={{ xs: 1, sm: 4, md: 8 }}
+          columnSpacing={{ xs: 1, sm: 4, md: 12 }}
           rowSpacing={{ xs: 1, sm: 4, md: 4 }}
           sx={{
             textAlign: "center", 

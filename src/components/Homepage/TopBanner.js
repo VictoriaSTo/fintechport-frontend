@@ -13,7 +13,7 @@ const TopBanner = () => {
       <div className={classes["header__text-box"]}>
         <div className={classes["heading-primary"]}>
           <TypedReactHook />
-          <p className={classes["heading-primary--sub"]}>FinTechPort is designed to help high-level talent and teams get support for government affairs, business promotion, and innovation development in Mainland China</p>
+          <p className={classes["heading-primary--sub"]}>FinTechPort is a leading platform designed to help high-level talent and teams get support for government affairs, business promotion, and innovation development in Mainland China</p>
         </div>
         <div className={classes["header__btn-box"]}>
           <ContainedButtonEl component={RouterLink} to="/contacts" action={"Contact Now"} />

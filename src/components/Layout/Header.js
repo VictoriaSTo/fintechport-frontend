@@ -90,7 +90,7 @@ const Header = (props) => {
   // Routes
   const routes = useMemo(() => [
     {name: "Home", link: "/", activeIndex: "one"}, 
-    {name: "Innovation Lab", link: "/innovation-lab", activeIndex: "two"}, 
+    {name: "Program", link: "/innovation-lab", activeIndex: "two"}, 
     {name: "Apply", link: "/submission-form", activeIndex: "three"}, 
     {name: "Events", link: "/tech-events", activeIndex: "four"},
     {name: "About Us", link: "/about-us", activeIndex: "five"},
@@ -179,7 +179,7 @@ const Header = (props) => {
         />
         <Tab 
           value="two" 
-          label="Innovation Lab" 
+          label="Program" 
           className={classes.tab}
           component={RouterLink}
           to="/innovation-lab"
@@ -295,7 +295,7 @@ const Header = (props) => {
             component={RouterLink} to="/innovation-lab"
           >
             <ListItemText>
-                Innovation Lab
+                Program
               </ListItemText>
           </ListItem>
 

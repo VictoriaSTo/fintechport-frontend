@@ -4,12 +4,14 @@ import { Link as RouterLink} from "react-router-dom";
 
 import classes from "./Partners.module.css";
 import useFetch from '../../hooks/useFetch';
+import LoadingSpinner from '../UI/LoadingSpinner';
+import OutlinedButtonEl from "../UI/OutlinedButton";
 
 const Partners = () => {
   const apiUrl = 'http://localhost:1337';
   const { loading, error, data } = useFetch('http://localhost:1337/partners');
 
-  if (loading) return <p>Loading ...</p>
+  if (loading) return <LoadingSpinner />
   if (error) return <p>Error</p>
 
   const partnersList = data.map((partner) => {
@@ -26,13 +28,13 @@ const Partners = () => {
   <div className={classes["section-partners"]}>
     <div className={classes["heading-box"]}>
       <h2 className={classes["heading-secondary"]}>We Partner With ...</h2>
-      <RouterLink to="/about-us/partners" style={{textDecoration: "none"}}><p className={classes["link"]} data-aos-duration="1000" data-aos="fade-bottom" data-aos-mirror="true" data-aos-delay="700">Learn more about our partnership &rarr;</p></RouterLink>
     </div>
     <Grid item container spacing={6}    
       sx={{
       paddingLeft: "84px",
       textAlign: "center",
-      paddingTop: "5%",
+      paddingTop: "2%",
+      paddingBottom: "6%",
       [theme.breakpoints.down("md")]: {
         paddingLeft: "7%",
         paddingRight: "7%",
@@ -40,6 +42,7 @@ const Partners = () => {
     >
       {partnersList}
     </Grid>
+    <OutlinedButtonEl component={RouterLink} action="Learn More" to="/about-us/partners"/>
   </div>
   )
 };

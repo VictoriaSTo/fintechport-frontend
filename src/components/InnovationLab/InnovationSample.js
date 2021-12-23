@@ -23,22 +23,56 @@ const InnovationSample = () => {
          <div className={classes["lab-header"]}>
         <div className={classes["lab-header__text-box"]}>
           <div className={classes["heading-primary"]}>
-            <h1>Innovation Lab</h1>
+            <h1>Programs</h1>
           </div>
         </div>
       </div>
         <article className={classes["text-section"]}>
-          <p> 
-            We don’t believe in forcing someone into a specific job function so consider the following responsibilities - in order of importance - as a starting point:
-            <br/>
-            You manage and grow key client accounts
-            <br/>
-            Strategic sparring partner: by asking the right question and sharing a clear point of view clients consider you as a go-to-sparring partner
-            Account management: you build on the great work we do and continuously look for other opportunities to help our clients.
-            You lead key complex client projects
-            <br/>
-            Program preparation and design: You turn a brief into a detailed approach that is both flexible enough to survive the fuzzy front end of innovation while being robust enough to drive real impact (no theatre please).
-          </p>
+          <h2>Fintechport Accelerator Program</h2>
+          <p>Fintechport's program is a set of support mechanisms for talents and startups who want to build a successful business by developing an innovative product.</p>
+          <p>In working with our clients, we have found that foreign founders and startups have similar needs, obstacles and challenges in building their businesses in China. Therefore, we have developed the three-month program that integrates the necessary procedures in a complete framework. The program will help you segment your market, develop your product, attract the right customers, partner, obtain financing, and get funded in mainland China.</p>
+          <p>The program offers fundraising opportunities, government affairs, legal and consulting assistance, marketing support, mentoring, and a co-working space.</p>
+          <p>We also understand that different projects need different amounts of support in different areas of their business. That's why we customize each program to the needs of the business.</p>
+        </article>
+        <article className={classes["process-section"]}>
+          <h3>Program Timeline</h3>
+          <ul>
+            <li>
+              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <div className={classes["process-detail"]}>
+                <h4>Phase 1</h4>
+                <p>Adjust product and market fit through rapid iteration</p>
+              </div>
+            </li>
+            <li>
+              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <div className={classes["process-detail"]}>
+                <h4>Phase 2</h4>
+                <p>Adjust product and market fit through rapid iteration</p>
+              </div>
+            </li>
+            <li>
+              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <div className={classes["process-detail"]}>
+                <h4>Phase 3</h4>
+                <p>Adjust product and market fit through rapid iteration</p>
+              </div>
+            </li>
+            <li>
+              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <div className={classes["process-detail"]}>
+                <h4>Phase 4</h4>
+                <p>Adjust product and market fit through rapid iteration</p>
+              </div>
+            </li>
+            <li>
+              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <div className={classes["process-detail"]}>
+                <h4>Phase 5</h4>
+                <p>Adjust product and market fit through rapid iteration</p>
+              </div>
+            </li>
+          </ul>
         </article>
       <Wrapper>
         <article className={classes["call-to-action"]}>

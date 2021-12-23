@@ -68,8 +68,30 @@
 }
 
 .text-section {
-  padding: 2% 24% 5% 24%;
+  padding: 2% 24% 2% 24%;
   text-align: justify;
+}
+
+.process-section {
+  text-align: center;
+}
+
+.process-section ul {
+  list-style: none;
+  text-align: center;
+}
+
+.process-section li {
+  display: inline-block;
+}
+
+.process-icon {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #bbb;
 }
 
 @media only screen and (max-width: 992px) {
