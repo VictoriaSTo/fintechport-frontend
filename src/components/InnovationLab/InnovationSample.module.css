@@ -8,6 +8,10 @@
   position: relative;
 }
 
+.banner-lab__image {
+  height: 300px;
+}
+
 .lab-header__text-box {
   position: absolute;
   top: 44%;

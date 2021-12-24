@@ -1,5 +1,4 @@
 import React from 'react';
-import WrapperNoColor from '../UI/WrapperNoColor';
 import ManagerCard from './ManagerCard';
 import classes from './ManagmentList.module.css';
 // import ManagerDetails from './ManagerDetails';

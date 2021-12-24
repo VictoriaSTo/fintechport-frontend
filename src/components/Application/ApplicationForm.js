@@ -1,12 +1,16 @@
 import React from 'react';
+
+// Material ui
 import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
 import theme from "../UI/Theme";
 
+// Project files
 import ContainedButtonEl from '../UI/ContainedButton';
 import classes from './ApplicationForm.module.css';
 import useInput from '../../hooks/useInput';
+
 
 // Parses the JSON returned by a network request
 const parseJSON = resp => (resp.json ? resp.json() : resp);
@@ -31,6 +35,7 @@ const isPhoneNumber = (value) => /^((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2
 const isNotMinimum = (value) => value.trim().length >= 30;
 const isWebsite = (value) => value.includes(".");
 
+// Form
 const ApplicationForm = (props) => {
   const {
     value: firstNameValue,
@@ -150,25 +155,8 @@ const ApplicationForm = (props) => {
     resetOrganization();
     resetCountry();
     resetMessage();
+    resetWebsite();
   };
-
-  const CustomizedTextField = styled(TextField)({
-    '& .MuiFormHelperText-root': {
-      fontFamily: "Barlow",
-      fontSize: "1.4rem",
-    },
-    '& .MuiInputLabel-root': {
-        fontFamily: "Barlow",
-        fontSize: "1.8rem"
-    },
-    '& .MuiFilledInput-input': {
-      fontSize: "1.8rem",
-      color: "black"
-    },
-    '& label.Mui-focused': {
-      color: theme.palette.common.lightBlue,
-    }
-  });
 
   return (
     <div className={classes.form}>
@@ -399,8 +387,6 @@ const ApplicationForm = (props) => {
           </Grid>
           <Grid item xs={12} md={6}>
             <TextField
-              // error={websiteHasError}
-              // helperText={websiteHasError ? "Please enter your website" : ""}
               fullWidth 
               id="Website"
               label="Company Website" 
@@ -428,7 +414,6 @@ const ApplicationForm = (props) => {
               ]}
             />
           </Grid>
-            {/* {applicationFields} */}
           <Grid item xs={12} md={12}>
             <TextField
               error={messageHasError}

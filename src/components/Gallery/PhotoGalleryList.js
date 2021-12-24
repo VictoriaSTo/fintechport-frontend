@@ -16,10 +16,8 @@ const PhotoGalleryList = () => {
 
   return (
     <div className={classes.gallery}>
-      <div className={classes["gallery__title-box"]}>
         <h1 className={classes["gallery__title"]}>A portfolio of <br/> collaboration & innovation</h1>
         <p className={classes["gallery__subtitle"]}>We connect with talants, start-ups and organizations in a variety of ways. Explore our network of more than 500 contacts. </p>
-      </div>
       <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
       <Grid container spacing={8}>
          {data.map((photo) => {

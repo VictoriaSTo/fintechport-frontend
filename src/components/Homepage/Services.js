@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 
 import classes from './Services.module.css';
-import Wrapper from '../UI/Wrapper';
 import services from './servicesInfo';
 
 import AOS from 'aos';

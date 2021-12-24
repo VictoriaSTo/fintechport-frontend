@@ -1,11 +1,11 @@
 import React from "react";
 import { Link as RouterLink} from "react-router-dom";
+
+// Material ui
 import { Grid } from "@mui/material";
 
+// Project files
 import classes from "./PositionList.module.css";
-import Wrapper from "../UI/Wrapper";
-import tech from "../../assets/tech.jpeg";
-import OutlinedButtonEl from "../UI/OutlinedButton";
 import useFetch from '../../hooks/useFetch';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import ServerError from '../../pages/HelperPages/ServerError';
@@ -20,16 +20,6 @@ const PositionsList = () => {
 
   return (
     <React.Fragment>
-      {/* <Wrapper>
-        <div className={classes.banner}>
-          <img src={tech} alt="tech jobs" className={classes["banner__photo"]} data-aos-duration="1000" data-aos="fade-right" data-aos-once="true" />
-          <div className={classes["banner__card"]} data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
-            <h1>Jobs</h1>
-            <p>Board of Innovation is building a team with superpowers. How are we doing it? By hiring top talent and creating a unique work environment.</p>
-          </div>
-        </div>
-      </Wrapper> */}
-
       <div className={classes["jobs-banner"]}></div>
       <div className={classes["jobs"]}>
         {data.map((job) => {
