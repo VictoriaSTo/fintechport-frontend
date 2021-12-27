@@ -5,6 +5,18 @@
   background-size: cover;
   background-attachment: fixed;
   height: 40vh;
+  margin-top: -5%;
+}
+
+.jobs-banner h1 {
+  color: white;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: .5rem 2rem 4rem rgba(0, 0, 0, .8);
+  padding-top: 7%;
+  padding-left: 7%;
+  text-align: left;
 }
 
 .banner {

@@ -24,7 +24,9 @@ const EventsList = () => {
 
   return (
     <React.Fragment>
-      <div className={classes["events-banner"]}></div>
+      <div className={classes["events-banner"]}>
+        <h1>Stay updated</h1>
+      </div>
       <Wrapper>
         <div className={classes["event-box"]}>
             <h1 className={classes["heading-primary"]}>Upcoming Events</h1>

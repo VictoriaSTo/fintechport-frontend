@@ -20,7 +20,9 @@ const PositionsList = () => {
 
   return (
     <React.Fragment>
-      <div className={classes["jobs-banner"]}></div>
+      <div className={classes["jobs-banner"]}>
+        <h1>Be a part of us</h1>
+      </div>
       <div className={classes["jobs"]}>
         {data.map((job) => {
               const { id, title, schedule, category} = job;

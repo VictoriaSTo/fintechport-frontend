@@ -12,17 +12,21 @@
 
 .header__text-box {
   position: absolute;
-  top: 44%;
+  top: 40%;
   left: 38%;
   transform: translate(-50%, -50%);
   align-items: center;
+  width: 60%;
 }
 
 .heading-primary h1 {
-  font-size: 6.9rem;
-  color: #08D9D6;
-  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+  color: white;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
   text-shadow: .5rem 2rem 4rem rgba(0, 0, 0, .8);
+  padding-top: 5%;
+  text-align: left;
 }
 
 .heading-primary--sub {

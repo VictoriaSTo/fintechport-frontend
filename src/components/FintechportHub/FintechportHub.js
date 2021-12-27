@@ -15,7 +15,7 @@ const FintechportHub = () => {
       <div className={classes["header"]}>
         <div className={classes["header__text-box"]}>
           <div className={classes["heading-primary"]}>
-            <h1>FinTech Hub of QianHai, Shenzhen</h1>
+            <h1>Tech Hub of QianHai, Shenzhen</h1>
           </div>
         </div>
       </div>

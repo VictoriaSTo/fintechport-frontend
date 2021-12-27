@@ -1,10 +1,22 @@
 .events-banner {
-  text-align: center;
-  background-image: url(../../assets/events/mic.jpg);
+  text-align: left;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(../../assets/events/mic.jpg);
   background-position-y: 170%;
   background-size: cover;
   background-attachment: fixed;
-  height: 40vh;
+  height: 45vh;
+  margin-top: -5%;
+}
+
+.events-banner h1 {
+  margin-bottom: 0%;
+  color: white;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: .5rem 2rem 4rem rgba(0, 0, 0, .8);
+  padding-top: 7%;
+  padding-left: 7%;
 }
 
 .event {
@@ -41,9 +53,9 @@
 }
 
 @media only screen and (max-width: 540px) {
-.events-banner {
-  height: 26vh;
-  background-size: contain;
-  background-position-y: top;
-}
+  .events-banner {
+    height: 24vh;
+    background-size: contain;
+    background-position-y: top;
+  }
 }

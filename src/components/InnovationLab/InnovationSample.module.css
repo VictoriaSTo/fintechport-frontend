@@ -18,11 +18,14 @@
   text-shadow: .5rem 2rem 4rem rgba(0, 0, 0, .8);
   padding-top: 7%;
   padding-left: 7%;
+  animation: moveInRight 1s ease-out;
 }
 
 .call-to-action__buttons {
   padding-top: 2%;
   padding-left: 7%;
+  animation: moveInBottom 1s 1s ease-out;
+  animation-fill-mode: backwards;
 }
 
 .text-section {
@@ -106,6 +109,29 @@
     transform: translate(-50%, -50%);
   }
 }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 
 @media only screen and (max-width: 992px) {
   .text-section {

@@ -18,7 +18,7 @@ const Partners = () => {
     const { id, name, logo } = partner;
     
     return (
-      <Grid item xs={4} md={2.2} key={id}>
+      <Grid item xs={6} md={2.2} key={id}>
          <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${logo[0].url}`} alt={name} className={classes.logo}/>
       </Grid> 
     )
@@ -27,7 +27,7 @@ const Partners = () => {
   return (
   <div className={classes["section-partners"]}>
     <div className={classes["heading-box"]}>
-      <h2 className={classes["heading-secondary"]}>We Partner With ...</h2>
+      <h2 className={classes["heading-secondary"]}>We Partner With</h2>
     </div>
     <Grid item container spacing={6}    
       sx={{
