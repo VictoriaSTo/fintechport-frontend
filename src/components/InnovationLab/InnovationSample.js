@@ -1,11 +1,16 @@
 import React from 'react';
 import { Link as RouterLink} from "react-router-dom";
 
-import WrapperNoColor from '../UI/WrapperNoColor';
 import Wrapper from '../UI/Wrapper';
 import classes from './InnovationSample.module.css';
 import ContainedButton from '../UI/ContainedButton';
 import OutlinedButton from '../UI/OutlinedButton';
+
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import LinkIcon from '@mui/icons-material/Link';
+import ScienceIcon from '@mui/icons-material/Science';
+import IosShareIcon from '@mui/icons-material/IosShare';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 const InnovationSample = () => {
   return (
@@ -38,38 +43,38 @@ const InnovationSample = () => {
           <h3>Program Timeline</h3>
           <ul>
             <li>
-              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <a href='#'><span className={classes["process-icon-box"]}><RocketLaunchIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
               <div className={classes["process-detail"]}>
                 <h4>Phase 1</h4>
-                <p>Adjust product and market fit through rapid iteration</p>
+                <p>Mapping key milestones for product and business development</p>
               </div>
             </li>
             <li>
-              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <a href='#'><span className={classes["process-icon-box"]}><LinkIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
               <div className={classes["process-detail"]}>
                 <h4>Phase 2</h4>
-                <p>Adjust product and market fit through rapid iteration</p>
+                <p>Product development support, including design, prototyping, and manufacturing</p>
               </div>
             </li>
             <li>
-              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <a href='#'><span className={classes["process-icon-box"]}><ScienceIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
               <div className={classes["process-detail"]}>
                 <h4>Phase 3</h4>
-                <p>Adjust product and market fit through rapid iteration</p>
+                <p>Creating a unified brand identity and developing marketing channels</p>
               </div>
             </li>
             <li>
-              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <a href='#'><span className={classes["process-icon-box"]}><IosShareIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
               <div className={classes["process-detail"]}>
                 <h4>Phase 4</h4>
-                <p>Adjust product and market fit through rapid iteration</p>
+                <p>Using our network of tech investors to help finance teams</p>
               </div>
             </li>
             <li>
-              <a href='#'><span className={classes["process-icon"]}></span></a>
+              <a href='#'><span className={classes["process-icon-box"]}><MonetizationOnIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
               <div className={classes["process-detail"]}>
                 <h4>Phase 5</h4>
-                <p>Adjust product and market fit through rapid iteration</p>
+                <p>Legal assistance, go-to-market guidance, and continuous network support</p>
               </div>
             </li>
           </ul>
