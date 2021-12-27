@@ -11,7 +11,7 @@ const Contacts = () => {
     <React.Fragment>
       <div className={classes["contacts-banner"]}></div>
       <Wrapper>
-        <h2>Contact Information</h2>
+        <h2 className={classes["contacts-title"]}>Contact Information</h2>
         <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>

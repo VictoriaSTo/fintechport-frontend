@@ -1,10 +1,14 @@
 .contacts-banner{
   text-align: center;
-  background-image: url(../assets/office.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../assets/office.jpg);
   background-position: bottom left;
   background-size: cover;
   background-attachment: fixed;
   height: 40vh;
+}
+
+.contacts-title {
+  text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

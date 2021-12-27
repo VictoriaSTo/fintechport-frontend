@@ -9,7 +9,7 @@ const SubmissionForm = () => {
     <React.Fragment>
       <Banner />
       <Form />
-      <BottomBanner />
+      {/* <BottomBanner /> */}
     </React.Fragment>
   )
 };
