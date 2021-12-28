@@ -1,11 +1,11 @@
 import { Grid } from "@mui/material";
 import theme from '../UI/Theme';
-import { Link as RouterLink} from "react-router-dom";
+// import { Link as RouterLink} from "react-router-dom";
 
 import classes from "./Partners.module.css";
 import useFetch from '../../hooks/useFetch';
 import LoadingSpinner from '../UI/LoadingSpinner';
-import OutlinedButtonEl from "../UI/OutlinedButton";
+// import OutlinedButtonEl from "../UI/OutlinedButton";
 
 const Partners = () => {
   const apiUrl = 'http://localhost:1337';
@@ -42,7 +42,7 @@ const Partners = () => {
     >
       {partnersList}
     </Grid>
-    <OutlinedButtonEl component={RouterLink} action="Learn More" to="/about-us/partners"/>
+    {/* <OutlinedButtonEl component={RouterLink} action="Learn More" to="/about-us/partners"/> */}
   </div>
   )
 };
