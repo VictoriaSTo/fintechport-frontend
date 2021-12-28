@@ -16,7 +16,7 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 import ServerError from '../../pages/HelperPages/ServerError';
 
 const EventsList = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
   if (loading) return <LoadingSpinner />

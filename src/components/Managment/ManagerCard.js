@@ -10,7 +10,7 @@ import { EmailRounded } from '@mui/icons-material';
 
 export default function MediaCard(props) {
   const { image, name, surname, position, email } = props.manager;
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   return (
     <Card 

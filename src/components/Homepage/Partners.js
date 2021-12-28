@@ -8,13 +8,13 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 // import OutlinedButtonEl from "../UI/OutlinedButton";
 
 const Partners = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch('http://localhost:1337/partners');
 
   if (loading) return <LoadingSpinner />
   if (error) return <p>Error</p>
 
-  const partnersList = data.map((partner) => {
+  const partnersList = data.length && data.map((partner) => { 
     const { id, name, logo } = partner;
     
     return (

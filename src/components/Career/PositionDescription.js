@@ -8,7 +8,7 @@ import ContainedButtonEl from '../UI/ContainedButton';
 const PositionDescription = () => {
 
   const { id } = useParams();
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/jobs/` + id);
 
   if (loading) return <p>Loading ...</p>

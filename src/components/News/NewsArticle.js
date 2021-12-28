@@ -10,7 +10,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const NewsArticle = () => {
   const { id } = useParams();
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/last-news/` + id);
 
   if (loading) return <p>Loading ...</p>

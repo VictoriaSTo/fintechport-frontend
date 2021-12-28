@@ -12,7 +12,7 @@ import ServerError from '../../pages/HelperPages/ServerError';
 
 
 const PositionsList = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/jobs`);
 
   if (loading) return <LoadingSpinner />
