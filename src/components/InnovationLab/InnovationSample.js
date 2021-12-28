@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link as RouterLink} from "react-router-dom";
 
-import Wrapper from '../UI/Wrapper';
 import classes from './InnovationSample.module.css';
 import ContainedButton from '../UI/ContainedButton';
 import OutlinedButton from '../UI/OutlinedButton';

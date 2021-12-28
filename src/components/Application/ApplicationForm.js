@@ -3,7 +3,6 @@ import React from 'react';
 // Material ui
 import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import { styled } from '@mui/material/styles';
 import theme from "../UI/Theme";
 
 // Project files

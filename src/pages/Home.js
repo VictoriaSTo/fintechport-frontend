@@ -1,7 +1,6 @@
 import React from 'react';
 
 import TopBanner from '../components/Homepage/TopBanner';
-import ApplicationForm from '../components/Homepage/ApplicationForm';
 import Testimonial from '../components/Homepage/Testimonial';
 import Services from '../components/Homepage/Services';
 import Partners from '../components/Homepage/Partners';
@@ -14,7 +13,6 @@ const Home = () => {
       <Services />
       <Testimonial />
       <Partners />
-      {/* <ApplicationForm /> */}
       <NewsEvents />
     </React.Fragment>
   )

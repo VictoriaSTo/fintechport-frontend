@@ -1,12 +1,8 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 
-import anny from '../../assets/managment/anny.webp';
-import { EmailRounded } from '@mui/icons-material';
 
 export default function MediaCard(props) {
   const { image, name, surname, position, email } = props.manager;

@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 
 import classes from "./ApplicationForm.module.css";
 import Wrapper from "../UI/Wrapper";
-import project from "../../assets/project.jpg";
 import ContainedButtonEl from "../UI/ContainedButton";
 
 const ApplicationForm = () => {

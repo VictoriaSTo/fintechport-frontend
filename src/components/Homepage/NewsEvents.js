@@ -18,7 +18,7 @@ const NewsEvents = () => {
   if (error) return <ServerError />
 
   const eventsList = data.map((event) => {
-    const { id, title, image, date, place } = event;
+    const { id, title, image, date } = event;
     return (
       <Grid item key={id} md={4}
         sx={{

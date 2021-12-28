@@ -1,8 +1,6 @@
 import React, { useMemo } from "react";
 import { useState, useEffect } from "react";
 import { Link as RouterLink} from "react-router-dom";
-import ContainedButtonEl from "../UI/ContainedButton";
-import OutlinedButtonEl from "../UI/OutlinedButton";
 
 // Material UI
 import AppBar from '@mui/material/AppBar';
@@ -239,7 +237,7 @@ const Header = (props) => {
       >
         {aboutMenuOptions.map((option, index) => (
           <MenuItem
-            key={option}
+            key={`${option.link}${option.selectedAboutMenuIndex}`}
             onClick={(event) => {handleAboutUsMenuItemClick(event, index) ; props.setHeaderValue("five") ; aboutMenuHandleClose()}}
             selected = {index === props.selectedAboutMenuIndex && props.headerValue === "five"}
             component={RouterLink} to={option.link} 

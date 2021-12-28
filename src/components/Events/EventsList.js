@@ -8,9 +8,8 @@ import { Grid } from '@mui/material';
 
 // Project files
 import classes from './EventsList.module.css';
-import Banner from './EventsListBanner';
 import Wrapper from '../UI/WrapperNoColor';
-import Calendar from '../UI/Calendar';
+// import Calendar from '../UI/Calendar';
 import useFetch from '../../hooks/useFetch';
 import LoadingSpinner from '../UI/LoadingSpinner';
 import ServerError from '../../pages/HelperPages/ServerError';
@@ -33,7 +32,7 @@ const EventsList = () => {
             {/* <Calendar /> */}
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
-              const { id, title, image, date, place, description, category, link} = event;
+              const { id, title, image, date, place, description, category} = event;
               if (category === "upcoming") {
                 return (
                   <Grid item xs={12} md={4}>
@@ -63,7 +62,7 @@ const EventsList = () => {
               const { id, title, image, date, place, description, category} = event;
               if (category === "past") {
                 return (
-                  <Grid item xs={12} md={4} className={classes["event"]}>
+                  <Grid key={id} item xs={12} md={4} className={classes["event"]}>
                     <Card key={id} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <CardMedia
                         component="img"
