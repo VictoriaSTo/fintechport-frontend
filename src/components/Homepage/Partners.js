@@ -8,18 +8,18 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 // import OutlinedButtonEl from "../UI/OutlinedButton";
 
 const Partners = () => {
-  const apiUrl = 'http://localhost:1337';
-  const { loading, error, data } = useFetch('http://localhost:1337/partners');
+  const apiUrl = process.env.REACT_APP_API_URL;
+  const { loading, error, data } = useFetch(`${apiUrl}/partners`);
 
   if (loading) return <LoadingSpinner />
   if (error) return <p>Error</p>
 
-  const partnersList = data.map((partner) => {
+  const partnersList = data.length && data.map((partner) => { 
     const { id, name, logo } = partner;
     
     return (
       <Grid item xs={6} md={2.2} key={id}>
-         <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${logo[0].url}`} alt={name} className={classes.logo}/>
+         <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={logo[0].url} alt={name} className={classes.logo}/>
       </Grid> 
     )
   })

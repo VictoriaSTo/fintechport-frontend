@@ -6,13 +6,11 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 import ServerError from '../../pages/HelperPages/ServerError';
 
 const PhotoGalleryList = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/photos`);
 
   if (loading) return <LoadingSpinner />
   if (error) return <ServerError />
-
-  console.log(data)
 
   return (
     <div className={classes.gallery}>
@@ -25,7 +23,7 @@ const PhotoGalleryList = () => {
           return (
             <Grid item xs={12} md={4} key={id}>
               <article className={classes["gallery__photo"]}>
-                <img src={`${apiUrl}${image[0].url}`} alt={name} className={classes.photo}/>
+                <img src={image[0].url} alt={name} className={classes.photo}/>
                 <div className={classes["gallery__text"]}>
                   <h3>{title}</h3>
                   <h4>{description}</h4>

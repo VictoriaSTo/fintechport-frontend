@@ -7,7 +7,7 @@ import ServerError from '../../pages/HelperPages/ServerError';
 
 
 const PartnersList = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/partners`);
 
 

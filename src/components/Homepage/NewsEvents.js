@@ -11,13 +11,13 @@ import ServerError from '../../pages/HelperPages/ServerError';
 
 
 const NewsEvents = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
   if (loading) return <LoadingSpinner />
   if (error) return <ServerError />
 
-  const eventsList = data.map((event) => {
+  const eventsList = data.length && data.map((event) => {
     const { id, title, image, date } = event;
     return (
       <Grid item key={id} md={4}
@@ -28,7 +28,7 @@ const NewsEvents = () => {
         }}>
         <div data-aos-duration="1000" data-aos="fade-up">
           <div className={classes["card"]}>
-            <img className={classes["card__image"]} src={`${apiUrl}${image.url}`} alt={title} />
+            <img className={classes["card__image"]} src={image.url} alt={title} />
             <div className={classes["card__text"]}>
               <p className={classes["card__text--medium"]}>{title}</p>
               <p className={classes["card__text--small"]}>{date}</p>
@@ -43,7 +43,7 @@ const NewsEvents = () => {
     <div className={classes["section-events"]}>
       {/* <h2 className={classes["heading-secondary"]}> <EventIcon color="secondary" sx={{fontSize: "4rem", paddingRight: "1rem"}} />Join Our Events</h2> */}
       <Grid container item direction="row" xs={12} md={12} spacing={6}>
-        {eventsList.reverse()}
+        {eventsList && eventsList.reverse()}
       </Grid>
     </div>
   )

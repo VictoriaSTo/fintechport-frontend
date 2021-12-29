@@ -9,7 +9,8 @@ import ServerError from '../../pages/HelperPages/ServerError';
 import { Grid } from '@mui/material';
 
 const ManagmentList = () => {
-  const { loading, error, data } = useFetch('http://localhost:1337/managments');
+  const apiUrl = process.env.REACT_APP_API_URL;
+  const { loading, error, data } = useFetch(`${apiUrl}/managments`);
   
   if (loading) return <LoadingSpinner />
   if (error) return <ServerError />

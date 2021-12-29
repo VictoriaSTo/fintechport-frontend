@@ -15,7 +15,7 @@ import LoadingSpinner from '../UI/LoadingSpinner';
 import ServerError from '../../pages/HelperPages/ServerError';
 
 const EventsList = () => {
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
   if (loading) return <LoadingSpinner />
@@ -68,7 +68,7 @@ const EventsList = () => {
                         component="img"
                         alt={title}
                         height="290"
-                        image={`${apiUrl}${image.url}`}
+                        image={image.url}
                       />
                       <CardContent>
                       <h2 className={classes["event__title"]}>{title}</h2>

@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 
 export default function MediaCard(props) {
   const { image, name, surname, position, email } = props.manager;
-  const apiUrl = 'http://localhost:1337';
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   return (
     <Card 
@@ -22,7 +22,7 @@ export default function MediaCard(props) {
       <CardMedia
         component="img"
         height="280"
-        image={`${apiUrl}${image[0].url}`}
+        image={image[0].url}
         alt={surname}
         sx={{
           objectPosition: "top"
