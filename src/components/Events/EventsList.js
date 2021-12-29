@@ -41,7 +41,7 @@ const EventsList = () => {
                         component="img"
                         alt={title}
                         height="290"
-                        image={`${apiUrl}${image.url}`}
+                        image={image.url}
                       />
                       <CardContent>
                         <h2 className={classes["event__title"]}>{title}</h2>

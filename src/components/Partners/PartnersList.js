@@ -32,7 +32,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
+                      <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo[0].url} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 
@@ -52,7 +52,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
+                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo[0].url} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 
@@ -72,7 +72,7 @@ const PartnersList = () => {
                         textAlign: "center",
                         marginBottom: "4%"
                         }}>
-                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={`${apiUrl}${partner.logo[0].url}`} alt={partner.name} className={classes.logo}/>
+                       <img data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" src={partner.logo[0].url} alt={partner.name} className={classes.logo}/>
                     </Grid>
                   )
                 } 
