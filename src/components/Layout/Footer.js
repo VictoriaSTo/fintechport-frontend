@@ -145,7 +145,7 @@ const Footer = (props) => {
     }
 
     try {
-      await fetch('http://localhost:1337/subscriptions', {
+      await fetch(`${process.env.REACT_APP_API_URL}/subscriptions`, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({

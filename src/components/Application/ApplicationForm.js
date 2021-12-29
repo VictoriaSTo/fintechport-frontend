@@ -126,7 +126,7 @@ const ApplicationForm = (props) => {
     console.log(firstNameValue, lastNameValue, emailValue, phoneNumberValue, jobTitleValue, organizationValue, countryValue, messageValue);
 
     try {
-      await fetch('http://localhost:1337/applications', {
+      await fetch(`${process.env.REACT_APP_API_URL}/applications`, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({

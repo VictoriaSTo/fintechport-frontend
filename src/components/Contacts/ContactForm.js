@@ -87,7 +87,7 @@ const ContactForm = () => {
     }
 
     try {
-      await fetch('http://localhost:1337/contact-uses', {
+      await fetch(`${process.env.REACT_APP_API_URL}/contact-uses`, {
         method: 'POST',
         headers: headers,
         body: JSON.stringify({
