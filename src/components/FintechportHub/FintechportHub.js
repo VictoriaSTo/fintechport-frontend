@@ -20,15 +20,15 @@ const FintechportHub = () => {
         </div>
       </div>
       <div className={classes["text"]}>
-        <h2 className={classes["text-title"]}>About the Fintechport</h2>
-        <p>The Fintechport, China's leading talent&startup development platform. It is located in QianHai, Shenzhen - the hub for digital technology in China. The Fintechport focuses on helping talents and technological startups from around the world enter China. We offer comprehensive services and resources from our mentors, partners and investors. With a team of committed professionals, the Fintechport is a "bridge" between innovations, entrepreneurship and venture capital investment. The robust and supportive network is our essential advantage.</p>
+        <h2 className={classes["text-title"]}>About Fintechport</h2>
+        <p>Fintechport, China's leading talent&startup development platform. It is located in QianHai, Shenzhen - the hub for digital technology in China. Fintechport focuses on helping talents and technological startups from around the world enter China. We offer comprehensive services and resources from our mentors, partners and investors. With a team of committed professionals, Fintechport is a "bridge" between innovations, entrepreneurship and venture capital investment. The robust and supportive network is our essential advantage.</p>
         <h3 className={classes["text-subtitle"]}>Our Objectives</h3>
         <p>To cultivate innovative solutions, promote entrepreneurs and attract global talent, partners and companies to China for cooperation and commercial possibilities.</p>
-        <h3 className={classes["text-subtitle"]}>Welcome to the Fintechport</h3>
+        <h3 className={classes["text-subtitle"]}>Welcome to Fintechport</h3>
         <p>We invest and empower talents and startups who are solving some of the world's most critical problems with innovative technology-based solutions.</p>
         </div>
         <div className={classes["section-advantages"]}>
-          <h2 className={classes["text-title"]}>Why Join the Fintechport?</h2>
+          <h2 className={classes["text-title"]}>Why Join Fintechport?</h2>
           <Grid 
           container 
           columnSpacing={{ xs: 1, sm: 4, md: 6 }}
