@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as RouterLink} from "react-router-dom";
 
 import { makeStyles } from '@mui/styles';
@@ -126,6 +126,7 @@ const CustomizedTextField = styled(TextField)({
 });
 
 const Footer = (props) => {
+  const [emailSent, setEmailSent] = useState(false);
   const classes = useStyles();
 
   const {
@@ -158,12 +159,13 @@ const Footer = (props) => {
       console.log(error)
     }
     resetEmail();
+    setEmailSent(true);
   }
 
   return (
     <footer className={classes.footer}>
       <Grid 
-        container spacing={2} className={classes.mainContainer}>
+        container spacing={2} justifyContent="space-between" className={classes.mainContainer}>
         <Grid xs={10} md={4} item sx={{marginTop: "24px"}}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.title}>
@@ -214,7 +216,7 @@ const Footer = (props) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid xs={5} md={2} item sx={{marginTop: "24px"}}>
+        {/* <Grid xs={5} md={2} item sx={{marginTop: "24px"}}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.title}>
               ACCOUNT
@@ -225,11 +227,11 @@ const Footer = (props) => {
             <Grid component={RouterLink} onClick={() => {props.setHeaderValue("null"); props.setSelectedAboutMenuIndex("null")}} to="/login" item className={classes.link}>
               Log In
             </Grid>
-            {/* <Grid item component={RouterLink} to="/" className={classes.link}>
+            <Grid item component={RouterLink} to="/" className={classes.link}>
               Chat With Us
-            </Grid> */}
+            </Grid>
           </Grid>
-        </Grid>
+        </Grid> */}
         <Grid xs={5} md={2} item sx={{marginTop: "24px"}}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.title}>
@@ -249,10 +251,11 @@ const Footer = (props) => {
         <Grid xs={10} md={4} item sx={{marginTop: "24px"}}>
           <Grid container direction="column" spacing={2}>
             <Grid item className={classes.title} sx={{width: "110%"}}>
-              Subscribe to stay updated!
+              Subscribe to stay updated
             </Grid>
             <Grid item className={classes.link}>
-              <form onSubmit={submitHandler}>
+              {emailSent && (<p className={classes.text}>Thank you for joining our mailing list!</p>)}
+              {!emailSent && (<form onSubmit={submitHandler}>
                 <CustomizedTextField 
                   label={"Email"}  
                   id="email-outlined"             
@@ -265,7 +268,7 @@ const Footer = (props) => {
                     marginBottom: "2%"
                   }}/>
                 <OutlinedButtonEl type={"submit"} action={"Subscribe"} />
-              </form>
+              </form>)}
             </Grid>
           </Grid>
         </Grid>

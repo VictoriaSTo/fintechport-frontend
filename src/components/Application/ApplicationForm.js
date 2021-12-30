@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Material ui
 import { Grid } from '@mui/material';
@@ -36,6 +36,8 @@ const isWebsite = (value) => value.includes(".");
 
 // Form
 const ApplicationForm = (props) => {
+  const [applicationSent, setApplicationSent] = useState(false);
+
   const {
     value: firstNameValue,
     isValid: firstNameIsValid,
@@ -155,301 +157,309 @@ const ApplicationForm = (props) => {
     resetCountry();
     resetMessage();
     resetWebsite();
+    setApplicationSent(true);
   };
 
   return (
     <div className={classes.form}>
       <h2>Apply to the Fintechport</h2>
-      <p>We'd love to help you get started with the Fintechport! Please fill out and submit the form below</p>
-      <form onSubmit={submitHandler}>
-        <Grid container columnSpacing={6} rowSpacing={4}>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              error={firstNameHasError}
-              helperText={firstNameHasError ? "Please enter your name" : ""}
-              required 
-              fullWidth 
-              id="First Name"
-              label="First Name" 
-              value={firstNameValue} 
-              onChange={firstNameChangeHandler} 
-              onBlur={firstNameBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              error={lastNameHasError}
-              helperText={lastNameHasError ? "Please enter your surname" : ""}
-              required 
-              fullWidth 
-              id="Last Name"
-              label="Last Name" 
-              value={lastNameValue} 
-              onChange={lastNameChangeHandler}
-              onBlur={lastNameBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              error={emailHasError}
-              helperText={emailHasError ? "Please enter a valid email address" : ""}
-              required 
-              fullWidth 
-              id="Email"
-              label="Email" 
-              value={emailValue} 
-              onChange={emailChangeHandler} 
-              onBlur={emailBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              error={phoneNumberHasError}
-              helperText={phoneNumberHasError ? "Please enter a valid phone number" : ""}
-              required 
-              fullWidth 
-              id="Phone Number"
-              label="Phone Number" 
-              value={phoneNumberValue} 
-              onChange={phoneNumberChangeHandler} 
-              onBlur={phoneNumberBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              error={countryHasError}
-              helperText={countryHasError ? "Please enter your country" : ""}
-              required 
-              fullWidth 
-              id="Country"
-              label="Country" 
-              value={countryValue} 
-              onChange={countryChangeHandler} 
-              onBlur={countryBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              error={jobTitleHasError}
-              helperText={jobTitleHasError ? "Please enter your job title" : ""}
-              required 
-              fullWidth 
-              id="Job Title"
-              label="Job Title" 
-              value={jobTitleValue} 
-              onChange={jobTitleChangeHandler} 
-              onBlur={jobTitleBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField 
-              fullWidth 
-              id="Organization"
-              label="Company Name" 
-              value={organizationValue} 
-              onChange={organizationChangeHandler} 
-              onBlur={organizationBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              fullWidth 
-              id="Website"
-              label="Company Website" 
-              value={websiteValue} 
-              onChange={websiteChangeHandler} 
-              onBlur={websiteBlurHandler} 
-              variant="filled" 
-              size="small"
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }}
-              ]}
-            />
-          </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              error={messageHasError}
-              helperText={messageHasError ? "Message must be thirty or more characters" : ""}
-              required 
-              fullWidth 
-              id="filled-textarea"
-              label="How do you see the Fintechport Lab helping you?"
-              multiline
-              variant="filled"
-              rows={4}
-              value={messageValue}
-              onChange={messageChangeHandler}
-              onBlur={messageBlurHandler}
-              sx={[
-                {'& .MuiFormHelperText-root': {
-                  fontFamily: "Barlow",
-                  fontSize: "1.4rem",
-                },
-                '& .MuiInputLabel-root': {
-                    fontFamily: "Barlow",
-                    fontSize: "1.8rem"
-                },
-                '& .MuiFilledInput-input': {
-                  fontSize: "1.8rem",
-                  color: "black"
-                },
-                '& label.Mui-focused': {
-                  color: theme.palette.common.lightBlue,
-                }},
-                {marginBottom: "5%"}
-              ]}
-            />
-          </Grid>
-        </Grid>
-        <ContainedButtonEl type={"submit"} action={"Submit"} />
-      </form>
+      {!applicationSent && (
+        <>
+          <p>We'd love to help you get started with the Fintechport! Please fill out and submit the form below</p>
+          <form onSubmit={submitHandler}>
+            <Grid container columnSpacing={6} rowSpacing={4}>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  error={firstNameHasError}
+                  helperText={firstNameHasError ? "Please enter your name" : ""}
+                  required 
+                  fullWidth 
+                  id="First Name"
+                  label="First Name" 
+                  value={firstNameValue} 
+                  onChange={firstNameChangeHandler} 
+                  onBlur={firstNameBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  error={lastNameHasError}
+                  helperText={lastNameHasError ? "Please enter your surname" : ""}
+                  required 
+                  fullWidth 
+                  id="Last Name"
+                  label="Last Name" 
+                  value={lastNameValue} 
+                  onChange={lastNameChangeHandler}
+                  onBlur={lastNameBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  error={emailHasError}
+                  helperText={emailHasError ? "Please enter a valid email address" : ""}
+                  required 
+                  fullWidth 
+                  id="Email"
+                  label="Email" 
+                  value={emailValue} 
+                  onChange={emailChangeHandler} 
+                  onBlur={emailBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  error={phoneNumberHasError}
+                  helperText={phoneNumberHasError ? "Please enter a valid phone number" : ""}
+                  required 
+                  fullWidth 
+                  id="Phone Number"
+                  label="Phone Number" 
+                  value={phoneNumberValue} 
+                  onChange={phoneNumberChangeHandler} 
+                  onBlur={phoneNumberBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  error={countryHasError}
+                  helperText={countryHasError ? "Please enter your country" : ""}
+                  required 
+                  fullWidth 
+                  id="Country"
+                  label="Country" 
+                  value={countryValue} 
+                  onChange={countryChangeHandler} 
+                  onBlur={countryBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  error={jobTitleHasError}
+                  helperText={jobTitleHasError ? "Please enter your job title" : ""}
+                  required 
+                  fullWidth 
+                  id="Job Title"
+                  label="Job Title" 
+                  value={jobTitleValue} 
+                  onChange={jobTitleChangeHandler} 
+                  onBlur={jobTitleBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField 
+                  fullWidth 
+                  id="Organization"
+                  label="Company Name" 
+                  value={organizationValue} 
+                  onChange={organizationChangeHandler} 
+                  onBlur={organizationBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <TextField
+                  fullWidth 
+                  id="Website"
+                  label="Company Website" 
+                  value={websiteValue} 
+                  onChange={websiteChangeHandler} 
+                  onBlur={websiteBlurHandler} 
+                  variant="filled" 
+                  size="small"
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }}
+                  ]}
+                />
+              </Grid>
+              <Grid item xs={12} md={12}>
+                <TextField
+                  error={messageHasError}
+                  helperText={messageHasError ? "Message must be thirty or more characters" : ""}
+                  required 
+                  fullWidth 
+                  id="filled-textarea"
+                  label="How do you see the Fintechport Lab helping you?"
+                  multiline
+                  variant="filled"
+                  rows={4}
+                  value={messageValue}
+                  onChange={messageChangeHandler}
+                  onBlur={messageBlurHandler}
+                  sx={[
+                    {'& .MuiFormHelperText-root': {
+                      fontFamily: "Barlow",
+                      fontSize: "1.4rem",
+                    },
+                    '& .MuiInputLabel-root': {
+                        fontFamily: "Barlow",
+                        fontSize: "1.8rem"
+                    },
+                    '& .MuiFilledInput-input': {
+                      fontSize: "1.8rem",
+                      color: "black"
+                    },
+                    '& label.Mui-focused': {
+                      color: theme.palette.common.lightBlue,
+                    }},
+                    {marginBottom: "5%"}
+                  ]}
+                />
+              </Grid>
+            </Grid>
+            <ContainedButtonEl type={"submit"} action={"Submit"} />
+          </form>
+        </>
+      )}
+      {applicationSent && (
+        <p>Thank you. Your application was submitted successfully</p>
+      )}
     </div>
   )
 };

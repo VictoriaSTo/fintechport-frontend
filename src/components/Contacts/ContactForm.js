@@ -1,4 +1,4 @@
-import React  from 'react';
+import React, { useState }  from 'react';
 import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
@@ -48,6 +48,8 @@ const InputTextField = styled(TextField)({
 });
 
 const ContactForm = () => {
+  const [messageSent, setMessageSent] = useState(false);
+
   const {
     value: nameValue,
     isValid: nameIsValid,
@@ -105,12 +107,13 @@ const ContactForm = () => {
     resetName();
     resetEmail();
     resetMessage();
+    setMessageSent(true);
   }
 
   return (
     <div data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
       <h3>Get In Touch</h3>
-      <form onSubmit={submitHandler}>
+      {!messageSent && (<form onSubmit={submitHandler}>
         <Grid container columnSpacing={6} rowSpacing={4} sx={{marginBottom: "5%"}}>
           <Grid item xs={12} md={6}>
           <InputTextField required fullWidth id="Name" label="Name" variant="filled" size="small" value={nameValue} onChange={nameChangeHandler} onBlur={nameBlurHandler} error={nameHasError} helperText={nameHasError ? "Please enter your name" : ""}/>
@@ -136,7 +139,10 @@ const ContactForm = () => {
             </Grid>
         </Grid>
         <ContainedButtonEl type={"submit"} action={"Send"} />
-      </form>
+      </form>)}
+      {messageSent && (<Grid>
+          <p>Thank you for contacting us, <br/> we'll be in touch very soon.</p>
+        </Grid>)}
     </div>
   )
 };
