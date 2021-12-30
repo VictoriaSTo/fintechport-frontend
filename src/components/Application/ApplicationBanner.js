@@ -24,7 +24,7 @@ const ApplicationBanner = () => {
           }}
         >
           <Grid item xs={12} md={12} sx={{marginBottom: "5%"}}>
-            <h1 className={classes["header__title"]} style>Get access to partnerships, projects and resources which will help your idea to grow.</h1>
+            <h1 className={classes["header__title"]}>Get access to partnerships, projects and resources which will help your idea to grow.</h1>
           </Grid>
           <Grid item container spacing={6}>
             <Grid item md={6}>

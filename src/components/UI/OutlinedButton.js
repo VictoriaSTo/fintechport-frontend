@@ -19,6 +19,7 @@ const OutlinedButtonEl = (props) => {
       type={props.type}
       component={props.component}
       to={props.to}
+      onClick={props.onClick}
     >
       {props.action}
     </OutlinedButton>

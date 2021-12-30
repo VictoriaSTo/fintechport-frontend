@@ -11,15 +11,15 @@ import ScienceIcon from '@mui/icons-material/Science';
 import IosShareIcon from '@mui/icons-material/IosShare';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
-const InnovationSample = () => {
+const InnovationSample = (props) => {
   return (
     <React.Fragment>
       <article className={classes["call-to-action"]}>
         <div className={classes["call-to-action__text"]}>
           <h1>Ready to get started?</h1>
           <div className={classes["call-to-action__buttons"]}>
-            <ContainedButton component={RouterLink} to="/submission-form" action={"Apply"} />
-            <OutlinedButton component={RouterLink} to="/contacts" action={"Contact Us"}/>
+            <ContainedButton component={RouterLink} to="/submission-form" action={"Apply"} onClick={() => {props.setHeaderValue("three"); props.setSelectedAboutMenuIndex(null)}} />
+            <OutlinedButton component={RouterLink} to="/contacts" action={"Contact Us"} onClick={() => {props.setHeaderValue("six"); props.setSelectedAboutMenuIndex(null)}} />
           </div>
         </div>
       </article>

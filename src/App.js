@@ -34,12 +34,12 @@ function App() {
       <BrowserRouter>
         <Header headerValue={headerValue} setHeaderValue={setHeaderValue} selectedAboutMenuIndex={selectedAboutMenuIndex} setSelectedAboutMenuIndex={setSelectedAboutMenuIndex} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route  exact path="/" element={<Home />} headerValue={headerValue} setHeaderValue={setHeaderValue} selectedAboutMenuIndex={selectedAboutMenuIndex} setSelectedAboutMenuIndex={setSelectedAboutMenuIndex}/>
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
 
           {/* To replace */}
-          <Route exact path="/innovation-lab" element={<InnovationLab />} />
+          <Route exact path="/innovation-lab" element={<InnovationLab headerValue={headerValue} setHeaderValue={setHeaderValue} selectedAboutMenuIndex={selectedAboutMenuIndex} setSelectedAboutMenuIndex={setSelectedAboutMenuIndex}/>} />
 
           <Route exact path="/submission-form" element={<SubmissionForm/>} />
           {/* To delete */}
