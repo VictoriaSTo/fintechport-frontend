@@ -113,7 +113,7 @@ const ApplicationForm = (props) => {
 
   let formIsValid = false;
 
-  if (firstNameIsValid && lastNameIsValid && emailIsValid && phoneNumberIsValid && jobTitleIsValid && organizationIsValid && countryIsValid && messageIsValid) {
+  if (firstNameIsValid && lastNameIsValid && emailIsValid && phoneNumberIsValid && jobTitleIsValid && countryIsValid && messageIsValid) {
     formIsValid = true;
   }
 
