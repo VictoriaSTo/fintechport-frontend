@@ -20,7 +20,7 @@ const Contacts = () => {
                 706A, Tower A, QianHai Excellence Times Square, <br/> 15 HaiTian Road, Boa'An District, <br/> Shenzhen, China 
               </p>
               <p><b>Phone number:</b></p>
-              <p>+86 134 XXXX XXXX Name</p>
+              <p>+86 185 6568 4709 Ludovic</p>
             </Grid>
             <Grid item xs={12} md={6}>
               <ContactForm />

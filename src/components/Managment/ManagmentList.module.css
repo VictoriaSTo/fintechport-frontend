@@ -13,6 +13,10 @@
 
 
 @media only screen and (max-width: 900px) {
+  .section-managment {
+    padding: 2% 7% 4% 7%;
+  }
+
   .title-container {
     width: 100%;
     margin-left: auto;

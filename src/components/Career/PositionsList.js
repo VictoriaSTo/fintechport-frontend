@@ -28,10 +28,10 @@ const PositionsList = () => {
               const { id, title, schedule, category} = job;
             return (
               <Grid container spacing={2} key={id} sx={{alignItems: "center"}}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={6} md={6}>
                   <h3>{category}</h3>
                 </Grid>
-                <Grid item xs={12} md={6}>  
+                <Grid item xs={6} md={6}>  
                   <Grid container columnSpacing={6} rowSpacing={0}>
                     <Grid component={RouterLink} to={`/open-positions/${id}`} item xs={12} md={12} sx={{textDecoration: "none"}} className={classes.job}>
                       <p className={classes["job__title"]}>{title}</p>

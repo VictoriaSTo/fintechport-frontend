@@ -34,35 +34,35 @@ const InnovationSample = () => {
         <h3>Program Timeline</h3>
         <ul>
           <li>
-            <a href='#'><span className={classes["process-icon-box"]}><RocketLaunchIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
+            <a href="javascript:void(0)"><span className={classes["process-icon-box"]}><RocketLaunchIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
             <div className={classes["process-detail"]}>
               <h4>Phase 1</h4>
               <p>Mapping key milestones for product and business development</p>
             </div>
           </li>
           <li>
-            <a href='#'><span className={classes["process-icon-box"]}><LinkIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
+            <a href="javascript:void(0)"><span className={classes["process-icon-box"]}><LinkIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
             <div className={classes["process-detail"]}>
               <h4>Phase 2</h4>
               <p>Product development support, including design, prototyping, and manufacturing</p>
             </div>
           </li>
           <li>
-            <a href='#'><span className={classes["process-icon-box"]}><ScienceIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
+            <a href="javascript:void(0)"><span className={classes["process-icon-box"]}><ScienceIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
             <div className={classes["process-detail"]}>
               <h4>Phase 3</h4>
               <p>Creating a unified brand identity and developing marketing channels</p>
             </div>
           </li>
           <li>
-            <a href='#'><span className={classes["process-icon-box"]}><IosShareIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
+            <a href="javascript:void(0)"><span className={classes["process-icon-box"]}><IosShareIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
             <div className={classes["process-detail"]}>
               <h4>Phase 4</h4>
               <p>Using our network of tech investors to help finance teams</p>
             </div>
           </li>
           <li>
-            <a href='#'><span className={classes["process-icon-box"]}><MonetizationOnIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
+            <a href="javascript:void(0)"><span className={classes["process-icon-box"]}><MonetizationOnIcon className={classes["process-icon"]} sx={{fontSize: "68px", color: "#bbb"}}/></span></a>
             <div className={classes["process-detail"]}>
               <h4>Phase 5</h4>
               <p>Legal assistance, go-to-market guidance, and continuous network support</p>

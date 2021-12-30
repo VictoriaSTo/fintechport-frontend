@@ -64,6 +64,7 @@
 
 .job__details {
   color: #B2B2B2;
+  margin-top: 0px;
 }
 
 .contact-us {
@@ -87,10 +88,8 @@
 
 @media only screen and (max-width: 900px) {
   .jobs-banner {
-    background-size: contain;
-    height: 24vh;
+    background-position: 46%;
   }
-
   .banner {
     display: block;
     padding: 7% 0% 7% 0%;

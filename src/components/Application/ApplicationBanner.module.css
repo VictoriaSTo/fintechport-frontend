@@ -4,6 +4,10 @@
   background-color: #F8F5F7;
 }
 
+.header__title {
+  font-size: 3.2rem;
+}
+
 .header__text--aligned {
   text-align: justify;
 }
@@ -15,7 +19,7 @@
   justify-content: center;
 };
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 600px) {
   .header__title {
     font-size: 3.2rem;
   }

@@ -33,6 +33,10 @@ padding: 2% 14% 4% 14%;
 }
 
 @media only screen and (max-width: 900px) {
+  .partners {
+    padding: 2% 7% 4% 7%;
+    }
+
   .partners__title {
     text-align: center;
   }

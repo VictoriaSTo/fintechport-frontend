@@ -161,6 +161,16 @@
     max-width: 90%;
   }
 
+  .process-detail h4 {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .process-detail p {
+    margin-top: 0;
+    margin-bottom: 36px;
+  }
+
   .process-section ul::before {
     opacity: 0;
   }

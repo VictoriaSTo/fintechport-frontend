@@ -162,10 +162,10 @@ const ApplicationForm = (props) => {
 
   return (
     <div className={classes.form}>
-      <h2>Apply to the Fintechport</h2>
+      <h2>Apply to Fintechport</h2>
       {!applicationSent && (
         <>
-          <p>We'd love to help you get started with the Fintechport! Please fill out and submit the form below</p>
+          <p>We'd love to help you get started with Fintechport! Please fill out and submit the form below</p>
           <form onSubmit={submitHandler}>
             <Grid container columnSpacing={6} rowSpacing={4}>
               <Grid item xs={12} md={6}>
