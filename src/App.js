@@ -23,6 +23,7 @@ import PositionDescription from './components/Career/PositionDescription';
 import NewsArticle from './components/News/NewsArticle';
 import Login from './pages/Auth/Login';
 import Signup from './pages/Auth/Signup';
+import SummerCamp from './pages/SummerCamp';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route exact path="/tech-news" element={<TechNews />} />
           {/* Make it dynamic */}
           <Route exact path="/tech-connect/news/:id" element={<NewsArticle />} />
+          <Route exact path="/summer-camp" element={<SummerCamp />} />
           {/* To delete or save */}
           <Route exact path="/about-us" element={<AboutUs />} />
           <Route exact path="/about-us/fintech-hub-of-sz" element={<FintechHub />} />
