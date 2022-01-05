@@ -1,6 +1,6 @@
-import Modal from '../UI/Modal';
+// import Modal from '../UI/Modal';
 import { Grid } from '@mui/material';
-import classes from './ManagerDetails.classes.css';
+// import classes from './ManagerDetails.classes.css';
 
 import anny from '../../assets/managment/anny.webp';
 

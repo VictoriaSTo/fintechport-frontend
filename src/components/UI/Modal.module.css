@@ -10,22 +10,45 @@
 
 .modal {
   position: fixed;
-  top: 20vh;
-  left: 5%;
-  width: 100%;
+  top: 14vh;
+  left: 20%;
+  width: 60%;
   background-color: white;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.37);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
-  /* height: 80vh;
-  overflow-y: auto; */
+  height: 80vh;
+  overflow-y: auto;
 }
 
-@media (min-width: 768px) {
+.icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: all .3s;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #039795;
+}
+
+@media (max-width: 900px) {
   .modal {
-    width: 60%;
-    left: calc(42% - 20rem);
+    width: 86%;
+    left: 7%;
+    height: 72vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 86%;
+    left: 7%;
+    height: 56vh;
+    overflow: auto;
+    top: 24vh;
   }
 }
 

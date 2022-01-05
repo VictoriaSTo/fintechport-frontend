@@ -1,6 +1,8 @@
+import { useState } from "react";
 import ContainedButtonEl from "../components/UI/ContainedButton";
+import OutlinedButtonEl from "../components/UI/OutlinedButton";
 import classes from "./SummerCamp.module.css";
-import lesson from "../assets/grad/3.jpeg"
+import Curriculum from "../components/Events/Curriculum";
 
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
@@ -9,8 +11,19 @@ import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 
 const SummerCamp = () => {
+  const [showCurriculum, setShowCurriculum] = useState(false);
+
+  const showCurriculumHandler = () => {
+    setShowCurriculum(true);
+  }
+
+  const hideCurriculumHandler = () => {
+    setShowCurriculum(false);
+  }
+
   return (
     <>
+      {showCurriculum && <Curriculum onClose={hideCurriculumHandler}/>}
       <div className={classes["grad-banner"]}>
         <div className={classes["grad-banner__text"]}>
         <h1>
@@ -46,7 +59,7 @@ const SummerCamp = () => {
           </div>
           <h3>How it works?</h3>
             <p>We invite you to take part in our GRAD Summer Camp program, which will run from June to August 2022. During the four weeks of classroom training, your child will design, create, program, and enjoy challenges.
-            The maximum number is 20 students per class. Lessons are guided by our professional teachers from Monday to Friday, 9am - 4pm. 
+            The maximum number is 20 students per class. Lessons are guided by our professional teachers from Monday to Friday, 9am - 4pm. Each pupil receives a completion certificate as well as an opportunity to represent Fintechport in the following Robotics Competitions.
             <br />
             Create a bright future for your child with Fintechport!</p>
           <h3>Timetable</h3>
@@ -67,7 +80,7 @@ const SummerCamp = () => {
           <h3>Campus location</h3>
             <p>Shenzhen, China. Exact location will be announced soon</p>
           <h3>Curriculum</h3>
-            <p>Click here</p>
+            <OutlinedButtonEl onClick={showCurriculumHandler} action="Check Now">Check Now</OutlinedButtonEl>
         </section>
         <section className={classes["teachers-section"]}>
           <h3>Professional teachers</h3>

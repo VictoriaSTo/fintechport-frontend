@@ -86,7 +86,7 @@
   transition: all .4s;
   background-image: url(../assets/grad/7.png);
   background-size: cover;
-  transition: all .2s;
+  transition: all .3s;
 }
 
 .teacher-icon-box-1:hover {
@@ -105,6 +105,7 @@
   transition: all .4s;
   background-image: url(../assets/grad/4.png);
   background-size: cover;
+  transition: all .3s;
 }
 
 .teacher-icon-box-2:hover {
@@ -123,6 +124,7 @@
   transition: all .4s;
   background-image: url(../assets/grad/5.png);
   background-size: cover;
+  transition: all .3s;
 }
 
 .teacher-icon-box-3:hover {
@@ -141,6 +143,7 @@
   transition: all .4s;
   background-image: url(../assets/grad/6.png);
   background-size: cover;
+  transition: all .3s;
 }
 
 .teacher-icon-box-4:hover {
@@ -231,20 +234,6 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .program {
-    padding: 2% 7% 0.2%;
-  }
-
-  .teachers-section {
-    padding: 0% 7%;
-  }
-
-  .testimonials-section {
-    padding: 0% 7%;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .teachers-section ul {
     display: block;
@@ -271,7 +260,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-56%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .testimonials {
@@ -296,3 +285,22 @@
     padding: 5% 7%;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .grad-banner__text {
+    width: 86%;
+  }
+
+  .program {
+    padding: 2% 7% 0.2%;
+  }
+
+  .teachers-section {
+    padding: 0% 7%;
+  }
+
+  .testimonials-section {
+    padding: 0% 7%;
+  }
+}
+
