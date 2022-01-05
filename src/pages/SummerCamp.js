@@ -98,7 +98,7 @@ const SummerCamp = () => {
               <div className={classes["teacher-details"]}>
                   <p>Dr.Alice
                   <br />
-                    E-Games
+                    eGames (esports)
                   </p>
                 </div>
             </li>
