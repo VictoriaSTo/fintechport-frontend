@@ -55,6 +55,10 @@
   color: white;
 }
 
+.card__text {
+  cursor: pointer;
+}
+
 .card__text--medium {
   opacity: 1;
   padding-left: 14px;

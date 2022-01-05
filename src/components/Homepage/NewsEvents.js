@@ -18,7 +18,7 @@ const NewsEvents = () => {
   if (error) return <ServerError />
 
   const eventsList = data.length && data.map((event) => {
-    const { id, title, image, date } = event;
+    const { id, title, image, date, link } = event;
     return (
       <Grid item key={id} md={4}
         sx={{
@@ -28,7 +28,9 @@ const NewsEvents = () => {
         }}>
         <div data-aos-duration="1000" data-aos="fade-up">
           <div className={classes["card"]}>
-            <img className={classes["card__image"]} src={image.url} alt={title} />
+            <a href={link}>
+              <img className={classes["card__image"]} src={image.url} alt={title} />
+            </a>
             <div className={classes["card__text"]}>
               <p className={classes["card__text--medium"]}>{title}</p>
               <p className={classes["card__text--small"]}>{date}</p>

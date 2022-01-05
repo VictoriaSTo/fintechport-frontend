@@ -32,25 +32,28 @@ const EventsList = () => {
             {/* <Calendar /> */}
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
-              const { id, title, image, date, place, description, category} = event;
+              const { id, title, image, date, place, description, category, link} = event;
               if (category === "upcoming") {
                 return (
-                  <Grid item xs={12} md={4}>
-                    <Card  key={id} className={classes["event"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
-                      <CardMedia
-                        component="img"
-                        alt={title}
-                        height="290"
-                        image={image.url}
-                      />
+
+                    <Grid item xs={12} md={4}>
+                      <Card  key={id} className={classes["event"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
+                      <a href={link}>
+                        <CardMedia
+                          component="img"
+                          alt={title}
+                          height="290"
+                          image={image.url}
+                        />
+                      </a>
                       <CardContent>
                         <h2 className={classes["event__title"]}>{title}</h2>
                         <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
                         <h3 className={classes["event__subtitle"]}>{place}</h3>
                         <p>{description}</p>
                       </CardContent>
-                    </Card>
-                  </Grid>
+                      </Card>
+                    </Grid>
                 )
               }
             })}
@@ -59,23 +62,25 @@ const EventsList = () => {
           <h1 className={classes["heading-primary"]}>Past Events</h1>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
-              const { id, title, image, date, place, description, category} = event;
+              const { id, title, image, date, place, description, category, link } = event;
               if (category === "past") {
                 return (
                   <Grid key={id} item xs={12} md={4} className={classes["event"]}>
                     <Card key={id} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
-                      <CardMedia
-                        component="img"
-                        alt={title}
-                        height="290"
-                        image={image.url}
-                      />
-                      <CardContent>
-                      <h2 className={classes["event__title"]}>{title}</h2>
-                        <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
-                        <h3 className={classes["event__subtitle"]}>{place}</h3>
-                        <p>{description}</p>
-                      </CardContent>
+                      <a href={link}>
+                        <CardMedia
+                          component="img"
+                          alt={title}
+                          height="290"
+                          image={image.url}
+                        />
+                        <CardContent>
+                        <h2 className={classes["event__title"]}>{title}</h2>
+                          <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
+                          <h3 className={classes["event__subtitle"]}>{place}</h3>
+                          <p>{description}</p>
+                        </CardContent>
+                      </a>
                     </Card>
                   </Grid>
                 )
