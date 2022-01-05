@@ -6,14 +6,14 @@ import Services from '../components/Homepage/Services';
 import Partners from '../components/Homepage/Partners';
 import NewsEvents from '../components/Homepage/NewsEvents';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <React.Fragment>
       <TopBanner />
       <Services />
       <Testimonial />
       <Partners />
-      <NewsEvents />
+      <NewsEvents setHeaderValue={props.setHeaderValue} />
     </React.Fragment>
   )
 };

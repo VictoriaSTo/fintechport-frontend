@@ -10,7 +10,7 @@ import ServerError from '../../pages/HelperPages/ServerError';
 // import eventsInfo from '../Events/eventsInfo';
 
 
-const NewsEvents = () => {
+const NewsEvents = (props) => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
@@ -28,7 +28,7 @@ const NewsEvents = () => {
         }}>
         <div data-aos-duration="1000" data-aos="fade-up">
           <div className={classes["card"]}>
-            <a href={link}>
+            <a href={link} onClick={() => {props.setHeaderValue("four")}}>
               <img className={classes["card__image"]} src={image.url} alt={title} />
             </a>
             <div className={classes["card__text"]}>

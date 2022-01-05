@@ -35,7 +35,7 @@ function App() {
       <BrowserRouter>
         <Header headerValue={headerValue} setHeaderValue={setHeaderValue} selectedAboutMenuIndex={selectedAboutMenuIndex} setSelectedAboutMenuIndex={setSelectedAboutMenuIndex} />
         <Routes>
-          <Route  exact path="/" element={<Home />} headerValue={headerValue} setHeaderValue={setHeaderValue} selectedAboutMenuIndex={selectedAboutMenuIndex} setSelectedAboutMenuIndex={setSelectedAboutMenuIndex}/>
+          <Route  exact path="/" element={<Home setHeaderValue={setHeaderValue} />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
 

@@ -35,7 +35,6 @@ const EventsList = () => {
               const { id, title, image, date, place, description, category, link} = event;
               if (category === "upcoming") {
                 return (
-
                     <Grid item xs={12} md={4}>
                       <Card  key={id} className={classes["event"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <a href={link}>
