@@ -5,8 +5,7 @@ import theme from '../UI/Theme';
 // import EventIcon from '@mui/icons-material/Event';
 
 import classes from './NewsEvents.module.css';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 // import eventsInfo from '../Events/eventsInfo';
 
 
@@ -14,8 +13,7 @@ const NewsEvents = (props) => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   const eventsList = data.length && data.map((event) => {
     const { id, title, image, date, link } = event;

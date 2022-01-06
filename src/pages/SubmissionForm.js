@@ -5,10 +5,10 @@ import Form from '../components/Application/ApplicationForm';
 
 const SubmissionForm = () => {
   return (
-    <React.Fragment>
+    <>
       <Banner />
       <Form />
-    </React.Fragment>
+    </>
   )
 };
 

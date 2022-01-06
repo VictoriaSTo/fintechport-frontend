@@ -8,7 +8,7 @@ import classes from "./Contacts.module.css";
 
 const Contacts = () => {
   return (
-    <React.Fragment>
+    <>
       <div className={classes["contacts-banner"]}></div>
       <Wrapper>
         <h2 className={classes["contacts-title"]}>Contact Information</h2>
@@ -28,7 +28,7 @@ const Contacts = () => {
           </Grid>
         </div>
       </Wrapper>
-    </React.Fragment>
+    </>
   )
 };
 

@@ -158,7 +158,7 @@ const Header = (props) => {
 
   // Desktop menu 
   const tabs = (
-    <React.Fragment>
+    <>
       <Tabs
         value={props.headerValue}
         onChange={handleChange}
@@ -253,12 +253,12 @@ const Header = (props) => {
           </MenuItem>
         ))}
       </Menu>
-    </React.Fragment>
+    </>
   )
 
   // Mobile menu
   const drawer = (
-    <React.Fragment>
+    <>
       <SwipeableDrawer 
         disableBackdropTransition={!iOS} 
         disableDiscovery={iOS} 
@@ -444,11 +444,11 @@ const Header = (props) => {
         >
           <MenuIcon sx={{color: "#666666", height: "3.8rem", width: "3.8rem"}}/>
         </IconButton>
-    </React.Fragment>
+    </>
   )
 
   return (
-    <React.Fragment>
+    <>
       <ElevationScroll>
           <AppBar position="fixed">
             <Toolbar disableGutters={false}>
@@ -463,7 +463,7 @@ const Header = (props) => {
           </AppBar>
       </ElevationScroll>
       <div className={classes.toolbarMargin}/>
-    </React.Fragment>
+    </>
   )
 }
 

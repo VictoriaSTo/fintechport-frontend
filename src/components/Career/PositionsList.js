@@ -7,19 +7,17 @@ import { Grid } from "@mui/material";
 // Project files
 import classes from "./PositionList.module.css";
 import useFetch from '../../hooks/useFetch';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 
 const PositionsList = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/jobs`);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   return (
-    <React.Fragment>
+    <>
       <div className={classes["jobs-banner"]}>
         <h1>Be a part of us</h1>
       </div>
@@ -49,7 +47,7 @@ const PositionsList = () => {
         <p>Did you not find the job you were looking for but are still keen to join the Fintechport? We’d love to hear from you!</p>
         <p>Contact us at<br/><a href="mailto:hr@fintechport.com?subject=Job Application&body=Thank you for applying for the position at Fintechport. Please attach your resume and a cover letter. We will carefully review your application and get back to you soon." style={{color: "#03d9d6", fontWeight: "600", textDecoration: "none"}}>hr@fintechport.com</a></p>
       </div>
-    </React.Fragment>
+    </>
   )
 };
 

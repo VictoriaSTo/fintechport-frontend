@@ -2,15 +2,13 @@ import { Grid } from "@mui/material";
 
 import classes from './PhotoGalleryList.module.css';
 import useFetch from '../../hooks/useFetch';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 const PhotoGalleryList = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/photos`);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   return (
     <div className={classes.gallery}>

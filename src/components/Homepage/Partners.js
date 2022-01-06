@@ -4,15 +4,14 @@ import theme from '../UI/Theme';
 
 import classes from "./Partners.module.css";
 import useFetch from '../../hooks/useFetch';
-import LoadingSpinner from '../UI/LoadingSpinner';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 // import OutlinedButtonEl from "../UI/OutlinedButton";
 
 const Partners = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/partners`);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <p>Error</p>
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   const partnersList = data.length && data.map((partner) => { 
     const { id, name, logo } = partner;

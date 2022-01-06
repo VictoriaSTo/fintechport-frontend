@@ -8,13 +8,13 @@ import NewsEvents from '../components/Homepage/NewsEvents';
 
 const Home = (props) => {
   return (
-    <React.Fragment>
+    <>
       <TopBanner />
       <Services />
       <Testimonial />
       <Partners />
       <NewsEvents setHeaderValue={props.setHeaderValue} />
-    </React.Fragment>
+    </>
   )
 };
 

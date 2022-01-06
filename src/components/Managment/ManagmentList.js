@@ -3,17 +3,16 @@ import ManagerCard from './ManagerCard';
 import classes from './ManagmentList.module.css';
 // import ManagerDetails from './ManagerDetails';
 import useFetch from '../../hooks/useFetch';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 import { Grid } from '@mui/material';
+
 
 const ManagmentList = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/managments`);
   
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   const managersList = data.map((manager) => {
     return (
@@ -26,18 +25,18 @@ const ManagmentList = () => {
   })
 
   return (
-<React.Fragment>
-  {/* <ManagerDetails /> */}
-  <div className={classes["section-managment"]}>
-    <div className={classes["title-container"]}>
-      <h1 className={classes["title"]}>Leadership</h1>
-      <p className={classes["subtitle"]}>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
-    </div>
-    <Grid container spacing={2}>
-      {managersList}
-    </Grid>
-  </div>
-</React.Fragment>
+    <>
+      {/* <ManagerDetails /> */}
+      <div className={classes["section-managment"]}>
+        <div className={classes["title-container"]}>
+          <h1 className={classes["title"]}>Leadership</h1>
+          <p className={classes["subtitle"]}>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
+        </div>
+        <Grid container spacing={2}>
+          {managersList}
+        </Grid>
+      </div>
+    </>
   )
 };
 

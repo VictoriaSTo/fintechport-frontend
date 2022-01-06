@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import classes from './NewsArticle.module.css';
 import Wrapper from '../UI/WrapperNoColor';
 import useFetch from '../../hooks/useFetch';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -13,8 +14,7 @@ const NewsArticle = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/last-news/` + id);
 
-  if (loading) return <p>Loading ...</p>
-  if (error) return <p>Error</p>
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   console.log(data)
 

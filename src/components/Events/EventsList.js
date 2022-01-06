@@ -11,18 +11,16 @@ import classes from './EventsList.module.css';
 import Wrapper from '../UI/WrapperNoColor';
 // import Calendar from '../UI/Calendar';
 import useFetch from '../../hooks/useFetch';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 const EventsList = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/events`);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   return (
-    <React.Fragment>
+    <>
       {/* <div className={classes["events-banner"]}>
         <h1>Stay updated</h1>
       </div> */}
@@ -88,7 +86,7 @@ const EventsList = () => {
           </Grid>
         </div>
       </Wrapper>
-    </React.Fragment>
+    </>
   )
 };
 

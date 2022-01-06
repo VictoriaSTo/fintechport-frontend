@@ -4,8 +4,7 @@ import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import classes from './PositionDescription.module.css';
 import ContainedButtonEl from '../UI/ContainedButton';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import ServerError from '../../pages/HelperPages/ServerError';
+import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
 const PositionDescription = () => {
 
@@ -13,11 +12,10 @@ const PositionDescription = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
   const { loading, error, data } = useFetch(`${apiUrl}/jobs/` + id);
 
-  if (loading) return <LoadingSpinner />
-  if (error) return <ServerError />
+  if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   return (
-    <React.Fragment>
+    <>
       <div className={classes["position__title"]}>
         <h3>{data.title}</h3>
         <p>{data.schedule_city}</p>
@@ -32,7 +30,7 @@ const PositionDescription = () => {
           </a>
         </div>
       </div>
-    </React.Fragment>
+    </>
   )
 };
 

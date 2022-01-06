@@ -13,7 +13,7 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 const InnovationSample = (props) => {
   return (
-    <React.Fragment>
+    <>
       <article className={classes["call-to-action"]}>
         <div className={classes["call-to-action__text"]}>
           <h1>Ready to get started?</h1>
@@ -70,7 +70,7 @@ const InnovationSample = (props) => {
           </li>
         </ul>
       </article>
-    </React.Fragment>
+    </>
   )
 };
 

@@ -11,7 +11,7 @@ import PeopleIcon from '@mui/icons-material/People';
 
 const FintechportHub = () => {
   return (
-    <React.Fragment>
+    <>
       <div className={classes["header"]}>
         <div className={classes["header__text-box"]}>
           <div className={classes["heading-primary"]}>
@@ -160,7 +160,7 @@ const FintechportHub = () => {
 
         </Grid>
         </div>
-    </React.Fragment>
+    </>
   )
 };
 
