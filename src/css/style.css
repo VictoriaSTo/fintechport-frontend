@@ -1,0 +1,256 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  /* overflow-x: hidden; */
+  clear: both;
+  font-size: 62.5%; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: #000; }
+
+.heading-primary {
+  color: #fff; }
+  .heading-primary--main {
+    font-size: 6.9rem;
+    font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+    margin-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        font-size: 4.4rem; } }
+  .heading-primary--sub {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.8rem;
+    padding-bottom: 2%;
+    font-weight: 400;
+    animation: moveInRight 1s ease-out;
+    line-height: 1.7; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        font-size: 1.8rem; } }
+
+.heading-secondary {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2.8rem;
+      margin: 0px;
+      top: 50%;
+      left: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      align-items: center;
+      text-align: center; } }
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600; }
+
+h4 {
+  font-size: 2.0rem;
+  font-weight: 500; }
+
+p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.service-box {
+  transition: all .4s ease;
+  cursor: default; }
+  .service-box__icon {
+    transition: all .3s ease; }
+  .service-box__title {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+    font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+    transition: all .3s ease; }
+  .service-box__text {
+    text-align: justify;
+    padding: 2% 0; }
+  .service-box__comments {
+    text-align: justify;
+    color: #777;
+    font-size: 1.4rem; }
+  .service-box:hover .service-box__title {
+    transform: scale(1.1); }
+  .service-box:hover .service-box__icon {
+    transform: scale(1.1); }
+
+.testimonial__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  width: 70%; }
+  @media only screen and (max-width: 37.5em) {
+    .testimonial__text {
+      width: 86%; } }
+  .testimonial__text-primary {
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 1.7;
+    padding-bottom: 2%; }
+  .testimonial__text-sub {
+    font-size: 1.8rem;
+    color: #03d9d6; }
+
+.logo {
+  width: 70%; }
+
+@media only screen and (max-width: 37.5em) {
+  width: 100%; }
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: left;
+  transition: 0.3s; }
+  .card__image {
+    border-radius: 4px;
+    width: 100%;
+    min-height: 260px;
+    object-fit: cover;
+    max-height: 260px; }
+  .card__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+    min-height: 30%;
+    width: 100%;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer; }
+    .card__text--medium {
+      opacity: 1;
+      padding-left: 14px;
+      margin-top: 8px;
+      margin-bottom: 0px;
+      font-weight: 400;
+      color: #03d9d6; }
+    .card__text--small {
+      margin-top: -4px;
+      padding-left: 14px;
+      font-size: 14px; }
+
+.header {
+  height: 80vh;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  background-image: linear-gradient(45deg, black, transparent), url(../assets/blue/blue2.jpg);
+  background-attachment: fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .header__text-box {
+        margin: 0px;
+        top: 50%;
+        left: 50%;
+        width: 86%; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__text-box {
+        align-items: center;
+        text-align: center; } }
+  .header__btn-box {
+    animation: moveInBottom 1s 1s ease-out;
+    animation-fill-mode: backwards; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      display: block; } }
+
+.section-services {
+  padding: 5% 7% 0%; }
+
+.section-testimonial {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/conference.jpeg);
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.section-partners {
+  align-items: center;
+  padding: 5% 7%;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .section-partners {
+      margin-left: auto;
+      margin-right: auto;
+      height: fit-content; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-partners {
+      height: fit-content; } }
+
+.section-events {
+  padding: 5% 7%;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/net.png);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed; }

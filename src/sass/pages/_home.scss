@@ -1,0 +1,39 @@
+.section-services {
+  padding: 5% 7% 0%;
+}
+
+.section-testimonial {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/conference.jpeg);
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section-partners {
+  align-items: center;
+  padding: 5% 7%;
+  position: relative;
+
+  @include respond(tab-port) {
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+  }
+
+  @include respond(phone) {
+    height: fit-content;
+  }
+}
+
+.section-events {
+  padding: 5% 7%;
+  color: white;
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../assets/net.png);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+}

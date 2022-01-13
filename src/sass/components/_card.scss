@@ -1,0 +1,54 @@
+
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 4px;
+  text-align: left;
+  transition: 0.3s;
+
+  &__image {
+    border-radius: 4px;
+    width: 100%; 
+    min-height: 260px;
+    object-fit: cover;
+    max-height: 260px;
+  }
+
+  &__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.8;
+    min-height: 30%;
+    width: 100%;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    &--medium {
+      opacity: 1;
+      padding-left: 14px;
+      margin-top: 8px;
+      margin-bottom: 0px;
+      font-weight: 400;
+      color: $color-primary;
+    }
+
+    &--small {
+      margin-top: -4px;
+      padding-left: 14px;
+      font-size: 14px;
+    }
+
+  }
+
+  // &:hover {
+  //   transform: scale(1.02) translateY(-10px);
+  //   box-shadow: 0 2.5rem 4rem rgba(black, .5);
+  // }
+
+  // &:not(:hover) {
+  //   transform: scale(.95);
+  // }
+}

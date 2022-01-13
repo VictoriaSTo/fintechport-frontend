@@ -1,0 +1,41 @@
+.header {
+  height: 80vh;
+  padding-bottom: 5%;
+  padding-top: 1%;
+  background-image: linear-gradient(45deg, black, transparent), url(../assets/blue/blue2.jpg);
+  background-attachment: fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+  position: relative;
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+
+    @include respond(tab-port) {
+      margin: 0px;
+      top: 50%;
+      left: 50%;
+      width: 86%;
+    }
+
+    @include respond(phone) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__btn-box {
+    animation: moveInBottom 1s 1s ease-out;
+    animation-fill-mode: backwards;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+  }
+
+  @include respond(phone) {
+  }
+}

@@ -1,0 +1,7 @@
+.logo {
+  width: 70%;
+}
+
+@include respond(phone) {
+  width: 100%;
+}

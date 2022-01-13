@@ -24,7 +24,7 @@ span {
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 900px) {
   .option {
     font-size: 44px;
   }

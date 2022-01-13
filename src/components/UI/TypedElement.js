@@ -29,7 +29,7 @@ const TypedReactHook = () => {
 
   return (
     <div className={classes.wrap}>
-      <h1>We help you find the best <br/><span ref={el} className={classes.option} /></h1>
+      <h1 class ="heading-primary--main">We help you find the best <br/><span ref={el} className={classes.option} /></h1>
     </div>
   );
 }

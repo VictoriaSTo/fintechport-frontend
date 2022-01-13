@@ -1,0 +1,66 @@
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: $color-black;
+}
+
+.heading-primary {
+  color: $color-white;
+
+  &--main {
+    font-size: 6.9rem;
+    font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+    margin-bottom: 4rem;
+  
+    @include respond(tab-port) {
+      font-size: 4.4rem;
+    }
+  }
+
+  &--sub {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.8rem;
+    padding-bottom: 2%;
+    font-weight: 400;
+    animation: moveInRight 1s ease-out;
+    line-height: 1.7;
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.4rem;
+  font-weight: 700;
+  font-family: archiabold,"DM Sans",Helvetica,sans-serif;
+
+  @include respond(tab-port) {
+    font-size: 2.8rem;
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+  }
+
+  @include respond(phone) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 2.0rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}

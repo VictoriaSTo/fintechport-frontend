@@ -58,16 +58,26 @@ const SummerCamp = () => {
             </div>
           </div>
           <h3>How it works?</h3>
-            <p>We invite you to take part in our GRAD Summer Camp program, which will run from June to August 2022. During the four weeks of classroom training, your child will design, create, program, and enjoy challenges.
+            <p>We invite you to take part in our GRAD Summer Camp program, which will run from July to August 2022. During the one week of classroom training, your child will design, create, program, and enjoy challenges.
             The maximum number is 20 students per class. Lessons are guided by our professional teachers from Monday to Friday, 9am - 4pm. Each pupil receives a completion certificate as well as an opportunity to represent Fintechport in the following Robotics Competitions.
             <br />
             Create a bright future for your child with Fintechport!</p>
           <h3>Timetable</h3>
-            <p>Option 1: <b>Jun 1st - Jun 30, 2022</b>
+            <p>Option 1: <b>Jul 4th - Jul 10th, 2022</b>
             <br />
-            Option 2: <b>Jul 1st - Jul 31, 2022</b>
+            Option 2: <b>Jul 11th - Jul 17th, 2022</b>
             <br />
-            Option 3: <b>Aug 1st - Aug 31, 2022</b></p>
+            Option 3: <b>Jul 18th - Jul 24th, 2022</b>
+            <br />
+            Option 4: <b>Jul 25th - Jul 31st, 2022</b></p>
+
+            <p>Option 5: <b>Aug 1st - Aug 7th, 2022</b>
+            <br />
+            Option 6: <b>Aug 8th - Aug 15th, 2022</b>
+            <br />
+            Option 7: <b>Aug 16th - Aug 23rd, 2022</b>
+            <br />
+            Option 8: <b>Aug 24th - Aug 30th, 2022</b></p>
           <h3>Recommended age</h3>
             <p>Higher grade elementary students & middle school students</p>
             <p>

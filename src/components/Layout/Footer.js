@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   footer: {
     backgroundColor: theme.palette.common.darkBrown,
     width: "100%",
-    height: "12rem",
+    height: "26rem",
     zIndex: 1,
     position: "relative",
     paddingTop: "4%",
