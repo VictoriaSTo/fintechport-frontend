@@ -1,22 +1,18 @@
 import React from "react";
-
 import { Grid } from "@mui/material";
-
-import Wrapper from "../components/UI/WrapperNoColor";
 import ContactForm from "../components/Contacts/ContactForm";
-import classes from "./Contacts.module.css";
 
 const Contacts = () => {
   return (
-    <>
-      <div className={classes["contacts-banner"]}></div>
-      <Wrapper>
-        <h2 className={classes["contacts-title"]}>Contact Information</h2>
+    <main>
+      <div class="contacts__banner"></div>
+      <div class="section-contacts">
+        <h2 class="heading-secondary u-margin-bottom-medium ">Contact Information</h2>
         <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
-              <h3>How To Find Us</h3>
-              <p>
+              <h3 class="heading-tertiary u-margin-bottom-small">How To Find Us</h3>
+              <p class="u-margin-bottom-small" >
                 706A, Tower A, QianHai Excellence Times Square, <br/> 15 HaiTian Road, Boa'An District, <br/> Shenzhen, China 
               </p>
               <p><b>Phone number:</b></p>
@@ -27,8 +23,8 @@ const Contacts = () => {
             </Grid>
           </Grid>
         </div>
-      </Wrapper>
-    </>
+      </div>
+    </main>
   )
 };
 

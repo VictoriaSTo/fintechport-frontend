@@ -3,9 +3,12 @@
 $color-primary: #03d9d6;
 
 $color-grey-dark: #777;
+$color-grey-dark-2: #bbb;
 
 $color-white: #fff;
 $color-black: #000;
+
+// MEDIA QUERY
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {

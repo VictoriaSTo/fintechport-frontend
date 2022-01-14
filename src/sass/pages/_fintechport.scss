@@ -1,0 +1,22 @@
+.section-fintechport-banner {
+  @include bannerBackground;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../assets/sh.jpg);
+  background-position: bottom left;
+
+  @include respond(tab-port) {
+    background-position: 173%;
+    background-size: cover;
+  }
+}
+
+.adv {
+  display: inline-flex;
+  text-align: justify;
+
+  &__icon {
+    font-size: 5rem !important;
+    color: $color-primary;
+    padding-right: 8%;
+  }
+}

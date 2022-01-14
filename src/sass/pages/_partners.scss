@@ -1,0 +1,13 @@
+.section-partners {
+  padding: 4% 14%;
+
+  @include respond(phone) {
+    padding: 2% 7%;
+  }
+}
+
+.divider {
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin: 0% auto 4% auto;
+}

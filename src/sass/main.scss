@@ -12,12 +12,21 @@
 // COMPONENTS
 @import "components/service-box";
 @import "components/testimonial";
-@import "components/partner";
+@import "components/logo";
 @import "components/card";
-
+@import "components/banner";
+@import "components/process";
+@import "components/form";
 
 // LAYOUT
 @import "layout/header";
 
 // PAGES
 @import "pages/home";
+@import "pages/innovation";
+@import "pages/contacts";
+@import "pages/privacy";
+@import "pages/application";
+@import "pages/gallery";
+@import "pages/partners";
+@import "pages/fintechport";

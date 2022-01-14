@@ -112,7 +112,7 @@ const ContactForm = () => {
 
   return (
     <div data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
-      <h3>Get In Touch</h3>
+      <h3 class="heading-tertiary u-margin-bottom-small">Get In Touch</h3>
       {!messageSent && (<form onSubmit={submitHandler}>
         <Grid container columnSpacing={6} rowSpacing={4} sx={{marginBottom: "5%"}}>
           <Grid item xs={12} md={6}>

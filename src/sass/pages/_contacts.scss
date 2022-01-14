@@ -1,17 +1,20 @@
-.contacts-banner{
+.section-contacts {
+  padding: 5% 7%;
+  background-color: #F8F5F7;
+}
+
+.contacts__banner {
+  @include bannerBackground;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../assets/office.jpg);
   background-position: bottom left;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 40vh;
 }
 
 .contacts-title {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
+@include respond(phone) {
   .contacts-banner {
     background-position: 30%;
   }

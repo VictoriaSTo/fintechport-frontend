@@ -4,3 +4,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin bannerBackground {
+  padding: 5% auto 4% auto;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+}

@@ -7,18 +7,7 @@
   }
 
   &__title {
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2%;
-    margin-top: 0%;
-    text-shadow: .5rem 1rem 2rem rgba(black, .2);
-    font-family: archiabold,"DM Sans",Helvetica,sans-serif;
     transition: all .3s ease;
-  }
-
-  &__text {
-    text-align: justify;
-    padding: 2% 0;
   }
 
   &__comments {

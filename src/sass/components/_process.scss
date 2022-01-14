@@ -1,0 +1,72 @@
+.process-list {
+  display:inline-flex;
+  list-style: none;
+
+  @include respond(tab-port) {
+    display: table-cell;
+    vertical-align: middle;
+    list-style: none;
+    text-align: center;
+    padding: 0 14%;
+  }
+}
+
+.process-list::before {
+  position: absolute;
+  left: 260px;
+  top: 130px;
+  display: block;
+  width: 58%;
+  height: 0;
+  border-top: 1px dashed #bbb;
+  content: "";
+
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+.process {
+
+  @include respond(tab-land) {
+    vertical-align: middle;
+    margin-bottom: 1.5rem;
+  }
+
+  &__icon {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px $color-grey-dark-2;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    transition: all .4s;
+  }
+
+  &__icon-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .4s;
+    color: $color-grey-dark-2;
+  }
+
+  &__text {
+    margin: 0 5%;
+    max-width: 20rem;
+
+    @include respond(tab-land) {
+      margin: 0 5%;
+      max-width: 90%;
+    }
+  }
+
+  &:hover .process__icon-image {
+    color: $color-primary;
+    animation: right .2s ease-in-out;
+  }
+}

@@ -15,8 +15,8 @@ const servicesList = services.map((service) => {
         <div data-aos-duration="1000" data-aos="fade-up">
           <div class="service-box">
             <div class="service-box__icon">{icon}</div>
-            <h3 class="service-box__title">{title}</h3>
-            <p class="service-box__text">{desc}</p>
+            <h3 class="heading-tertiary service-box__title">{title}</h3>
+            <p class="paragraph u-justify-text u-margin-top-small">{desc}</p>
             <p class="service-box__comments">{details}</p>
           </div>
         </div>

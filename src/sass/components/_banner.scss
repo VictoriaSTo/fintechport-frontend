@@ -1,0 +1,20 @@
+.banner {
+  &__text-box {
+    padding: 2% 7%;
+    text-align: left;
+
+    @include respond(tab-port) {
+      padding: 7% 7%;
+    }
+
+    @include respond(phone) {
+      padding: 14% 7%;
+    }
+
+  }
+
+  &__buttons {
+      animation: moveInBottom 1s 1s ease-out;
+      animation-fill-mode: backwards;
+  }
+}

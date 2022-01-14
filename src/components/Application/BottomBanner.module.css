@@ -1,8 +1,0 @@
-.application-banner {
-  text-align: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, .9), transparent), url(../../assets/handshake.jpg);
-  background-position: center left;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 40vh;
-}

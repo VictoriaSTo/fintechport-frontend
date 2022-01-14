@@ -3,5 +3,5 @@
 }
 
 @include respond(phone) {
-  width: 100%;
+  .logo { width: 70%; }
 }

@@ -1,0 +1,29 @@
+.section-banner {
+  @include bannerBackground;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(../assets/work.jpg);
+  background-position-y: 140%;
+
+  @include respond(tab-port) {
+    background-position: 92%;
+  }
+}
+
+.section-text {
+  padding: 2% 24%;
+  text-align: justify;
+
+
+  @include respond(tab-port) {
+    padding: 2% 7%;
+  }
+}
+
+.section-process {
+  padding: 0 14%;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 0% 7%;
+    text-align: justify;
+  }
+}

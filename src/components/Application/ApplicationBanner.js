@@ -7,14 +7,13 @@ import DoneAllIcon from '@mui/icons-material/DoneAll';
 import theme from '../UI/Theme';
 
 // Project files
-import classes from './ApplicationBanner.module.css';
 import solution from '../../assets/solution.png';
 
 const ApplicationBanner = () => {
   return (
-    <div className={classes['header']}>
+    <div class="application-header">
       <Grid container spacing={6}>
-        <Grid container item direction="row" xs={12} md={6} className={classes['header-left']}
+        <Grid container item direction="row" xs={12} md={6}
           sx={{
             marginTop: "5%", 
             marginBottom: "5%",
@@ -24,25 +23,25 @@ const ApplicationBanner = () => {
           }}
         >
           <Grid item xs={12} md={12} sx={{marginBottom: "5%"}}>
-            <h1 className={classes["header__title"]}>Get access to partnerships, projects and resources which will help your idea to grow.</h1>
+            <h1 class="heading-secondary"> Get access to partnerships, projects and resources which will help your idea to grow.</h1>
           </Grid>
           <Grid item container spacing={6}>
             <Grid item md={6}>
               <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <DoneIcon color="secondary" sx={{fontSize: "2.5rem"}} />
-                <p className={classes["header__text--aligned"]}>We accept and evaluate applications on a rolling basis. Our team will review an application within 1 week of submission and reach out to you.</p>
+                <p class="u-justify-text">We accept and evaluate applications on a rolling basis. Our team will review an application within 1 week of submission and reach out to you.</p>
               </div>
             </Grid>
 
             <Grid item md={6}>
               <div data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                 <DoneAllIcon color="secondary" sx={{fontSize: "2.5rem"}} />
-                <p className={classes["header__text--aligned"]}>Be ready to provide an initial amount of information that helps us understand your team, technology and market during our initial interview.</p>
+                <p class="u-justify-text">Be ready to provide an initial amount of information that helps us understand your team, technology and market during our initial interview.</p>
               </div>
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container xs={12} md={6} className={classes['header-right']}
+        <Grid item container xs={12} md={6}
           sx={{
             marginTop: "5%",
             [theme.breakpoints.down("md")]: {
@@ -60,7 +59,7 @@ const ApplicationBanner = () => {
               marginRight: "auto"
             }
             }}><img src={solution} alt='solution' style={{maxHeight: "220px"}}/></Grid>
-          <Grid md={12}><div className={classes["header__text--large"]} data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">APPLY TODAY &<br/> INNOVATE</div></Grid>
+          <Grid md={12}><div class="application-header__text--large" data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">APPLY TODAY &<br/> INNOVATE</div></Grid>
         </Grid>
       </Grid>
     </div>
