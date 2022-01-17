@@ -1,6 +1,5 @@
 import React from 'react';
 import ManagerCard from './ManagerCard';
-import classes from './ManagmentList.module.css';
 // import ManagerDetails from './ManagerDetails';
 import useFetch from '../../hooks/useFetch';
 import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
@@ -27,11 +26,9 @@ const ManagmentList = () => {
   return (
     <>
       {/* <ManagerDetails /> */}
-      <div className={classes["section-managment"]}>
-        <div className={classes["title-container"]}>
-          <h1 className={classes["title"]}>Leadership</h1>
-          <p className={classes["subtitle"]}>It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
-        </div>
+      <div class="section-managment">
+          <h1 class="heading-secondary u-margin-bottom-small">Leadership</h1>
+          <p class="u-margin-bottom-medium">It takes many aspects for a new talent or startup to grow. At Fintechport, we are not partial problem solvers who slap band-aids on big problems. Our business expertise with our personal experiences allow us to provide comprehensive solutions to any challenge we face.</p>
         <Grid container spacing={2}>
           {managersList}
         </Grid>

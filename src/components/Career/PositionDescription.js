@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 import useFetch from '../../hooks/useFetch';
-import classes from './PositionDescription.module.css';
 import ContainedButtonEl from '../UI/ContainedButton';
 import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
@@ -16,15 +15,15 @@ const PositionDescription = () => {
 
   return (
     <>
-      <div className={classes["position__title"]}>
+      <div class="position">
         <h3>{data.title}</h3>
         <p>{data.schedule_city}</p>
-        <div className={classes["position__divider"]}></div>
-        <h4>Overview</h4>
+        <div class="position__divider"></div>
+        <h4 class="position__title">Overview</h4>
       </div>
-      <div className={classes["position__description"]}>
-        <p>{data.description}</p>
-        <div className={classes["position__actions"]}>
+      <div class="position__description">
+        <p class="position__paragraph">{data.description}</p>
+        <div class="position__actions">
         <a href="mailto:hr@fintechport.com?subject=Job Application&body=Thank you for applying for the position at Fintechport. Please attach your resume and a cover letter. We will carefully review your application and get back to you soon." style={{textDecoration: "none"}}>
           <ContainedButtonEl action={"Apply"} />
           </a>

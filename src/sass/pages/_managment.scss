@@ -1,0 +1,7 @@
+.section-managment {
+  padding: 4% 14%;
+
+  @include respond(phone) {
+    padding: 4% 7%;
+  }
+}

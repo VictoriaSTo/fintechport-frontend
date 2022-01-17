@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom';
 import classes from './NewsArticle.module.css';
-import Wrapper from '../UI/WrapperNoColor';
 import useFetch from '../../hooks/useFetch';
 import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 
@@ -19,7 +18,7 @@ const NewsArticle = () => {
   console.log(data)
 
   return (
-    <Wrapper>
+    <>
       <div className={classes.flex}>
         <div className={classes["flex-element"]}>
           <p style={{marginBottom: "0px"}}>Share</p>
@@ -38,7 +37,7 @@ const NewsArticle = () => {
           <p>{data.text}</p>
         </div>
       </div>
-    </Wrapper>
+    </>
   )
 }
 

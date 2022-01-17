@@ -36,8 +36,8 @@ const SummerCamp = () => {
         </div>
       </div>
       <main>
-        <section className={classes.program}>
-          <h2> Welcome to GRAD <br/> summer camp</h2>
+        <section class="program u-margin-bottom-medium">
+          <h2 class="heading-secondary u-margin-bottom-small"> Welcome to GRAD <br/> summer camp</h2>
           <p>GRAD stands for Games, Robots, Art, and Drones. Our mission is to  inspire children and teenagers to love science and engineering.</p>
           <div className={classes.icons}>
             <div className={classes.icon} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
@@ -57,12 +57,12 @@ const SummerCamp = () => {
               <p className={classes["icon__label"]}>Drones</p>
             </div>
           </div>
-          <h3>How it works?</h3>
-            <p>We invite you to take part in our GRAD Summer Camp program, which will run from July to August 2022. During the one week of classroom training, your child will design, create, program, and enjoy challenges.
+          <h3 class="heading-tertiary u-margin-bottom-small u-margin-top-medium" >How it works?</h3>
+            <p class="u-margin-bottom-medium">We invite you to take part in our GRAD Summer Camp program, which will run from July to August 2022. During the one week of classroom training, your child will design, create, program, and enjoy challenges.
             The maximum number is 20 students per class. Lessons are guided by our professional teachers from Monday to Friday, 9am - 4pm. Each pupil receives a completion certificate as well as an opportunity to represent Fintechport in the following Robotics Competitions.
             <br />
             Create a bright future for your child with Fintechport!</p>
-          <h3>Timetable</h3>
+          <h3 class="heading-tertiary u-margin-bottom-small">Timetable</h3>
             <p>Option 1: <b>Jul 4th - Jul 10th, 2022</b>
             <br />
             Option 2: <b>Jul 11th - Jul 17th, 2022</b>
@@ -78,7 +78,8 @@ const SummerCamp = () => {
             Option 7: <b>Aug 16th - Aug 23rd, 2022</b>
             <br />
             Option 8: <b>Aug 24th - Aug 30th, 2022</b></p>
-          <h3>Recommended age</h3>
+
+          <h3 class="heading-tertiary u-margin-bottom-small  u-margin-top-medium">Recommended age</h3>
             <p>Higher grade elementary students & middle school students</p>
             <p>
             <b>6-11 years old
@@ -87,13 +88,13 @@ const SummerCamp = () => {
             <br />
             (no experience needed)
             </p>
-          <h3>Campus location</h3>
+          <h3 class="heading-tertiary u-margin-bottom-small u-margin-top-medium">Campus location</h3>
             <p>Shenzhen, China. Exact location will be announced soon</p>
-          <h3>Curriculum</h3>
+          <h3 class="heading-tertiary u-margin-bottom-small u-margin-top-medium">Curriculum</h3>
             <OutlinedButtonEl onClick={showCurriculumHandler} action="Check Now">Check Now</OutlinedButtonEl>
         </section>
         <section className={classes["teachers-section"]}>
-          <h3>Professional teachers</h3>
+          <h3 class="heading-tertiary u-margin-bottom-small">Professional teachers</h3>
           <ul>
             <li>
               <div className={classes["teacher-icon-box-1"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true" data-aos-delay="200">
@@ -139,7 +140,7 @@ const SummerCamp = () => {
         </section>
 
         <section className={classes["testimonials-section"]}>
-          <h3>Parent quote<FormatQuoteIcon sx={{fontSize: "44px", color: "#99258e", textAlign: "right"}}/></h3>
+          <h3 class="heading-tertiary u-margin-bottom-small u-margin-top-medium">Parent quote<FormatQuoteIcon sx={{fontSize: "44px", color: "#99258e", textAlign: "right"}}/></h3>
           <div className={classes.card} data-aos-duration="1000" data-aos="fade-left" data-aos-once="true">
             <div className={classes["card__inner"]}>
               <p className={classes["card__text"]}>GRAD is without a doubt the most interesting and exciting program in which my son Eric has ever participated! It has surely boosted the creative side as well as curiosity in new ideas. Eric grew in confidence and established many acquaintances with like-minded pupils. I couldn't recommend it enough.</p>

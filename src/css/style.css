@@ -477,3 +477,327 @@ p {
     font-size: 5rem !important;
     color: #03d9d6;
     padding-right: 8%; }
+
+.section-all-events {
+  padding: 5% 7%;
+  background-color: #F8F5F7; }
+
+.section-managment {
+  padding: 4% 14%; }
+  @media only screen and (max-width: 37.5em) {
+    .section-managment {
+      padding: 4% 7%; } }
+
+.section-jobs-banner {
+  padding: 5% auto 4% auto;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 45vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(../assets/career/1.jpg);
+  background-position-y: 76%; }
+  @media only screen and (max-width: 56.25em) {
+    .section-jobs-banner {
+      background-position: 92%; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-jobs-banner {
+      background-position: 42%; } }
+
+.section-jobs {
+  padding: 2% 24%; }
+  @media only screen and (max-width: 37.5em) {
+    .section-jobs {
+      padding: 2% 7%; } }
+
+.job {
+  margin-top: -4px;
+  padding-top: 0px;
+  color: #000;
+  text-decoration: none; }
+  .job__title {
+    text-transform: uppercase;
+    color: #03d9d6;
+    font-weight: 500;
+    margin-bottom: 0px;
+    padding-bottom: 0px; }
+  .job__details {
+    color: #777;
+    margin-top: 0px; }
+
+.section-contact-us {
+  padding: 2% 24%;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .section-contact-us {
+      padding: 2% 7%; } }
+
+.position {
+  text-align: center;
+  margin-top: 5%; }
+  .position__title {
+    text-transform: uppercase;
+    color: #797979;
+    font-weight: 400; }
+    @media only screen and (max-width: 56.25em) {
+      .position__title {
+        padding: 2% 7% 10% 7%; } }
+  .position__paragraph {
+    color: #B2B2B2;
+    font-family: 'Barlow';
+    margin-top: 0%;
+    margin-bottom: 2%; }
+  .position__divider {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2); }
+  .position__description {
+    padding: 2% 24% 10% 24%;
+    background-color: #F8F5F7;
+    text-align: justify; }
+    @media only screen and (max-width: 56.25em) {
+      .position__description {
+        margin-top: 10%;
+        padding: 2% 14% 10% 14%; } }
+  .position__actions {
+    margin-top: 6%;
+    align-items: center;
+    text-align: center; }
+
+.grad-banner {
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(../assets/grad/1.jpeg);
+  background-position: bottom left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 48vh;
+  margin-top: -5%;
+  position: relative; }
+
+.grad-banner__text {
+  padding: 7%;
+  text-align: left; }
+
+.grad-banner h1 {
+  color: white;
+  margin: 0;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.8);
+  padding-bottom: 2%;
+  animation: moveInRight 1s ease-out; }
+
+.grad-banner__text a {
+  animation: moveInBottom 1s 1s ease-out;
+  animation-fill-mode: backwards; }
+
+.grad-banner h1 span {
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0.5rem 2rem 4rem rgba(0, 0, 0, 0.8); }
+
+.grad-banner a {
+  text-decoration: none; }
+
+.program {
+  padding: 2% 24% 0.2%; }
+
+.icons {
+  display: flex;
+  justify-content: space-around; }
+
+.icon__picture {
+  font-size: 8.6rem !important; }
+
+.icon__label {
+  text-align: center;
+  margin-top: 0; }
+
+.teachers-section {
+  padding: 0% 24%; }
+
+.teachers-section ul {
+  display: inline-flex;
+  list-style: none;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%; }
+
+.teachers-section li {
+  display: inline-block; }
+
+.teacher-icon-box-1 {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #F8F5F7;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  transition: all .4s;
+  background-image: url(../assets/grad/7.png);
+  background-size: cover;
+  transition: all .3s; }
+
+.teacher-icon-box-1:hover {
+  cursor: pointer;
+  outline: 1rem solid #ed3829; }
+
+.teacher-icon-box-2 {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #F8F5F7;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  transition: all .4s;
+  background-image: url(../assets/grad/4.png);
+  background-size: cover;
+  transition: all .3s; }
+
+.teacher-icon-box-2:hover {
+  cursor: pointer;
+  outline: 1rem solid #38b449; }
+
+.teacher-icon-box-3 {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #F8F5F7;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  transition: all .4s;
+  background-image: url(../assets/grad/5.png);
+  background-size: cover;
+  transition: all .3s; }
+
+.teacher-icon-box-3:hover {
+  cursor: pointer;
+  outline: 1rem solid #99258e; }
+
+.teacher-icon-box-4 {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #F8F5F7;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  transition: all .4s;
+  background-image: url(../assets/grad/6.png);
+  background-size: cover;
+  transition: all .3s; }
+
+.teacher-icon-box-4:hover {
+  cursor: pointer;
+  outline: 1rem solid #ffc938; }
+
+.testimonials-section {
+  padding: 0% 20% 0% 24%; }
+
+.card {
+  height: 40vh;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  text-decoration: none;
+  border: 2px solid #99258e;
+  border-radius: 6px;
+  margin: 4% 0 8% 0;
+  display: flex; }
+
+.card__image {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-image: url(../assets/grad/8.png);
+  width: 40%;
+  height: 100%;
+  padding: 0;
+  background-size: cover; }
+
+.card__inner {
+  width: 60%;
+  padding: 4%; }
+
+.card__name {
+  color: #99258e;
+  text-align: right; }
+
+.application {
+  background-color: #F8F5F7;
+  padding: 2% 0; }
+
+.application__text-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.application__text {
+  display: block; }
+
+.application__text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0; }
+
+.application__text h4 {
+  margin-top: 2%;
+  font-weight: 400; }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@media only screen and (max-width: 600px) {
+  .teachers-section ul {
+    display: block;
+    padding: 0; }
+  .teachers-section li {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 7%; }
+  .teacher-details {
+    display: inline-flex;
+    text-align: center;
+    align-items: center; }
+  .grad-banner {
+    background-position: center; }
+  .grad-banner__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .testimonials {
+    padding: 0% 7%; }
+  .card {
+    display: block;
+    height: 48vh; }
+  .card__image {
+    visibility: hidden; }
+  .card__inner {
+    width: 90%; }
+  .application__text-area {
+    display: block;
+    padding: 5% 7%; } }
+
+@media only screen and (max-width: 900px) {
+  .grad-banner__text {
+    width: 86%; }
+  .program {
+    padding: 2% 7% 0.2%; }
+  .teachers-section {
+    padding: 0% 7%; }
+  .testimonials-section {
+    padding: 0% 7%; } }

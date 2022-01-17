@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link as RouterLink} from "react-router-dom";
 
-import Wrapper from '../UI/WrapperNoColor';
 import classes from './NewsList.module.css';
 import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
 import Card from '@mui/material/Card';
@@ -20,7 +19,7 @@ const NewsList = () => {
   console.log(data)
 
   return (
-    <Wrapper>
+    <>
       <div className={classes.title}>
         <h2>TECH NEWS</h2>
         <div className={classes["title-underline"]} />
@@ -51,7 +50,7 @@ const NewsList = () => {
           })}
         </Grid>
       </div>
-    </Wrapper>
+    </>
   )
 };
 

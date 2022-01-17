@@ -29,7 +29,7 @@ export default function MediaCard(props) {
         }}
       />
       <CardContent>
-        <h3>{name} {surname}</h3>
+        <h3 class="heading-tertiary">{name} {surname}</h3>
         <p>{position} <br/><span style={{color: "#08D9D6"}}>{email}</span></p>
       </CardContent>
     </Card>

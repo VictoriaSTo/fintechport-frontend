@@ -1,0 +1,95 @@
+.section-jobs-banner {
+  @include bannerBackground;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(../assets/career/1.jpg);
+  background-position-y: 76%;
+
+  @include respond(tab-port) {
+    background-position: 92%;
+  }
+
+
+  @include respond(phone) {
+    background-position: 42%;
+  }
+}
+
+.section-jobs {
+  padding: 2% 24%;
+
+  @include respond(phone) {
+    padding: 2% 7%;
+  }
+}
+
+.job {
+  margin-top: -4px;
+  padding-top: 0px;
+  color: $color-black;
+  text-decoration: none;
+
+  &__title {
+    text-transform: uppercase;
+    color: $color-primary;
+    font-weight: 500;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  &__details {
+    color: $color-grey-dark;
+    margin-top: 0px;
+  }
+}
+
+.section-contact-us {
+  padding: 2% 24%;
+  text-align: center;
+
+  @include respond(phone) {
+    padding: 2% 7%;
+  }
+}
+
+.position {
+  text-align: center;
+  margin-top: 5%;
+
+  &__title {
+    text-transform: uppercase;
+    color: #797979;
+    font-weight: 400;
+
+    @include respond(tab-port) {
+      padding: 2% 7% 10% 7%;
+    }
+  }
+
+  &__paragraph {
+    color: #B2B2B2;
+    font-family: 'Barlow';
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+
+  &__divider {
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+  }
+
+  &__description {
+    padding: 2% 24% 10% 24%;
+    background-color: #F8F5F7;
+    text-align: justify;
+
+    @include respond(tab-port) {
+      margin-top: 10%;
+      padding: 2% 14% 10% 14%;
+    }
+  }
+
+  &__actions {
+    margin-top: 6%;
+    align-items: center;
+    text-align: center;
+  }
+}

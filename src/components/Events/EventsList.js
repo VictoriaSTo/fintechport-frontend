@@ -7,8 +7,6 @@ import CardMedia from '@mui/material/CardMedia';
 import { Grid } from '@mui/material';
 
 // Project files
-import classes from './EventsList.module.css';
-import Wrapper from '../UI/WrapperNoColor';
 // import Calendar from '../UI/Calendar';
 import useFetch from '../../hooks/useFetch';
 import ServerResponseStatus from '../../pages/HelperPages/ServerResponseStatus';
@@ -20,13 +18,8 @@ const EventsList = () => {
   if (loading || error) return <ServerResponseStatus loading={loading} error={error} />
 
   return (
-    <>
-      {/* <div className={classes["events-banner"]}>
-        <h1>Stay updated</h1>
-      </div> */}
-      <Wrapper>
-        <div className={classes["event-box"]}>
-            <h1 className={classes["heading-primary"]}>Upcoming Events</h1>
+    <div class="section-all-events">
+      <h1 class="heading-primary--main">Upcoming Events</h1>
             {/* <Calendar /> */}
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
@@ -34,7 +27,7 @@ const EventsList = () => {
               if (category === "upcoming") {
                 return (
                     <Grid item xs={12} md={4}>
-                      <Card  key={id} className={classes["event"]} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
+                      <Card  key={id} class="event" data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <a href={link}>
                         <CardMedia
                           component="img"
@@ -43,10 +36,10 @@ const EventsList = () => {
                           image={image.url}
                         />
                       </a>
-                      <CardContent>
-                        <h2 className={classes["event__title"]}>{title}</h2>
-                        <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
-                        <h3 className={classes["event__subtitle"]}>{place}</h3>
+                      <CardContent sx="padding: 0">
+                        <h2 class="heading-secondary">{title}</h2>
+                        <h3 class="heading-tertiary">{date}</h3>
+                        <h3 class="heading-tertiary">{place}</h3>
                         <p>{description}</p>
                       </CardContent>
                       </Card>
@@ -55,15 +48,15 @@ const EventsList = () => {
               }
             })}
           </Grid>
-          <div className={classes["divider"]} />
-          <h1 className={classes["heading-primary"]}>Past Events</h1>
+          <div class="divider" />
+          <h1 class="heading-primary">Past Events</h1>
           <Grid container spacing={6} sx={{paddingTop: "2%", paddingBottom: "2%"}}>
             {data.map((event) => {
               const { id, title, image, date, place, description, category, link } = event;
               if (category === "past") {
                 return (
-                  <Grid key={id} item xs={12} md={4} className={classes["event"]}>
-                    <Card key={id} data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
+                  <Grid item xs={12} md={4}>
+                    <Card key={id} class="event" data-aos-duration="1000" data-aos="fade-up" data-aos-once="true">
                       <a href={link}>
                         <CardMedia
                           component="img"
@@ -72,9 +65,9 @@ const EventsList = () => {
                           image={image.url}
                         />
                         <CardContent>
-                        <h2 className={classes["event__title"]}>{title}</h2>
-                          <h3 className={classes["event__subtitle--blue"]}>{date}</h3>
-                          <h3 className={classes["event__subtitle"]}>{place}</h3>
+                        <h2 class="heading-secondary">{title}</h2>
+                          <h3 class="heading-tertiary">{date}</h3>
+                          <h3 class="heading-tertiary">{place}</h3>
                           <p>{description}</p>
                         </CardContent>
                       </a>
@@ -84,9 +77,7 @@ const EventsList = () => {
               }
             })}
           </Grid>
-        </div>
-      </Wrapper>
-    </>
+    </div>
   )
 };
 
